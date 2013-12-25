@@ -1,1 +1,5 @@
 /.#.emacs
+.emacs.d/auto-save-list
+.emacs.d/project-persist
+.emacs.d/places
+.emacs.d/ac-comphist.dat
