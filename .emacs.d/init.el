@@ -43,8 +43,8 @@
 (global-set-key (kbd "s-[") 'previous-buffer)
 (global-set-key (kbd "s-]") 'next-buffer)
 (global-set-key (kbd "s-r") 'replace-string)
-(global-set-key (kbd "s-j") 'imenu)
-(global-set-key (kbd "s-\") 'magit-status)
+(global-set-key (kbd "s-.") 'imenu-anywhere)
+(global-set-key (kbd "s-\\") 'magit-status)
 
 (server-start)
 
