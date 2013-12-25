@@ -17,8 +17,8 @@ export BASH_IT_THEME='clean'
 export GIT_HOSTING='git@git.domain.com'
 
 # Set my editor and git editor
-export EDITOR="emacsclient"
-export GIT_EDITOR='emacsclient'
+export EDITOR="emacsclient -c "
+export GIT_EDITOR='emacsclient -c '
 
 # Set the path nginx
 export NGINX_PATH='/opt/nginx'
@@ -50,5 +50,5 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # added by Anaconda 1.6.1 installer
 export PATH="/Users/sm52286/anaconda/bin:$PATH"
 export PATH="/Users/sm52286/local/emsdk_portable:/Users/sm52286/local/emsdk_portable/emscripten/incoming:$PATH"
-
-alias emacs="emacsclient -c\"
+export C_INCLUDE_PATH="/opt/local/include"
+alias emacs="emacsclient -c "
