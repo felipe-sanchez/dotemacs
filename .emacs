@@ -5,11 +5,6 @@
 
 (package-initialize)
 
-(autoload 'markdown-mode "markdown-mode"
-   "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 ;; Org-mode settings
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
@@ -38,4 +33,41 @@
 (ac-config-default)
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 
-(require 'ein)
+(require 'graphene)
+
+;; Add some custom key-binding
+(global-set-key (kbd "s-{") 'previous-buffer)
+(global-set-key (kbd "s-}") 'next-buffer)
+(global-set-key (kbd "s-[") 'previous-buffer)
+(global-set-key (kbd "s-]") 'next-buffer)
+(global-set-key (kbd "s-r") 'replace-string)
+
+(server-start)
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
+ '(blink-cursor-mode t)
+ '(custom-enabled-themes (quote (graphene)))
+ '(custom-safe-themes (quote ("5a1a016301ecf6874804aef2df36ca8b957443b868049d35043a02a0c1368517" default)))
+ '(fringe-mode (quote (0)) nil (fringe))
+ '(graphene-default-font "Menlo-14")
+ '(save-place t nil (saveplace))
+ '(sr-speedbar-auto-refresh t)
+ '(sr-speedbar-delete-windows t)
+ '(sr-speedbar-right-side t)
+ '(tool-bar-mode nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "white" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "apple" :family "Menlo")))))
+
+
+
+
