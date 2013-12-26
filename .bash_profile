@@ -50,5 +50,6 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # added by Anaconda 1.6.1 installer
 export PATH="/Users/sm52286/anaconda/bin:$PATH"
 export PATH="/Users/sm52286/local/emsdk_portable:/Users/sm52286/local/emsdk_portable/emscripten/incoming:$PATH"
+export PATH="/usr/texbin/:$PATH"
 export C_INCLUDE_PATH="/opt/local/include"
 alias emacs="emacsclient -c "
