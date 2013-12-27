@@ -1,1 +1,0 @@
-("~/Projects/Notes/" "~/Projects/dotemacs/" "~/Projects/CollabAC/" "~/Projects/Plans/")
