@@ -7,3 +7,8 @@
 .emacs.d/places
 .emacs.d/.graphene-geometry
 .emacs.d/projectile-bookmarks.eld
+.emacs.d/semanticdb
+.emacs.d/eshell
+.emacs.d/image-dired
+.emacs.d/request
+.emacs.d/backups
