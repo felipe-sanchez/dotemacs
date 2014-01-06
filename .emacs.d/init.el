@@ -19,6 +19,11 @@
 ;; Start server to use Emacs GUI from command line
 (server-start)
 
+;; Define function to give focus to app when called from command line
+(defun ns-raise-emacs ()  
+  (ns-do-applescript "tell application \"Emacs\" to activate"))  
+(add-hook 'server-visit-hook 'ns-raise-emacs)
+
 ;; Appearance settings
 (require 'my-appearance)
 ;; Loads and set up general settings (e.g. autocomplete, undo, etc.)
@@ -38,3 +43,6 @@
 
 (setq custom-file (expand-file-name "my-custom.el" user-emacs-directory))
 (load custom-file)
+
+;; Refresh screen (to prevent display glitches)
+(redraw-display)
