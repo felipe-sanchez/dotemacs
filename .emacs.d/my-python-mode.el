@@ -8,6 +8,7 @@
 ;; Uses ipython as shell. C-c C-z to switch to shell; C-c C-c to run current file
 (elpy-use-ipython)
 
+
 ;; Enable EIN; M-x notebook-list
 (require 'ein)
 (setq ein:use-auto-complete 't)
