@@ -6,15 +6,17 @@
 ;; Graphene (saner emacs defaults)
 (require 'graphene)
 
+(require 'imenu)
+(add-hook 'prog-mode-hook 'imenu-add-menubar-index)
+(setq imenu-auto-rescan t)
+
+
 ;; Autocomplete
 (require 'auto-complete)
 (require 'auto-complete-config)
 (setq ac-auto-start nil)
 (setq ac-auto-show-menu nil)
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
-
-;; Semantic
-(semantic-mode)
 
 ;; Activate tramp; C-x C-f /ssh:user@server etc.
 (require 'tramp)

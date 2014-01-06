@@ -16,6 +16,12 @@
 (global-set-key (kbd "s-Z") 'undo-tree-redo)
 (global-set-key (kbd "s-F") 'anything-occur)
 (global-set-key (kbd "s-X") 'smex)
+(global-set-key (kbd "<s-left>") 'beginning-of-visual-line)
+(global-set-key (kbd "<s-right>") 'end-of-visual-line)
+(global-set-key (kbd "<s-up>") 'beginning-of-buffer)
+(global-set-key (kbd "<s-down>") 'end-of-buffer)
+
+
 
 (provide 'my-keybindings)
 
