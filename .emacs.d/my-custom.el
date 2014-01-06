@@ -17,8 +17,6 @@
  '(frame-brackground-mode (quote dark))
  '(fringe-mode (quote (8 . 8)) nil (fringe))
  '(global-semantic-decoration-mode t)
- '(global-semantic-highlight-func-mode nil)
- '(global-semantic-stickyfunc-mode t)
  '(global-semanticdb-minor-mode t)
  '(graphene-default-font "Menlo-16")
  '(graphene-errors-auto nil)

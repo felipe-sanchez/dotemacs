@@ -48,8 +48,13 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 
 # added by Anaconda 1.6.1 installer
-export PATH="/Users/sm52286/anaconda/bin:$PATH"
-export PATH="/Users/sm52286/local/emsdk_portable:/Users/sm52286/local/emsdk_portable/emscripten/incoming:$PATH"
+export PATH="~/anaconda/bin:$PATH"
+export PATH="~/local/emsdk_portable:~/local/emsdk_portable/emscripten/incoming:$PATH"
 export PATH="/usr/texbin/:$PATH"
 export C_INCLUDE_PATH="/opt/local/include"
-alias emacs="emacsclient -c "
+alias emacs="emacsclient -n -c "
+
+export XGRID_CONTROLLER_HOSTNAME="xgrid.as.utexas.edu"
+export XGRID_CONTROLLER_PASSWORD="ast_xgrid"
+export LUA_PATH="?.lua;lua/?.lua"
+
