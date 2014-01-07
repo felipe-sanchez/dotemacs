@@ -1,45 +1,10 @@
-
-
-# Load RVM, if you are using it
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
-# Add rvm gems and nginx to the path
-export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
-
-# Path to the bash it configuration
-export BASH_IT=$HOME/.bash_it
-
-# Lock and Load a custom theme file
-# location /.bash_it/themes/
-export BASH_IT_THEME='clean'
-
-# Your place for hosting Git repos. I use this for private repos.
-export GIT_HOSTING='git@git.domain.com'
-
-# Set my editor and git editor
-export EDITOR="emacsclient -c "
-export GIT_EDITOR='emacsclient -c '
-
-# Set the path nginx
-export NGINX_PATH='/opt/nginx'
-
-# Don't check mail when opening terminal.
-unset MAILCHECK
-
-# Change this to your console based IRC client of choice.
-
-export IRC_CLIENT='irssi'
-
-# Set this to the command you use for todo.txt-cli
-
-export TODO="t"
-
-# Set vcprompt executable path for scm advance info in prompt (demula theme)
-# https://github.com/xvzf/vcprompt
-#export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
-
-# Load Bash It
-source $BASH_IT/bash_it.sh
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+}
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+}
+export PS1='\u \[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
 
 alias aquamacs='open -b org.gnu.Aquamacs'
 # MacPorts Installer addition on 2012-10-01_at_17:56:59: adding an appropriate PATH variable for use with MacPorts.
@@ -52,7 +17,7 @@ export PATH="~/anaconda/bin:$PATH"
 export PATH="~/local/emsdk_portable:~/local/emsdk_portable/emscripten/incoming:$PATH"
 export PATH="/usr/texbin/:$PATH"
 export C_INCLUDE_PATH="/opt/local/include"
-alias emacs="emacsclient -n -c "
+alias emacs="emacsclient -n "
 
 export XGRID_CONTROLLER_HOSTNAME="xgrid.as.utexas.edu"
 export XGRID_CONTROLLER_PASSWORD="ast_xgrid"
