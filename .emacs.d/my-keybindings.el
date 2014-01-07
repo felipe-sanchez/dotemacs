@@ -21,7 +21,8 @@
 (global-set-key (kbd "<s-up>") 'beginning-of-buffer)
 (global-set-key (kbd "<s-down>") 'end-of-buffer)
 
-
+;; ibuffer
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (provide 'my-keybindings)
 

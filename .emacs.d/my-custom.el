@@ -16,7 +16,9 @@
  '(flycheck-highlighting-mode (quote lines))
  '(frame-brackground-mode (quote dark))
  '(fringe-mode (quote (8 . 8)) nil (fringe))
- '(global-semantic-decoration-mode t)
+ '(global-semantic-decoration-mode nil)
+ '(global-semantic-highlight-func-mode nil)
+ '(global-semantic-stickyfunc-mode nil)
  '(global-semanticdb-minor-mode t)
  '(graphene-default-font "Menlo-16")
  '(graphene-errors-auto nil)
@@ -37,7 +39,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(header-line ((t (:inherit mode-line :background "gray30" :foreground "DodgerBlue3" :box (:line-width 2 :color "grey75" :style released-button)))))
+ '(header-line ((t (:inherit mode-line :background "gray30" :foreground "dark gray" :box (:line-width 2 :color "grey75" :style released-button)))))
  '(mode-line ((t (:background "gray73" :foreground "gray0" :box (:line-width 1 :style released-button) :family "Lucida Grande"))))
  '(mode-line-buffer-id ((t (:foreground "black" :weight bold))))
  '(mode-line-highlight ((t (:foreground "gray0" :box (:line-width 2 :color "grey75" :style released-button) :weight bold))))
