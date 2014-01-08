@@ -65,5 +65,11 @@
 (require 'projectile)
 (projectile-global-mode)
 
+;; Breadcrumbs
+(require 'breadcrumb)
+(global-set-key (kbd "s-1") 'bc-set)            ;; Shift-SPACE for set bookmark
+(global-set-key [(s shift up)]              'bc-previous)       ;; M-j for jump to previous
+(global-set-key [(s shift down)]        'bc-next)           ;; Shift-M-j for jump to next
+
 (provide 'my-packages)
 
