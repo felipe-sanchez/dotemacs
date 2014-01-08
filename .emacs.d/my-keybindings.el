@@ -21,6 +21,7 @@
 (global-set-key (kbd "<s-up>") 'beginning-of-buffer)
 (global-set-key (kbd "<s-down>") 'end-of-buffer)
 (global-set-key (kbd "s-w") 'kill-default-buffer)
+(global-set-key (kbd "s-W") 'delete-frame)
 
 ;; Don't open dialogs on Mac OS X
 (global-set-key (kbd "s-o") 'ido-find-file)

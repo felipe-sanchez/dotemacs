@@ -23,6 +23,7 @@
  '(graphene-default-font "Menlo-16")
  '(graphene-errors-auto nil)
  '(graphene-variable-pitch-font "Lucida Grande-12")
+ '(inferior-R-program-name "/usr/bin/R")
  '(js2-global-externs js2-my-global-externs)
  '(org-agenda-files (quote ("~/Dropbox/Org/Today.org" "~/Projects/Plans/plans.org")))
  '(powerline-color1 "#3d3d68")
