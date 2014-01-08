@@ -20,6 +20,12 @@
 (global-set-key (kbd "<s-right>") 'end-of-visual-line)
 (global-set-key (kbd "<s-up>") 'beginning-of-buffer)
 (global-set-key (kbd "<s-down>") 'end-of-buffer)
+(global-set-key (kbd "s-w") 'kill-default-buffer)
+
+;; Don't open dialogs on Mac OS X
+(global-set-key (kbd "s-o") 'ido-find-file)
+(global-set-key (kbd "s-s") 'save-buffer)
+(global-set-key (kbd "s-S") 'ido-write-file)
 
 ;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
