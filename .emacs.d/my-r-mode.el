@@ -37,6 +37,7 @@
           '(lambda()
              (define-key inferior-ess-mode-map [up] (lambda() (interactive) (goto-char (point-max)) (comint-previous-input 1)))
              (define-key inferior-ess-mode-map [down] (lambda() (interactive) (goto-char (point-max)) (comint-next-input 1)))))
+          
 
 
 
