@@ -61,7 +61,7 @@ function git.remotestatus(dir)
       print(dir, st)
    end
    
-   if (st:find("up to date")) then
+   if (st:find("up to date") or st:find("No remote")) then
       return git.clean, st
    else
       return git.needspull, st
