@@ -20,6 +20,12 @@ local fprintf = ex.fprintf
 local home = os.getenv("HOME")
 local defaultdir = home .. "/Projects/"
 local dirs = arg
+local dry_run = false
+
+if arg[1] == "--dry-run" then
+   dry_run = true
+   table.remove(dirs, 1)
+end
 if not dirs[1] then
    dirs[1] = defaultdir
 end
@@ -38,6 +44,10 @@ end
 function git.status(dir)
    local st = capture("cd " .. dir .. "; git status 2>&1 -s")
 
+   if (dry_run) then
+      print(dir, st)
+   end
+   
    if (st == "") then
       return git.clean, st
    else
@@ -47,8 +57,14 @@ end
 
 function git.remotestatus(dir)
    local st = capture("cd " .. dir .. "; git pull 2>&1 -v --dry-run")
+   if (dry_run) then
+      print(dir, st)
+   end
+   
    if (st:find("up to date")) then
       return git.clean, st
+   else
+      return git.needspull, st
    end
 end
 
@@ -69,13 +85,13 @@ while true do
             nneedscommit = nneedscommit + 1
          end
          if rst == git.needspull then
-            nneedspull = nneddspull + 1
+            nneedspull = nneedspull + 1
          end
 
-         if st == git.needscommit or st == git.needspull then
+         if st == git.needscommit or rst == git.needspull then
             b:append(name, "\n", string.rep("=", name:len()), "\n")
             b:append(st == git.needscommit and stret or "No file changed/added.\n",
-                  st == git.needspull and rstret or "No pull needed.\n", "\n")         
+                  rst == git.needspull and rstret or "No pull needed.\n", "\n")         
          end
       end
    end
@@ -85,5 +101,8 @@ while true do
    f:close()
 
    b:save(home .. "/.git_global_report")
+   if (dry_run) then
+      os.exit()
+   end
    os.execute("sleep 30")
 end
