@@ -104,5 +104,5 @@ while true do
    if (dry_run) then
       os.exit()
    end
-   os.execute("sleep 30")
+   os.execute("sleep 90")
 end
