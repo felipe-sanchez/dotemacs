@@ -71,5 +71,8 @@
 (global-set-key [(s shift up)]              'bc-previous)       ;; M-j for jump to previous
 (global-set-key [(s shift down)]        'bc-next)           ;; Shift-M-j for jump to next
 
+;; Set up ediff not to open a new frame
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
 (provide 'my-packages)
 
