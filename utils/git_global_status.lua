@@ -20,8 +20,13 @@ local fprintf = ex.fprintf
 local home = os.getenv("HOME")
 local defaultdir = home .. "/Projects/"
 local dirs = arg
+local no_daemon = false
 local dry_run = false
 
+if arg[1] == "--no-daemon" then
+   no_daemon = true
+   table.remove(dirs, 1)
+end
 if arg[1] == "--dry-run" then
    dry_run = true
    table.remove(dirs, 1)
@@ -44,10 +49,6 @@ end
 function git.status(dir)
    local st = capture("cd " .. dir .. "; git status 2>&1 -s")
 
-   if (dry_run) then
-      print(dir, st)
-   end
-   
    if (st == "") then
       return git.clean, st
    else
@@ -100,9 +101,13 @@ while true do
    fprintf(f, "[%d/c%d/r%d]", n, nneedscommit, nneedspull)
    f:close()
 
-   b:save(home .. "/.git_global_report")
-   if (dry_run) then
+   if (no_daemon) then
+      print(b:tostring())
+   else
+      b:save(home .. "/.git_global_report")
+   end
+   if (dry_run or no_daemon) then
       os.exit()
    end
-   os.execute("sleep 90")
+   os.execute("sleep 60")
 end
