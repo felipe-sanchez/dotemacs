@@ -74,5 +74,7 @@
 ;; Set up ediff not to open a new frame
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
+(require 'browse-kill-ring)
+
 (provide 'my-packages)
 
