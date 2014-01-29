@@ -22,8 +22,11 @@ alias git_status="pushd $HOME/Projects/dotemacs/utils; lua git_global_status.lua
 
 export PS1='`cat ~/.git_global_stats` \u \[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
 
+<<<<<<< HEAD
 export XGRID_CONTROLLER_HOSTNAME="xgrid.as.utexas.edu"
 export XGRID_CONTROLLER_PASSWORD="ast_xgrid"
+=======
+>>>>>>> c25eeaa079e8f1cbac67ff11db97665432ea5ccf
 export LUA_PATH="?.lua;lua/?.lua"
 
 # Launches git global daemon, if needed
