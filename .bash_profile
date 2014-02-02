@@ -24,6 +24,11 @@ export PS1='`cat ~/.git_global_stats` \u \[\033[1;33m\]\w\[\033[0m\]$(parse_git_
 
 export LUA_PATH="?.lua;lua/?.lua"
 
+# Adds git completions
+. ~/.git-completion.bash
+. ~/Projects/dotemacs/git-flow-completion.bash
+
+
 # Launches git global daemon, if needed
 ps aux | grep git_global_status.lua | grep -v grep >/dev/null
 if [ $? -eq 1 ]; then

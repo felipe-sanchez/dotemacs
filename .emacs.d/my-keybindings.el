@@ -35,14 +35,6 @@
 (global-set-key (kbd "<f9>") '(lambda () (interactive) (jump-to-register 9) (message "Windows disposition loaded")))                                                                                                                                  
 (global-set-key (kbd "<f10>") '(lambda () (interactive) (window-configuration-to-register 9) (message "Windows disposition saved")))                                 
 
-(defun kill-whitespace-or-word ()
-  (interactive)
-  (if (looking-at "[ \t\n]")
-      (let ((p (point)))
-        (re-search-forward "[^ \t\n]" nil :no-error)
-        (backward-char)
-        (kill-region p (point)))
-    (kill-word 1)))
 
 (global-set-key (kbd "M-DEL") 'kill-whitespace-or-word)
 
