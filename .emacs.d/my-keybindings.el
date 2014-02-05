@@ -36,7 +36,4 @@
 (global-set-key (kbd "<f10>") '(lambda () (interactive) (window-configuration-to-register 9) (message "Windows disposition saved")))                                 
 
 
-(global-set-key (kbd "M-DEL") 'kill-whitespace-or-word)
-
 (provide 'my-keybindings)
-

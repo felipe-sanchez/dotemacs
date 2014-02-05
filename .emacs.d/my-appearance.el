@@ -14,4 +14,12 @@
 (require 'hl-line)
 (global-hl-line-mode)
 
+;; I want "q" to actually *close* the buffer. I almost
+;; never want to keep those buffers around!
+(defadvice quit-window (before quit-window-always-kill)
+  "When running `quit-window', always kill the buffer."
+  (ad-set-arg 0 t))
+(ad-activate 'quit-window)
+
+
 (provide 'my-appearance)

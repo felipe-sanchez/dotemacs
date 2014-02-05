@@ -74,7 +74,13 @@
 ;; Set up ediff not to open a new frame
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
+;; Browse-kill-ring
 (require 'browse-kill-ring)
+
+;; Show git signal on the fringe
+(require 'git-gutter-fringe+)
+(global-git-gutter+-mode)
+
 
 (provide 'my-packages)
 
