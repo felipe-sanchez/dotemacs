@@ -81,6 +81,11 @@
 (require 'git-gutter-fringe+)
 (global-git-gutter+-mode)
 
+;; Global linum
+(global-linum-mode)
+
+;; Global paredit
+(show-paren-mode 1)
 
 (provide 'my-packages)
 
