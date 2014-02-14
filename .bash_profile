@@ -25,6 +25,10 @@ export PS1='`cat ~/.git_global_stats` \u \[\033[1;33m\]\w\[\033[0m\]$(parse_git_
 export LUA_PATH="?.lua;lua/?.lua"
 
 # Adds git completions
+  if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+      . /opt/local/etc/profile.d/bash_completion.sh
+  fi
+
 . ~/.git-completion.bash
 . ~/Projects/dotemacs/git-flow-completion.bash
 
