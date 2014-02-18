@@ -11,7 +11,7 @@
 (setq imenu-auto-rescan t)
 
 
-;; Autocomplete
+;; Autocomplete -- using company-mode for now
 ;(require 'auto-complete)
 ;(require 'auto-complete-config)
 (setq ac-auto-start nil)
@@ -48,6 +48,8 @@
 (setq TeX-view-program-list
      '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")))
 
+;; Use rainbow-delimiters
+(global-rainbow-delimiters-mode)
 
 ;; Activate tramp; C-x C-f /ssh:user@server etc.
 (require 'tramp)

@@ -50,4 +50,5 @@
  '(mode-line-highlight ((t (:foreground "gray0" :box (:line-width 2 :color "grey75" :style released-button) :weight bold))))
  '(mode-line-inactive ((t (:inherit mode-line :background "#393939" :foreground "#999999" :box (:line-width 1 :color "#cccccc" :style released-button) :weight normal))))
  '(powerline-active1 ((t (:inherit mode-line :background "gray60"))))
- '(powerline-active2 ((t (:inherit mode-line :background "gray60")))))
+ '(powerline-active2 ((t (:inherit mode-line :background "gray60"))))
+ '(rainbow-delimiters-unmatched-face ((t (:foreground "#f2777a" :underline t)))))
