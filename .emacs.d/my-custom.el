@@ -24,6 +24,7 @@
  '(global-semantic-highlight-func-mode nil)
  '(global-semantic-stickyfunc-mode nil)
  '(global-semanticdb-minor-mode t)
+ '(graphene-autocomplete-auto nil)
  '(graphene-default-font "Menlo-16")
  '(graphene-errors-auto nil)
  '(graphene-variable-pitch-font "Lucida Grande-12")
