@@ -22,4 +22,5 @@
 (ad-activate 'quit-window)
 
 
+
 (provide 'my-appearance)

@@ -23,6 +23,7 @@
 (global-set-key (kbd "s-w") 'kill-default-buffer)
 (global-set-key (kbd "s-W") 'delete-frame)
 
+
 ;; Don't open dialogs on Mac OS X
 (global-set-key (kbd "s-o") 'ido-find-file)
 (global-set-key (kbd "s-s") 'save-buffer)
