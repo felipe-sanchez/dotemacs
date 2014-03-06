@@ -123,6 +123,7 @@
 
 ;; Eyebrowse
 (eyebrowse-mode t)
+(eyebrowse-setup-opinionated-keys)
 
 (provide 'my-packages)
 
