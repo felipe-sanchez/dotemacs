@@ -63,7 +63,7 @@ Symbols matching the text at point are put first in the completion list."
 
 
 
-(global-set-key (kbd "s-.") 'ido-imenu)
+(global-set-key (kbd "s-.") 'idomenu)
 (global-set-key (kbd "s->") 'imenu-anywhere)
 (global-set-key (kbd "s-\\") 'magit-status)
 (global-set-key (kbd "s-+") 'text-scale-increase)
@@ -87,13 +87,6 @@ Symbols matching the text at point are put first in the completion list."
 
 ;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
-
-(global-set-key (kbd "M-TAB") 'company-complete)
-(global-set-key (kbd "C-TAB") 'company-complete-mouse)
-
-;; Register Windows                                                                                                                                                                                                    
-(global-set-key (kbd "<f9>") '(lambda () (interactive) (jump-to-register 9) (message "Windows disposition loaded")))                                                                                                                                  
-(global-set-key (kbd "<f10>") '(lambda () (interactive) (window-configuration-to-register 9) (message "Windows disposition saved")))                                 
 
 
 (provide 'my-keybindings)

@@ -31,6 +31,7 @@
 (setq reftex-plug-into-AUCTeX t)
 (setq TeX-PDF-mode t)
 
+
 ;; Use Skim as viewer, enable source <-> PDF sync
 ;; make latexmk available via C-c C-c
 ;; Note: SyncTeX is setup via ~/.latexmkrc (see below)
@@ -119,6 +120,9 @@
 
 ;; Global paredit
 (show-paren-mode 1)
+
+;; Eyebrowse
+(eyebrowse-mode t)
 
 (provide 'my-packages)
 
