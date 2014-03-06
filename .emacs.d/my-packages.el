@@ -12,13 +12,13 @@
 
 
 ;; Autocomplete -- using company-mode for now
-;(require 'auto-complete)
-;(require 'auto-complete-config)
+(require 'auto-complete)
+(require 'auto-complete-config)
 (setq ac-auto-start nil)
 (setq ac-auto-show-menu nil)
-;(define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+(define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 
-(add-hook 'after-init-hook 'global-company-mode)
+;;(add-hook 'after-init-hook 'global-company-mode)
 
 ;; AucTeX
 (setq TeX-auto-save t)
