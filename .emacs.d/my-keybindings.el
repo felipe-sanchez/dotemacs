@@ -8,6 +8,7 @@
 (global-set-key (kbd "s-[") 'previous-buffer)
 (global-set-key (kbd "s-]") 'next-buffer)
 (global-set-key (kbd "s-r") 'replace-string)
+(global-set-key (kbd "s-p") 'semantic-ia-show-summary)
 
 (defun ido-imenu ()
   "Update the imenu index and then use ido to select a symbol to navigate to.
