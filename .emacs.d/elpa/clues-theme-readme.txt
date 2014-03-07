@@ -5,9 +5,9 @@ more toasted caramel flavor. Clues on the other hand is made up of
 cooling colors with a couple of flecks of light cream/brown/orange
 to break up any monotony, with yellow/gold rainbow-delimiters.
 
-Clues has become my working theme of choice since about 7/20, and
-with xterm-frobs.el, looks really excellent in the terminal as well
-as the GUI.
+Clues has become my working theme of choice since about 7/20/2013,
+and when used with xterm-frobs.el, it looks great in the terminal
+as well as the GUI.
 
 
 (deftheme clues
@@ -36,9 +36,9 @@ as the GUI.
  '(minibuffer-prompt                   ((t (:foreground "#1278A8"  :background nil       :weight bold                                  ))))
  '(escape-glyph                        ((t (:foreground "orange"   :background nil                                                     ))))
  '(highlight                           ((t (:foreground "orange"   :background nil                                                     ))))
- '(region                              ((t (                       :background "#131D26"                                               ))))
+ '(region                              ((t (                       :background "#342858"                                               ))))
  '(shadow                              ((t (:foreground "#777777"  :background nil                                                     ))))
- '(secondary-selection                 ((t (                       :background "#132125"                                               ))))
+ '(secondary-selection                 ((t (                       :background "#342858"                                               ))))
  '(trailing-whitespace                 ((t (:foreground "#FFFFFF"  :background "#C74000"                                               ))))
  '(font-lock-builtin-face              ((t (:foreground "#55B1E2"  :background nil                                                     ))))
  '(font-lock-comment-face              ((t (:foreground "#90A0A0"  :background nil       :slant italic                                 ))))
@@ -62,7 +62,7 @@ as the GUI.
  '(fringe                              ((t (                       :background "#1B0F1f"                                               ))))
  '(next-error                          ((t (                                             :inherit (region)                             ))))
  '(query-replace                       ((t (                                             :inherit (isearch)                            ))))
- '(header-line                         ((t (:foreground "#222222"  :background "#bbbbbb" :box nil :inherit (mode-line)                 ))))
+ '(header-line                         ((t (:foreground "#EEEEEE"  :background "#444444" :box nil :inherit (mode-line)                 ))))
  '(mode-line-highlight                 ((t (                                             :box nil                                      ))))
  '(mode-line-emphasis                  ((t (                                             :weight bold                                  ))))
  '(mode-line-buffer-id                 ((t (                                             :box nil :weight bold                         ))))
