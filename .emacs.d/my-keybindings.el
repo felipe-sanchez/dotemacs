@@ -9,6 +9,7 @@
 (global-set-key (kbd "s-]") 'next-buffer)
 (global-set-key (kbd "s-r") 'replace-string)
 (global-set-key (kbd "s-p") 'semantic-ia-show-summary)
+(global-set-key (kbd "s-`") 'smex)
 
 (defun ido-imenu ()
   "Update the imenu index and then use ido to select a symbol to navigate to.
@@ -79,7 +80,7 @@ Symbols matching the text at point are put first in the completion list."
 (global-set-key (kbd "<s-down>") 'end-of-buffer)
 (global-set-key (kbd "s-w") 'kill-default-buffer)
 (global-set-key (kbd "s-W") 'delete-frame)
-
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 ;; Don't open dialogs on Mac OS X
 (global-set-key (kbd "s-o") 'ido-find-file)
@@ -89,5 +90,11 @@ Symbols matching the text at point are put first in the completion list."
 ;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+;; Shell
+(setq multi-term-program "/usr/bin/bash")
+
+
+;; Chords
+(key-chord-define-global "[]" 'ace-jump-mode)
 
 (provide 'my-keybindings)

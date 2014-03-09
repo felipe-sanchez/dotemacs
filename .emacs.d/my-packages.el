@@ -125,5 +125,12 @@
 (eyebrowse-mode t)
 (eyebrowse-setup-opinionated-keys)
 
+;; Ace-jump
+(require 'ace-jump-mode)
+
+ ;; Key-chord
+(require 'key-chord)
+(key-chord-mode 1)
+
 (provide 'my-packages)
 

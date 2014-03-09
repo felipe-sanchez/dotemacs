@@ -39,6 +39,8 @@
 (require 'my-python-mode)
 (require 'my-lua-mode)
 
+;; Better shell defaults
+(require 'my-term)
 ;; Keybindings
 (require 'my-keybindings)
 
