@@ -31,13 +31,3 @@ export LUA_PATH="?.lua;lua/?.lua"
 
 . ~/.git-completion.bash
 . ~/Projects/dotemacs/git-flow-completion.bash
-
-
-# Launches git global daemon, if needed
-ps aux | grep git_global_status.lua | grep -v grep >/dev/null
-if [ $? -eq 1 ]; then
-    echo "Launching git_global_status daemon"
-    cd ~/Projects/dotemacs/utils; /usr/bin/nohup >/dev/null 2>&1 lua ~/Projects/dotemacs/utils/git_global_status.lua &
-    cd ~
-fi
-

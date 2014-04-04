@@ -49,8 +49,14 @@
 (setq TeX-view-program-list
      '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")))
 
-;; Use rainbow-delimiters
+;; Use rainbow-delimiters and highlight-parentheses
 (global-rainbow-delimiters-mode)
+(define-globalized-minor-mode global-highlight-parentheses-mode
+  highlight-parentheses-mode
+  (lambda ()
+    (highlight-parentheses-mode t)))
+(global-highlight-parentheses-mode t)
+
 
 ;; Activate tramp; C-x C-f /ssh:user@server etc.
 (require 'tramp)
@@ -131,6 +137,8 @@
  ;; Key-chord
 (require 'key-chord)
 (key-chord-mode 1)
+
+(add-hook 'custom-mode-hook (lambda () (linum-mode -1)))
 
 (provide 'my-packages)
 
