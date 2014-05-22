@@ -62,12 +62,12 @@
 (require 'tramp)
 
 ;; Ack
-(require 'ack-and-a-half)
+;(require 'ack-and-a-half)
 
-(defalias 'ack 'ack-and-a-half)
-(defalias 'ack-same 'ack-and-a-half-same)
-(defalias 'ack-find-file 'ack-and-a-half-find-file)
-(defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
+;(defalias 'ack 'ack-and-a-half)
+;(defalias 'ack-same 'ack-and-a-half-same)
+;(defalias 'ack-find-file 'ack-and-a-half-find-file)
+;(defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
 
 ;; Loads magit; use M-x magit-status
 (require 'magit)
@@ -106,10 +106,10 @@
 (projectile-global-mode)
 
 ;; Breadcrumbs
-(require 'breadcrumb)
-(global-set-key (kbd "s-1") 'bc-set)            ;; Shift-SPACE for set bookmark
-(global-set-key [(s shift up)]              'bc-previous)       ;; M-j for jump to previous
-(global-set-key [(s shift down)]        'bc-next)           ;; Shift-M-j for jump to next
+;(require 'breadcrumb)
+;(global-set-key (kbd "s-1") 'bc-set)            ;; Shift-SPACE for set bookmark
+;(global-set-key [(s shift up)]              'bc-previous)       ;; M-j for jump to previous
+;(global-set-key [(s shift down)]        'bc-next)           ;; Shift-M-j for jump to next
 
 ;; Set up ediff not to open a new frame
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)

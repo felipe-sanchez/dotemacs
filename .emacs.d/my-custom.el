@@ -58,4 +58,5 @@
  '(mode-line-inactive ((t (:inherit mode-line :background "#393939" :foreground "#999999" :box (:line-width 1 :color "#cccccc" :style released-button) :weight normal))))
  '(powerline-active1 ((t (:inherit mode-line :background "gray60"))) t)
  '(powerline-active2 ((t (:inherit mode-line :background "gray60"))) t)
- '(rainbow-delimiters-unmatched-face ((t (:foreground "#f2777a" :underline t)))))
+ '(rainbow-delimiters-unmatched-face ((t (:foreground "#f2777a" :underline t))))
+ '(which-func ((t (:foreground "dark red" :weight bold)))))
