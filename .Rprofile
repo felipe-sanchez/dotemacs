@@ -1,8 +1,17 @@
+require(stringr)
+require(compiler)
+enableJIT(3)
+options(max.print = 100)
+suppressPackageStartupMessages(library(stringr, logical.return=TRUE))
 
-`%+%` <- function(s1, s2) {
-    paste(s1, s2, sep="")
+logseq <- function(from=0, to=1, by=((to-from)/(length.out - 1)), length.out=NULL) {
+    return(10^seq(from, to, by, length.out))
+}
+
+`%.%` <- function(str1, str2) {
+    return(paste(str1, str2, sep=''))
 }
 
 printf <- function(...) {
-    cat(sprintf(...));
+    cat(sprintf(...))
 }
