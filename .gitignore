@@ -13,4 +13,4 @@
 .emacs.d/request
 .emacs.d/backups
 .emacs.d/.*
-.R*
+.Rh*
