@@ -118,8 +118,10 @@
 (require 'browse-kill-ring)
 
 ;; Show git signal on the fringe
-(require 'git-gutter-fringe+)
-(global-git-gutter+-mode)
+(require 'git-gutter-fringe)
+;(global-git-gutter+-mode)
+(global-git-gutter-mode +1)
+;;(global-git-gutter-mode)
 
 ;; Global linum
 (global-linum-mode)
