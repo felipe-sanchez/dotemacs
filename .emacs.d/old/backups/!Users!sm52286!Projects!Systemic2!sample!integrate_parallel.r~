@@ -1,0 +1,12 @@
+# Set up a new kernel object
+k <- knew()
+k$mstar <- 0.95
+k$epoch <- 0.
+k$element.type <- ASTROCENTRIC
+
+# Add planets
+k[] <- c(period=38., mass=0.053, ma=214.07, ecc=0.22, lop=303.75, inc=90, node=0)
+k[] <- c(period=42., mass=0.07, ma=33.57, ecc=0.36, lop=331.22, inc=90, node=0)
+
+# Integrate for 10^5 years
+int <- kintegrate(k, 1e5*365.25, int.method=SWIFTRMVS, dt=min(k[, 'period'])*0.05)

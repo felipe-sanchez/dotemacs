@@ -1,0 +1,43 @@
+#ifndef UTILS_H
+#define UTILS_H
+
+#include "stdio.h"
+#include "stdlib.h"
+
+
+#define WARNING(str, args...) do { fflush(stdout); fflush(stderr); fprintf(stderr, "WARNING [%s/%s/%d]: " str "\n", __FILE__, __func__, __LINE__, ##args); if (fid_warnings == NULL) fid_warnings = fopen("warnings.txt", "w"); fprintf(fid_warnings, "WARNING [%s/%s/%d]: " str "\n", __FILE__, __func__, __LINE__, ##args); fflush(fid_warnings);} while (0)
+#define ERROR(str, args...) do { fflush(stdout); fflush(stderr); FILE* fid_error = fopen("errors.txt", "w"); fprintf(stderr, "ERROR [%s/%s/%d]: " str "\n", __FILE__, __func__, __LINE__, ##args); if (fid_error) { fprintf(fid_error, "ERROR [%s/%s/%d]: " str "\n", __FILE__, __func__, __LINE__, ##args); fclose(fid_error);};  perror("Last errno"); exit(0);} while (0)
+#define INFO(fmt, args...) do { if (fid_info == NULL) break; printf("** "); printf(fmt, ##args); fprintf(fid_info, fmt, ##args); fflush(fid_info); } while(0)
+
+static inline FILE* fopen_fmt(char* mode, char* fmt, ...) {
+  char fn[1024];
+  va_list argptr;
+  va_start(argptr, fmt);
+  vsprintf(fn, fmt, argptr);
+  va_end(argptr);
+  
+  FILE* fid = fopen(fn, mode);
+  if (!fid)
+    ERROR("Could not open %s! [mode = %s]\n", fn, mode);
+  return fid;
+}
+
+#define VERY_SMALL_NUMBER 1e-30
+
+#ifdef NDEBUG
+#define DEBUGF(args...) do {} while(0)
+#else
+static FILE* fid_warnings __attribute((unused))= NULL;
+#define DEBUGF printf
+#endif
+
+#define UNIQUE1(X,Y) X ## Y
+#define UNIQUE(X,Y) UNIQUE1(X,Y)
+
+#ifdef HAVE_MPI
+#include "mpi.h"
+#define IF_MASTER_PROCESS int UNIQUE(rank,__LINE__); MPI_Comm_rank(MPI_COMM_WORLD, &UNIQUE(rank,__LINE__)); if ( UNIQUE(rank, __LINE__) == 0) 
+#else
+#define IF_MASTER_PROCESS if (true) 
+#endif
+#endif

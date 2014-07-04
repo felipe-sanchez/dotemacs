@@ -1,0 +1,59 @@
+#+OPTIONS: tex:dvipng
+#+STARTUP: latexpreview, inlineimages, entitiespretty, showall
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-light.min.css" />
+
+* MCDM/Simple
+
+** Introduction
+A Monte Carlo code modeled on Zsom et al., 2010.
+
+** Numerical algorithm
+The algorithm follows the evolution of n _representative_ particles
+out of N _physical_ particles. The particles are tracers of the
+underlying distribution (think SPH: particles tracing the density distribution).
+
+
+At each step, rng decides which particles collide, and a function decides the collisional outcome.
+
+Algorithm:
+- Start with n particles with mass m_i. The representative particles (n
+  \ll N) will only collide with physical particles.
+- Choose a particle, say i = 20; what particles will collide with it?
+  Assume physical particles are distributed the same -- then for each
+  value k = 1..n, there are $n_k = M_tot/nm_k \times V$ physical
+  particles per cubic cm with mass m_k. I.e. each representative
+  particle i represents $M_{tot}/nm_i$ physical particles.
+- The rate of collision is  $r_i(k) = n_k \sigma_ik \Delta{}v_ik = M_{tot} / nm_k V \sigma_{ik}
+  \Delta{}v_{ik}$ between particles i and k; then the rate of collisions for
+  particle i is r_i=\sum{}r_ik and the total rate is r = \sum_i r_i.
+- Choose a timestep \delta{}t = -1/r log(ran()) (it's a Poisson process) -> 1
+  collision event.
+- P(i) = r_i/r is the probability that there's a collision with
+  particle i; P(k|i) = r_i(k)/r_i probability of k is involved in the
+  collision. (i and k can be equal).
+
+** Initialization
+- Initially, it is assumed that all the mass in solid is distributed between R = R_min and R_fill as dN/dR = N_0 R^{-pg}; \rho is assumed constant (e.g. = 2 g/cm^3). Therefore, M_tot = \int N_0 R^{-pg} M dR = 4/3 \pi \rho N_0 \int R^{-pg+3} dR \rightarrow N_0 = M (4-pg) / (4/3 \pi\rho R_{fill}^{4-pg})
+
+- M_tot is distributed in two ways; between 0 and R_dust it goes in the M_dust bin (where we don't follow the detailed evolution of radii). The rest is initially going into the MC particles, distributed between R_dust and R_fill.
+
+** Evolution
+- First, calculate r_ik (a lower triangular matrix if r_i(k) = M_tot/nV \sigma_{ik}\Delta v_ik; notice I removed the m_k factor and will add it later when calculating sums, so that the expression is symmetric). r_ik is the "collision rate" matrix.
+- Next, calculate the rate at which material in the [R_snowball, R_boulder ] range is converted into material in the [R_{planetesimal1}, R_{planetesimal2}] range. At each step, take a planetesimal mass M_pl (sampled from a distribution dN/dR ~ R^{-pp}; pp = 0 by default), and calculate the rate of planetesimal production as 
+
+  dN/dt = M_available/M_{pl}\tau = M_{available}/M_pl \epsilon_{pl}\Omega/2\pi
+  \rightarrow r_pl = (dN/dt)^{-1}
+
+  (where M_{available} is the mass available to create planetesimals, \epsilon_{pl}
+  is the efficiency and \Omega the local angular speed).
+- The total rate is r = \sum_i \sum_k r_ik + r_pl. Choose dt = -1/r log(rng()).
+- Choose a number q between 1 and r; if q > \sum_i \sum_k r_ik, then collision, otherwise conversion.
+  - Collision: probability happening to particle i is P(i) = r_i/r, so select particle according to r_i distribution.
+  - then, choose k such that P(k|i) = r_ik/r_i, then compute outcome (still WIP).
+- Conversion: choose the particle i that will be converted among the ones that participate in conversion, and substitute its characteristics (M and R) with the planetesimal's.
+
+** Implementation
+- The main code is in src/main.c. 
+- Variables between in the PARAMETERS block are read either from the command line or from a bloc. They are normalized by AU, MSUN and G=1 (so the time unit is ~.16 years).
+- The code is parallelized using MPI. Each process runs with the same parameters but different seeds -- the plotting code can then average the outputs. At each dt_out, the following data is printed:
+  - output.%04d.txt: all the MC particles, listed by mass and radius (in internal units)

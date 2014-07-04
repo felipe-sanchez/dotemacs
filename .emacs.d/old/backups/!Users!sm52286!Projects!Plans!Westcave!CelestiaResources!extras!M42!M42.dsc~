@@ -1,0 +1,25 @@
+Nebula "M42"
+{
+	Mesh "M42-43.3ds"
+	Radius 12
+	RA 5.5833
+	Dec -5.4951
+	Distance 1177.748
+}
+
+Nebula "M43"
+{
+	RA 5.592
+	Dec -5.31
+	Distance 1177.748
+}
+
+Nebula "NGC 1977"
+{
+	Mesh "NGC1977.3ds"
+	Radius 7
+	RA 5.590
+	#Dec -4.795
+	Dec -4.785
+	Distance 1177.748
+}

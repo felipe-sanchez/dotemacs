@@ -1,0 +1,608 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "systemic.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include nil nil [41 60])
+            ("stdbool.h" include nil nil [61 81])
+            ("stdio.h" include nil nil [82 100])
+            ("string.h" include nil nil [101 120])
+            ("float.h" include nil nil [121 139])
+            ("gsl/gsl_math.h" include (:system-flag t) nil [141 166])
+            ("gsl/gsl_matrix.h" include (:system-flag t) nil [167 194])
+            ("gsl/gsl_vector.h" include (:system-flag t) nil [195 222])
+            ("gsl/gsl_rng.h" include (:system-flag t) nil [223 247])
+            ("types_h" variable (:constant-flag t) nil [273 280])
+            ("INVALID_NUMBER" variable (:constant-flag t) nil [290 304])
+            ("IS_INVALID" variable (:constant-flag t) nil [319 329])
+            ("SYSTEMIC_VERSION" variable (:constant-flag t) nil [353 369])
+            ("MAX_LINE" variable (:constant-flag t) nil [386 394])
+            ("T_RV" variable (:constant-flag t) nil [409 413])
+            ("T_PHOTO" variable (:constant-flag t) nil [424 431])
+            ("T_TIMING" variable (:constant-flag t) nil [442 450])
+            ("T_DUMMY" variable (:constant-flag t) nil [461 468])
+            ("DATA_SIZE" variable (:constant-flag t) nil [603 612])
+            ("DATA_SETS_SIZE" variable (:constant-flag t) nil [625 639])
+            ("T_TIME" variable (:constant-flag t) nil [700 706])
+            ("T_VAL" variable (:constant-flag t) nil [764 769])
+            ("T_ERR" variable (:constant-flag t) nil [789 794])
+            ("T_TDS_PLANET" variable (:constant-flag t) nil [918 930])
+            ("T_TDS_FLAG" variable (:constant-flag t) nil [978 988])
+            ("T_FLAG" variable (:constant-flag t) nil [1015 1021])
+            ("T_SVAL" variable (:constant-flag t) nil [1107 1113])
+            ("T_PRED" variable (:constant-flag t) nil [1142 1148])
+            ("T_SET" variable (:constant-flag t) nil [1177 1182])
+            ("T_GUI" variable (:constant-flag t) nil [1235 1240])
+            ("T_SCRATCH" variable (:constant-flag t) nil [1252 1261])
+            ("X" variable (:constant-flag t) nil [1274 1275])
+            ("Y" variable (:constant-flag t) nil [1286 1287])
+            ("Z" variable (:constant-flag t) nil [1298 1299])
+            ("VX" variable (:constant-flag t) nil [1310 1312])
+            ("VY" variable (:constant-flag t) nil [1323 1325])
+            ("VZ" variable (:constant-flag t) nil [1336 1338])
+            ("STAT_MEAN" variable (:constant-flag t) nil [1350 1359])
+            ("STAT_MEDIAN" variable (:constant-flag t) nil [1370 1381])
+            ("STAT_STDDEV" variable (:constant-flag t) nil [1393 1404])
+            ("STAT_MAD" variable (:constant-flag t) nil [1416 1424])
+            ("STAT_QUART_25" variable (:constant-flag t) nil [1436 1449])
+            ("STAT_QUART_50" variable (:constant-flag t) nil [1461 1474])
+            ("STAT_QUART_75" variable (:constant-flag t) nil [1486 1499])
+            ("ENSURE_SIZE" variable (:constant-flag t) nil [1512 1523])
+            ("KEPLER" variable (:constant-flag t) nil [1618 1624])
+            ("RK45" variable (:constant-flag t) nil [1635 1639])
+            ("RK89" variable (:constant-flag t) nil [1650 1654])
+            ("ADAMS" variable (:constant-flag t) nil [1665 1670])
+            ("BULIRSCHSTOER" variable (:constant-flag t) nil [1681 1694])
+            ("SWIFTRMVS" variable (:constant-flag t) nil [1705 1714])
+            ("AU" variable (:constant-flag t) nil [1761 1763])
+            ("MSUN" variable (:constant-flag t) nil [1785 1789])
+            ("MJUP" variable (:constant-flag t) nil [1809 1813])
+            ("RJUP" variable (:constant-flag t) nil [1832 1836])
+            ("GGRAV" variable (:constant-flag t) nil [1851 1856])
+            ("DAY" variable (:constant-flag t) nil [1877 1880])
+            ("TWOPI" variable (:constant-flag t) nil [1896 1901])
+            ("SQRT_TWOPI" variable (:constant-flag t) nil [1927 1937])
+            ("K2" variable (:constant-flag t) nil [1963 1965])
+            ("YEAR" variable (:constant-flag t) nil [2017 2021])
+            ("PER" variable (:constant-flag t) nil [2041 2044])
+            ("MASS" variable (:constant-flag t) nil [2055 2059])
+            ("MA" variable (:constant-flag t) nil [2070 2072])
+            ("ECC" variable (:constant-flag t) nil [2083 2086])
+            ("LOP" variable (:constant-flag t) nil [2097 2100])
+            ("INC" variable (:constant-flag t) nil [2111 2114])
+            ("NODE" variable (:constant-flag t) nil [2125 2129])
+            ("RADIUS" variable (:constant-flag t) nil [2140 2146])
+            ("ORD" variable (:constant-flag t) nil [2157 2160])
+            ("SMA" variable (:constant-flag t) nil [2220 2223])
+            ("SEMIAMP" variable (:constant-flag t) nil [2235 2242])
+            ("TPERI" variable (:constant-flag t) nil [2254 2259])
+            ("TRUEANOMALY" variable (:constant-flag t) nil [2271 2282])
+            ("MEANLONGITUDE" variable (:constant-flag t) nil [2294 2307])
+            ("ELEMENTS_SIZE" variable (:constant-flag t) nil [2320 2333])
+            ("ALL_ELEMENTS_SIZE" variable (:constant-flag t) nil [2345 2362])
+            ("P_DATA1" variable (:constant-flag t) nil [2375 2382])
+            ("P_DATA2" variable (:constant-flag t) nil [2393 2400])
+            ("P_DATA3" variable (:constant-flag t) nil [2411 2418])
+            ("P_DATA4" variable (:constant-flag t) nil [2429 2436])
+            ("P_DATA5" variable (:constant-flag t) nil [2447 2454])
+            ("P_DATA6" variable (:constant-flag t) nil [2465 2472])
+            ("P_DATA7" variable (:constant-flag t) nil [2483 2490])
+            ("P_DATA8" variable (:constant-flag t) nil [2501 2508])
+            ("P_DATA9" variable (:constant-flag t) nil [2519 2526])
+            ("P_DATA10" variable (:constant-flag t) nil [2537 2545])
+            ("P_DATA_NOISE1" variable (:constant-flag t) nil [2557 2570])
+            ("P_DATA_NOISE2" variable (:constant-flag t) nil [2582 2595])
+            ("P_DATA_NOISE3" variable (:constant-flag t) nil [2607 2620])
+            ("P_DATA_NOISE4" variable (:constant-flag t) nil [2632 2645])
+            ("P_DATA_NOISE5" variable (:constant-flag t) nil [2657 2670])
+            ("P_DATA_NOISE6" variable (:constant-flag t) nil [2682 2695])
+            ("P_DATA_NOISE7" variable (:constant-flag t) nil [2707 2720])
+            ("P_DATA_NOISE8" variable (:constant-flag t) nil [2732 2745])
+            ("P_DATA_NOISE9" variable (:constant-flag t) nil [2757 2770])
+            ("P_DATA_NOISE10" variable (:constant-flag t) nil [2782 2796])
+            ("P_RV_TREND" variable (:constant-flag t) nil [2809 2819])
+            ("PARAMS_SIZE" variable (:constant-flag t) nil [2831 2842])
+            ("ok_orb_labels" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("extern")
+                :type "char")
+                nil [2848 2891])
+            ("ok_all_orb_labels" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("extern")
+                :type "char")
+                nil [2892 2943])
+            ("OPT_EPS" variable (:constant-flag t) nil [2953 2960])
+            ("OPT_ECC_LAST" variable (:constant-flag t) nil [2971 2983])
+            ("OPT_MCMC_SKIP_STEPS" variable (:constant-flag t) nil [2995 3014])
+            ("OPT_MCMC_SKIP" variable (:constant-flag t) nil [3025 3038])
+            ("OPT_MCMC_RSTOP_SINGLE" variable (:constant-flag t) nil [3049 3070])
+            ("OPT_MCMC_RETURN_ALL" variable (:constant-flag t) nil [3081 3100])
+            ("OPT_MCMC_BETA" variable (:constant-flag t) nil [3111 3124])
+            ("OPT_MCMC_NSTOP" variable (:constant-flag t) nil [3135 3149])
+            ("OPT_MCMC_TEMPFAC" variable (:constant-flag t) nil [3160 3176])
+            ("OPT_MCMC_VERBOSE_DIAGS" variable (:constant-flag t) nil [3187 3209])
+            ("OPT_MCMC_ACCRATIO" variable (:constant-flag t) nil [3220 3237])
+            ("OPT_MCMC_NMIN" variable (:constant-flag t) nil [3248 3261])
+            ("OPT_LM_MINCHI_PAR" variable (:constant-flag t) nil [3273 3290])
+            ("OPT_LM_HIGH_DF" variable (:constant-flag t) nil [3302 3316])
+            ("OPT_LM_MAX_ITER_AT_SCALE" variable (:constant-flag t) nil [3328 3352])
+            ("OPT_LM_INITIAL_SCALE" variable (:constant-flag t) nil [3364 3384])
+            ("OPT_SA_T0" variable (:constant-flag t) nil [3397 3406])
+            ("OPT_SA_ALPHA" variable (:constant-flag t) nil [3418 3430])
+            ("OPT_SA_CHAINS" variable (:constant-flag t) nil [3442 3455])
+            ("OPT_SA_AUTO_STEPS" variable (:constant-flag t) nil [3467 3484])
+            ("OPT_DE_CR" variable (:constant-flag t) nil [3497 3506])
+            ("OPT_DE_NP_FAC" variable (:constant-flag t) nil [3518 3531])
+            ("OPT_DE_F_MIN" variable (:constant-flag t) nil [3543 3555])
+            ("OPT_DE_F_MAX" variable (:constant-flag t) nil [3567 3579])
+            ("OPT_DE_USE_STEPS" variable (:constant-flag t) nil [3591 3607])
+            ("PROGRESS_CONTINUE" variable (:constant-flag t) nil [3622 3639])
+            ("PROGRESS_STOP" variable (:constant-flag t) nil [3650 3663])
+            ("STATUS_SUCCESS" variable (:constant-flag t) nil [3675 3689])
+            ("TDS_PRIMARY" variable (:constant-flag t) nil [3711 3722])
+            ("TDS_SECONDARY" variable (:constant-flag t) nil [3733 3746])
+            ("DONE" variable (:constant-flag t) nil [3758 3762])
+            ("ACTIVE" variable (:constant-flag t) nil [3775 3781])
+            ("MINIMIZE" variable (:constant-flag t) nil [3799 3807])
+            ("NEEDS_COMPILE" variable (:constant-flag t) nil [3826 3839])
+            ("NEEDS_SETUP" variable (:constant-flag t) nil [3857 3868])
+            ("BOOTSTRAP_DATA" variable (:constant-flag t) nil [3886 3900])
+            ("RETAIN" variable (:constant-flag t) nil [3918 3924])
+            ("SHARE_FLAGS" variable (:constant-flag t) nil [3942 3953])
+            ("SHARE_STEPS" variable (:constant-flag t) nil [3971 3982])
+            ("SHARE_DATA" variable (:constant-flag t) nil [4000 4010])
+            ("SHARE_RANGES" variable (:constant-flag t) nil [4028 4040])
+            ("FREED" variable (:constant-flag t) nil [4059 4064])
+            ("DUPLICATE" variable (:constant-flag t) nil [4082 4091])
+            ("GUI_RESERVED_1" variable (:constant-flag t) nil [4109 4123])
+            ("GUI_RESERVED_2" variable (:constant-flag t) nil [4142 4156])
+            ("GUI_RESERVED_3" variable (:constant-flag t) nil [4175 4189])
+            ("GUI_RESERVED_4" variable (:constant-flag t) nil [4208 4222])
+            ("ASTROCENTRIC" variable (:constant-flag t) nil [4242 4254])
+            ("JACOBI" variable (:constant-flag t) nil [4265 4271])
+            ("SIMPLEX" variable (:constant-flag t) nil [4291 4298])
+            ("LM" variable (:constant-flag t) nil [4309 4311])
+            ("DIFFEVOL" variable (:constant-flag t) nil [4322 4330])
+            ("SA" variable (:constant-flag t) nil [4341 4343])
+            ("INTEGRATION_SUCCESS" variable (:constant-flag t) nil [4355 4374])
+            ("INTEGRATION_FAILURE_SMALL_TIMESTEP" variable (:constant-flag t) nil [4385 4419])
+            ("INTEGRATION_FAILURE_INCREASE_TOLERANCE" variable (:constant-flag t) nil [4438 4476])
+            ("INTEGRATION_FAILURE_CLOSE_ENCOUNTER" variable (:constant-flag t) nil [4495 4530])
+            ("INTEGRATION_FAILURE_CLOSE_ENCOUNTER_STAR" variable (:constant-flag t) nil [4549 4589])
+            ("INTEGRATION_FAILURE_STOPPED" variable (:constant-flag t) nil [4608 4635])
+            ("INTEGRATION_FAILURE_SWIFT" variable (:constant-flag t) nil [4654 4679])
+            ("ok_system" type
+               (:typedef ("ok_system" type (:type "struct") nil nil)
+                :superclasses "ok_system"
+                :type "typedef")
+                nil [4690 5350])
+            ("ok_system" type
+               (:members 
+                  ( ("nplanets" variable (:type "int") (reparse-symbol classsubparts) [4751 4764])
+                    ("epoch" variable (:type "double") (reparse-symbol classsubparts) [4842 4855])
+                    ("elements" variable
+                       (:pointer 1
+                        :type ("gsl_matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5029 5050])
+                    ("time" variable (:type "double") (reparse-symbol classsubparts) [5120 5132])
+                    ("xyz" variable
+                       (:pointer 1
+                        :type ("gsl_matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5202 5218])
+                    ("orbits" variable
+                       (:pointer 1
+                        :type ("gsl_matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5290 5309])
+                    ("flag" variable (:type "int") (reparse-symbol classsubparts) [5328 5337]))                  
+                :type "struct")
+                nil [4690 5350])
+            ("ok_kernel" type
+               (:typedef ("ok_kernel" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :superclasses "ok_kernel"
+                :type "typedef")
+                nil [5352 5387])
+            ("ok_callback" variable
+               (:functionpointer-flag t
+                :type "double")
+                nil [5396 5429])
+            ("ok_callback2" variable
+               (:functionpointer-flag t
+                :type "void")
+                nil [5438 5479])
+            ("ok_icallback" variable
+               (:functionpointer-flag t
+                :type "void")
+                nil [5488 5513])
+            ("INTEGRATORS_SIZE" variable (:constant-flag t) nil [5523 5539])
+            ("ok_progress" variable
+               (:functionpointer-flag t
+                :type "int")
+                nil [5551 5626])
+            ("ok_integrator_options" type
+               (:typedef ("ok_integrator_options" type (:type "struct") nil nil)
+                :superclasses "ok_integrator_options"
+                :type "typedef")
+                nil [5629 6651])
+            ("ok_integrator_options" type
+               (:members 
+                  ( ("abs_acc" variable (:type "double") (reparse-symbol classsubparts) [5752 5767])
+                    ("rel_acc" variable (:type "double") (reparse-symbol classsubparts) [5772 5787])
+                    ("acc_par" variable (:type "double") (reparse-symbol classsubparts) [5877 5892])
+                    ("dt" variable (:type "double") (reparse-symbol classsubparts) [5952 5962])
+                    ("eps_tr" variable (:type "double") (reparse-symbol classsubparts) [6010 6024])
+                    ("iterations" variable (:type "int") (reparse-symbol classsubparts) [6034 6049])
+                    ("calc_elements" variable (:type "bool") (reparse-symbol classsubparts) [6059 6078])
+                    ("force" variable
+                       (:functionpointer-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [6254 6310])
+                    ("jac" variable
+                       (:functionpointer-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [6315 6378])
+                    ("force_jerk" variable
+                       (:functionpointer-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [6383 6454])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type ("gsl_vector" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6547 6566])
+                    ("ibuffer" variable
+                       (:pointer 1
+                        :type ("gsl_vector_int" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6571 6595])
+                    ("progress" variable (:type ("ok_progress" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6605 6626]))                  
+                :type "struct")
+                nil [5629 6651])
+            ("ok_model_function" variable
+               (:functionpointer-flag t
+                :type "void")
+                nil [6662 6725])
+            ("ok_integrator" variable
+               (:functionpointer-flag t
+                :type ("ok_system" type (:type "class") nil nil))
+                nil [6734 6834])
+            ("ok_minimizer" variable
+               (:functionpointer-flag t
+                :type "int")
+                nil [6843 6889])
+            ("ok_kernel" type
+               (:members 
+                  ( ("system" variable
+                       (:pointer 1
+                        :type ("ok_system" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6941 6959])
+                    ("chi2" variable (:type "double") (reparse-symbol classsubparts) [6985 6997])
+                    ("chi2_rvs" variable (:type "double") (reparse-symbol classsubparts) [7015 7031])
+                    ("chi2_tts" variable (:type "double") (reparse-symbol classsubparts) [7053 7069])
+                    ("chi2_other" variable (:type "double") (reparse-symbol classsubparts) [7133 7151])
+                    ("rms" variable (:type "double") (reparse-symbol classsubparts) [7180 7191])
+                    ("rms_tts" variable (:type "double") (reparse-symbol classsubparts) [7214 7229])
+                    ("jitter" variable (:type "double") (reparse-symbol classsubparts) [7248 7262])
+                    ("nsets" variable (:type "int") (reparse-symbol classsubparts) [7302 7312])
+                    ("datasets" variable
+                       (:pointer 2
+                        :type ("gsl_matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7350 7372])
+                    ("compiled" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [7509 7527])
+                    ("params" variable
+                       (:pointer 1
+                        :type ("gsl_vector" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7556 7575])
+                    ("times" variable
+                       (:pointer 1
+                        :type ("gsl_vector" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7593 7611])
+                    ("integration" variable
+                       (:pointer 2
+                        :type ("ok_system" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7650 7674])
+                    ("integrationSamples" variable (:type "int") (reparse-symbol classsubparts) [7716 7739])
+                    ("plFlags" variable
+                       (:pointer 1
+                        :type ("gsl_matrix_int" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7771 7795])
+                    ("parFlags" variable
+                       (:pointer 1
+                        :type ("gsl_vector_int" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7800 7825])
+                    ("plSteps" variable
+                       (:pointer 1
+                        :type ("gsl_matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7830 7850])
+                    ("parSteps" variable
+                       (:pointer 1
+                        :type ("gsl_vector" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7855 7876])
+                    ("plRanges" variable
+                       (:pointer 2
+                        :type ("gsl_matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7881 7903])
+                    ("parRanges" variable
+                       (:pointer 2
+                        :type ("gsl_vector" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7908 7931])
+                    ("Mstar" variable (:type "double") (reparse-symbol classsubparts) [7963 7976])
+                    ("ndata" variable (:type "int") (reparse-symbol classsubparts) [8017 8027])
+                    ("nrvs" variable (:type "int") (reparse-symbol classsubparts) [8032 8041])
+                    ("ntts" variable (:type "int") (reparse-symbol classsubparts) [8046 8055])
+                    ("nrpars" variable (:type "int") (reparse-symbol classsubparts) [8060 8071])
+                    ("intMethod" variable (:type "int") (reparse-symbol classsubparts) [8100 8114])
+                    ("intOptions" variable
+                       (:pointer 1
+                        :type ("ok_integrator_options" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8119 8153])
+                    ("minfunc" variable (:type ("ok_callback" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8203 8223])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol classsubparts) [8242 8261])
+                    ("rng" variable
+                       (:pointer 1
+                        :type ("gsl_rng" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8306 8319])
+                    ("tag" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [8345 8355])
+                    ("tagValue" variable (:type "double") (reparse-symbol classsubparts) [8360 8376])
+                    ("progress" variable (:type ("ok_progress" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8411 8432])
+                    ("datanames" variable
+                       (:dereference 2
+                        :type "char")
+                        (reparse-symbol classsubparts) [8463 8504])
+                    ("model_function" variable (:type ("ok_model_function" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8543 8576])
+                    ("last_error" variable (:type "int") (reparse-symbol classsubparts) [8581 8596]))                  
+                :type "struct")
+                nil [6892 8609])
+            ("ok_list_item" type
+               (:typedef ("ok_list_item" type (:type "struct") nil nil)
+                :superclasses "ok_list_item"
+                :type "typedef")
+                nil [8611 8779])
+            ("ok_list_item" type
+               (:members 
+                  ( ("elements" variable
+                       (:pointer 1
+                        :type ("gsl_matrix" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8645 8666])
+                    ("params" variable
+                       (:pointer 1
+                        :type ("gsl_vector" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8671 8690])
+                    ("merit" variable (:type "double") (reparse-symbol classsubparts) [8695 8708])
+                    ("merit_pr" variable (:type "double") (reparse-symbol classsubparts) [8713 8729])
+                    ("merit_li" variable (:type "double") (reparse-symbol classsubparts) [8734 8750])
+                    ("tag" variable (:type "int") (reparse-symbol classsubparts) [8755 8763]))                  
+                :type "struct")
+                nil [8611 8779])
+            ("ok_list" type
+               (:typedef ("ok_list" type (:type "struct") nil nil)
+                :superclasses "ok_list"
+                :type "typedef")
+                nil [8786 8920])
+            ("ok_list" type
+               (:members 
+                  ( ("prototype" variable
+                       (:pointer 1
+                        :type ("ok_kernel" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8815 8836])
+                    ("kernels" variable
+                       (:pointer 2
+                        :type ("ok_list_item" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8841 8864])
+                    ("size" variable (:type "int") (reparse-symbol classsubparts) [8869 8878])
+                    ("diags" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [8883 8895])
+                    ("type" variable (:type "int") (reparse-symbol classsubparts) [8900 8909]))                  
+                :type "struct")
+                nil [8786 8920])
+            ("ok_kernel_minimizer_pars" type
+               (:typedef ("ok_kernel_minimizer_pars" type (:type "struct") nil nil)
+                :superclasses "ok_kernel_minimizer_pars"
+                :type "typedef")
+                nil [8922 9093])
+            ("ok_kernel_minimizer_pars" type
+               (:members 
+                  ( ("pars" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [8968 8982])
+                    ("steps" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [8987 9001])
+                    ("min" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [9006 9018])
+                    ("max" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [9023 9035])
+                    ("type" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [9040 9050])
+                    ("npars" variable (:type "int") (reparse-symbol classsubparts) [9055 9065]))                  
+                :type "struct")
+                nil [8922 9093])
+            ("FREE_MINIMIZER_PARS" variable (:constant-flag t) nil [9103 9122]))          
+    :file "systemic.h"
+    :pointmax 9221
+    :fsize 9220
+    :lastmodtime '(21238 45170 0 0)
+    :unmatched-syntax '((semantic-list 6885 . 6887) (TYPEDEF 6835 . 6842) (TYPEDEF 6726 . 6733) (TYPEDEF 6654 . 6661) (semantic-list 6443 . 6445) (semantic-list 6433 . 6435) (semantic-list 6423 . 6425) (semantic-list 6367 . 6369) (semantic-list 6348 . 6350) (semantic-list 6299 . 6301) (semantic-list 6289 . 6291) (TYPEDEF 5543 . 5550) (TYPEDEF 5480 . 5487) (TYPEDEF 5430 . 5437) (TYPEDEF 5388 . 5395))
+    :lexical-table 
+        '(("STAT_STDDEV" . ((punctuation "-" 1405 . 1406) (number "2" 1406 . 1407)))
+          ("ENSURE_SIZE" (spp-arg-list ("matrix" "rows" "columns") 1523 . 1546) . ((symbol "assert" 1547 . 1553) (semantic-list "((matrix->size1 == rows) && (matrix->size2 == columns))" 1553 . 1608)))
+          ("MSUN" . ((number "1.98892e33" 1790 . 1800)))
+          ("LOP" . ((number "4" 2101 . 2102)))
+          ("TRUEANOMALY" . ((number "16" 2283 . 2285)))
+          ("ALL_ELEMENTS_SIZE" . ((number "20" 2363 . 2365)))
+          ("P_DATA7" . ((number "6" 2491 . 2492)))
+          ("OPT_DE_USE_STEPS" . ((number "34" 3608 . 3610)))
+          ("PROGRESS_STOP" . ((number "1" 3664 . 3665)))
+          ("RETAIN" . ((semantic-list "(1 << 4)" 3925 . 3933)))
+          ("INTEGRATION_FAILURE_SMALL_TIMESTEP" . ((semantic-list "(1 << 11)" 4420 . 4429)))
+          ("T_VAL" . ((number "1" 770 . 771)))
+          ("T_GUI" . ((number "10" 1241 . 1243)))
+          ("STAT_QUART_50" . ((number "50" 1475 . 1477)))
+          ("P_DATA8" . ((number "7" 2509 . 2510)))
+          ("P_DATA_NOISE1" . ((number "10" 2571 . 2573)))
+          ("OPT_MCMC_ACCRATIO" . ((number "8" 3238 . 3239)))
+          ("STATUS_SUCCESS" . ((symbol "GSL_SUCCESS" 3690 . 3701)))
+          ("FREE_MINIMIZER_PARS" (spp-arg-list ("p") 9122 . 9125) . 
+              ((DO "do" 9126 . 9128) (semantic-list "{ free(p.pars); free(p.steps); free(p.min); free(p.max); free(p.type); }" 9129 . 9201) (WHILE "while" 9202 . 9207) (semantic-list "(0)" 9208 . 9211) (punctuation ";" 9211 . 9212)))
+          ("IS_INVALID" (spp-arg-list ("x") 329 . 332) . ((semantic-list "(isnan(x))" 333 . 343)))
+          ("T_TIME" . ((number "0" 707 . 708)))
+          ("T_PRED" . ((number "8" 1149 . 1150)))
+          ("K2" . ((semantic-list "((GGRAV * MSUN * DAY * DAY) / (AU*AU*AU))" 1967 . 2008)))
+          ("P_DATA9" . ((number "8" 2527 . 2528)))
+          ("P_DATA_NOISE2" . ((number "11" 2596 . 2598)))
+          ("OPT_MCMC_RSTOP_SINGLE" . ((number "2" 3071 . 3072)))
+          ("OPT_MCMC_TEMPFAC" . ((number "6" 3177 . 3178)))
+          ("OPT_MCMC_VERBOSE_DIAGS" . ((number "7" 3210 . 3211)))
+          ("OPT_SA_ALPHA" . ((number "21" 3431 . 3433)))
+          ("OPT_SA_AUTO_STEPS" . ((number "23" 3485 . 3487)))
+          ("DUPLICATE" . ((semantic-list "(1 << 9)" 4092 . 4100)))
+          ("SIMPLEX" . ((number "0" 4299 . 4300)))
+          ("SA" . ((number "3" 4344 . 4345)))
+          ("INVALID_NUMBER" . ((semantic-list "(NAN)" 305 . 310)))
+          ("GGRAV" . ((number "6.67384e-8" 1857 . 1867)))
+          ("SMA" . ((number "13" 2224 . 2226)))
+          ("P_DATA_NOISE3" . ((number "12" 2621 . 2623)))
+          ("OPT_ECC_LAST" . ((number "1" 2984 . 2985)))
+          ("TDS_SECONDARY" . ((number "2" 3747 . 3748)))
+          ("DONE" . ((punctuation "-" 3763 . 3764) (number "1" 3764 . 3765)))
+          ("INTEGRATION_FAILURE_INCREASE_TOLERANCE" . ((semantic-list "(1 << 12)" 4477 . 4486)))
+          ("MAX_LINE" . ((number "8192" 395 . 399)))
+          ("STAT_MEDIAN" . ((punctuation "-" 1382 . 1383) (number "1" 1383 . 1384)))
+          ("RK45" . ((number "1" 1640 . 1641)))
+          ("RJUP" . ((number "7.1e9" 1837 . 1842)))
+          ("P_DATA10" . ((number "9" 2546 . 2547)))
+          ("P_DATA_NOISE4" . ((number "13" 2646 . 2648)))
+          ("OPT_MCMC_SKIP_STEPS" . ((number "0" 3015 . 3016)))
+          ("OPT_MCMC_NMIN" . ((number "9" 3262 . 3263)))
+          ("NEEDS_SETUP" . ((semantic-list "(1 << 2)" 3869 . 3877)))
+          ("SHARE_RANGES" . ((semantic-list "(1 << 11)" 4041 . 4050)))
+          ("T_PHOTO" . ((number "1" 432 . 433)))
+          ("T_DUMMY" . ((number "99" 469 . 471)))
+          ("DATA_SETS_SIZE" . ((number "10" 640 . 642)))
+          ("T_TDS_PLANET" . ((number "3" 931 . 932)))
+          ("ADAMS" . ((number "3" 1671 . 1672)))
+          ("ECC" . ((number "3" 2087 . 2088)))
+          ("ELEMENTS_SIZE" . ((number "13" 2334 . 2336)))
+          ("P_DATA_NOISE5" . ((number "14" 2671 . 2673)))
+          ("OPT_MCMC_BETA" . ((number "4" 3125 . 3126)))
+          ("OPT_MCMC_NSTOP" . ((number "5" 3150 . 3151)))
+          ("OPT_LM_HIGH_DF" . ((number "11" 3317 . 3319)))
+          ("OPT_SA_T0" . ((number "20" 3407 . 3409)))
+          ("FREED" . ((semantic-list "(1 << 8)" 4065 . 4073)))
+          ("DATA_SIZE" . ((number "11" 613 . 615)))
+          ("SQRT_TWOPI" . ((number "2.5066282746e+00" 1938 . 1954)))
+          ("MASS" . ((number "1" 2060 . 2061)))
+          ("SEMIAMP" . ((number "14" 2243 . 2245)))
+          ("P_DATA_NOISE6" . ((number "15" 2696 . 2698)))
+          ("OPT_MCMC_SKIP" . ((number "1" 3039 . 3040)))
+          ("OPT_MCMC_RETURN_ALL" . ((number "3" 3101 . 3102)))
+          ("TDS_PRIMARY" . ((number "1" 3723 . 3724)))
+          ("NEEDS_COMPILE" . ((semantic-list "(1 << 1)" 3840 . 3848)))
+          ("SHARE_FLAGS" . ((semantic-list "(1 << 5)" 3954 . 3962)))
+          ("LM" . ((number "1" 4312 . 4313)))
+          ("T_FLAG" . ((number "6" 1022 . 1023)))
+          ("T_SET" . ((number "9" 1183 . 1184)))
+          ("RK89" . ((number "2" 1655 . 1656)))
+          ("BULIRSCHSTOER" . ((number "4" 1695 . 1696)))
+          ("AU" . ((number "1.4959787e13" 1764 . 1776)))
+          ("RADIUS" . ((number "7" 2147 . 2148)))
+          ("P_DATA1" . ((number "0" 2383 . 2384)))
+          ("P_DATA_NOISE7" . ((number "16" 2721 . 2723)))
+          ("PARAMS_SIZE" . ((number "100" 2843 . 2846)))
+          ("INTEGRATION_FAILURE_STOPPED" . ((semantic-list "(1 << 15)" 4636 . 4645)))
+          ("T_TIMING" . ((number "2" 451 . 452)))
+          ("VX" . ((number "4" 1313 . 1314)))
+          ("STAT_MEAN" . ((number "0" 1360 . 1361)))
+          ("PER" . ((number "0" 2045 . 2046)))
+          ("P_DATA2" . ((number "1" 2401 . 2402)))
+          ("P_DATA_NOISE8" . ((number "17" 2746 . 2748)))
+          ("PROGRESS_CONTINUE" . ((number "0" 3640 . 3641)))
+          ("ACTIVE" . ((semantic-list "(1 << 1)" 3782 . 3790)))
+          ("GUI_RESERVED_1" . ((semantic-list "(1 << 12)" 4124 . 4133)))
+          ("INTEGRATION_FAILURE_CLOSE_ENCOUNTER" . ((semantic-list "(1 << 13)" 4531 . 4540)))
+          ("INTEGRATION_FAILURE_SWIFT" . ((semantic-list "(1 << 16)" 4680 . 4689)))
+          ("T_ERR" . ((number "2" 795 . 796)))
+          ("T_TDS_FLAG" . ((number "4" 989 . 990)))
+          ("VY" . ((number "5" 1326 . 1327)))
+          ("INC" . ((number "5" 2115 . 2116)))
+          ("NODE" . ((number "6" 2130 . 2131)))
+          ("P_DATA3" . ((number "2" 2419 . 2420)))
+          ("P_DATA_NOISE9" . ((number "18" 2771 . 2773)))
+          ("OPT_LM_INITIAL_SCALE" . ((number "13" 3385 . 3387)))
+          ("OPT_DE_F_MAX" . ((number "33" 3580 . 3582)))
+          ("GUI_RESERVED_2" . ((semantic-list "(1 << 13)" 4157 . 4166)))
+          ("SYSTEMIC_VERSION" . ((number "2.1300" 370 . 376)))
+          ("T_RV" . ((number "0" 414 . 415)))
+          ("X" . ((number "1" 1276 . 1277)))
+          ("VZ" . ((number "6" 1339 . 1340)))
+          ("STAT_QUART_25" . ((number "25" 1450 . 1452)))
+          ("MA" . ((number "2" 2073 . 2074)))
+          ("P_DATA4" . ((number "3" 2437 . 2438)))
+          ("OPT_EPS" . ((number "0" 2961 . 2962)))
+          ("OPT_DE_F_MIN" . ((number "32" 3556 . 3558)))
+          ("MINIMIZE" . ((semantic-list "(1 << 2)" 3808 . 3816)))
+          ("BOOTSTRAP_DATA" . ((semantic-list "(1 << 3)" 3901 . 3909)))
+          ("GUI_RESERVED_3" . ((semantic-list "(1 << 14)" 4190 . 4199)))
+          ("ASTROCENTRIC" . ((number "0" 4255 . 4256)))
+          ("types_h")
+          ("T_SVAL" . ((number "7" 1114 . 1115)))
+          ("Y" . ((number "2" 1288 . 1289)))
+          ("STAT_MAD" . ((punctuation "-" 1425 . 1426) (number "3" 1426 . 1427)))
+          ("KEPLER" . ((number "0" 1625 . 1626)))
+          ("SWIFTRMVS" . ((number "5" 1715 . 1716)))
+          ("TWOPI" . ((number "6.2831853072e+00" 1902 . 1918)))
+          ("ORD" . ((number "8" 2161 . 2162)))
+          ("TPERI" . ((number "15" 2260 . 2262)))
+          ("MEANLONGITUDE" . ((number "17" 2308 . 2310)))
+          ("P_DATA5" . ((number "4" 2455 . 2456)))
+          ("OPT_LM_MAX_ITER_AT_SCALE" . ((number "12" 3353 . 3355)))
+          ("OPT_SA_CHAINS" . ((number "22" 3456 . 3458)))
+          ("OPT_DE_NP_FAC" . ((number "31" 3532 . 3534)))
+          ("SHARE_DATA" . ((semantic-list "(1 << 7)" 4011 . 4019)))
+          ("GUI_RESERVED_4" . ((semantic-list "(1 << 15)" 4223 . 4232)))
+          ("DIFFEVOL" . ((number "2" 4331 . 4332)))
+          ("INTEGRATORS_SIZE" . ((number "4" 5540 . 5541)))
+          ("T_SCRATCH" . ((number "10" 1262 . 1264)))
+          ("Z" . ((number "3" 1300 . 1301)))
+          ("STAT_QUART_75" . ((number "75" 1500 . 1502)))
+          ("MJUP" . ((number "1.8986e30" 1814 . 1823)))
+          ("DAY" . ((number "8.64e4" 1881 . 1887)))
+          ("YEAR" . ((number "31556926." 2022 . 2031)))
+          ("P_DATA6" . ((number "5" 2473 . 2474)))
+          ("P_DATA_NOISE10" . ((number "19" 2797 . 2799)))
+          ("P_RV_TREND" . ((number "20" 2820 . 2822)))
+          ("OPT_LM_MINCHI_PAR" . ((number "10" 3291 . 3293)))
+          ("OPT_DE_CR" . ((number "30" 3507 . 3509)))
+          ("SHARE_STEPS" . ((semantic-list "(1 << 6)" 3983 . 3991)))
+          ("JACOBI" . ((semantic-list "(1 << 10)" 4272 . 4281)))
+          ("INTEGRATION_SUCCESS" . ((number "0" 4375 . 4376)))
+          ("INTEGRATION_FAILURE_CLOSE_ENCOUNTER_STAR" . ((semantic-list "(1 << 14)" 4590 . 4599)))
+          )
+
+    )
+   )
+  :file "!Users!sm52286!Downloads!mac-7!Systemic!src!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

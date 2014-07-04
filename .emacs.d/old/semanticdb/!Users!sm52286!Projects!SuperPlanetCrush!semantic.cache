@@ -1,0 +1,24 @@
+;; Object SuperPlanetCrush/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "SuperPlanetCrush/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-mode
+    :tags 
+        '( ("UGLIFYJS" variable (:default-value ("uglifyjs" "-m" "-c" "-o")) nil [1 28])
+            ("all" function (:arguments ("js/ps.min.js" "js/pcl.min.js" "js/utils.min.js" "js/colors.min.js")) nil [29 94])
+            ("js/ps.min.js" function (:arguments ("js/ps.js")) nil [95 153])
+            ("js/pcl.min.js" function (:arguments ("js/pcl.js")) nil [154 216])
+            ("js/utils.min.js" function (:arguments ("js/utils.js")) nil [217 287])
+            ("js/colors.min.js" function (:arguments ("js/colors.js")) nil [288 362]))          
+    :file "Makefile"
+    :pointmax 372
+    :fsize 374
+    :lastmodtime '(21299 1979 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!sm52286!Projects!SuperPlanetCrush!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

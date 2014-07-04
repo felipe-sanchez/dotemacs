@@ -1,0 +1,33 @@
+tt <- seq(0, 2e4, 1e2)
+width <- 600
+height <- 800
+
+png('./presentation/noseeds_%04d.png', width=width, height=height)
+layout(rbind(1, 2, 2))
+systemic.par <- list()
+systemic.par$font.lab <- 2
+systemic.par$tck <- 0.02
+systemic.par$cex.lab <- 2
+systemic.par$cex.axis <- 2
+systemic.par$cex.main <- 2
+systemic.par$mar <- c( 5.1, 5.1, 4.1, 2.1)
+par(systemic.par)
+
+for (t in tt) {
+    print(t)
+    mcdm.plot.dist(t=t, main=sprintf("Time = %.0f years", t), type='density3', xlim=c(1e-4, 1e2), ylim=c(1, 1e3), xlab='log Radius [cm]', ylab='log # of particles', dir='./1e-4_noseeds_rates')
+    plot.rates(t=t, './1e-4_noseeds_rates', reload=F, zlim=c(1e-6, 1e-2), xlim=c(-4, 2), pty='s', xlab='log Radius [cm]', ylab='log Radius [cm]')
+}
+dev.off()
+
+png('./presentation/seeds_%04d.png', width=width, height=height)
+layout(rbind(1, 2, 2))
+
+par(systemic.par)
+
+for (t in tt) {
+    print(t)
+    mcdm.plot.dist(t=t, main=sprintf("Time = %.0f years", t), type='density3', xlim=c(1e-4, 1e2), ylim=c(1, 1e3), xlab='log Radius [cm]', ylab='# of particles', dir='./1e-4_seeds_rates')
+    plot.rates(t=t, './1e-4_seeds_rates', reload=F, zlim=c(1e-6, 1e-2), xlim=c(-4, 2), pty='s', xlab='log Radius [cm]', ylab='log Radius [cm]')
+}
+dev.off()

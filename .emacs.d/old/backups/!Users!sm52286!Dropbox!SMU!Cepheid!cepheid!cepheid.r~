@@ -1,0 +1,39 @@
+b <- read.table('../lightcurves.dat')
+
+mag.to.r <- function(mag) {
+    f.ratio <- 10^((mag-max(b[,3]))/2.5)
+    return(sqrt(f.ratio))
+}
+
+
+frames <- 164
+#bout <- seq(min(b[,1]), max(b[,1]), length.out=164)
+#print(bout)
+#b <- cbind(bout, approx(b[,1], b[,2], bout)$y, approx(b[,1], b[,3], bout)$y)
+
+#convert 000.png ../cepheid.png -gravity west -geometry +200-120 -composite ../cepheid.png -gravity west -geometry +400-120 out.png
+
+for (i in 1:length(b[,1])) {
+    idx <- sprintf("%03d", i-1)
+    k <- mag.to.r(b[i, 2])
+#    k <- 1
+    width <- 800*k*0.5
+    height <- 728*k*0.5
+    
+    system(sprintf("cp ../cepheid.png tmp.png; convert tmp.png -resize %.fx%.f tmp2.png",  width, height))
+
+    x <- sprintf("convert %s.png tmp2.png -geometry +%.f+%.f -composite out.png", idx, 620-width, 350-height)
+    system(x)
+
+    k <- mag.to.r(b[i, 3])
+
+    width <- 800*k*0.5
+    height <- 728*k*0.5
+
+    system(sprintf("cp ../cepheid.png tmp.png; convert tmp.png -resize %.fx%.f tmp2.png",  width, height))
+
+    x <- sprintf("convert out.png tmp2.png -geometry +%.f+%.f -composite out2.png", 1420-width, 350-height)
+    system(x)
+
+    system(sprintf("cp out2.png out/%s.png", idx))
+}

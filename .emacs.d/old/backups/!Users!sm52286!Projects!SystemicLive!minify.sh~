@@ -1,0 +1,4 @@
+uglifyjs js/systemic.js $(UGLIFYJS_FLAGS) -o js/systemic.min.js
+uglifyjs js/ui.js $(UGLIFYJS_FLAGS) -o js/ui.min.js
+uglifyjs js/help.js $(UGLIFYJS_FLAGS) -o js/help.min.js
+	

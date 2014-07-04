@@ -1,0 +1,1 @@
+("~/Projects/dotemacs/" "~/Dropbox/" "~/Projects/SuperPlanetCrash/" "~/Projects/Systemic2/" "~/Projects/SystemicGui/" "~/Projects/Plans/" "~/Projects/Notes/" "~/Projects/SystemicLive/" "~/Projects/SuperPlanetCrush/" "~/Projects/PlanetCrushLegend/" "~/Projects/CollabAC/" "~/local/emsdk_portable/emscripten/incoming/" \.\.\.)

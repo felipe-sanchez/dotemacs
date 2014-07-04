@@ -1,0 +1,351 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables (list 
+   (semanticdb-table "omp.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("OMP_H" variable (:constant-flag t) nil [1351 1356])
+            ("_LIBGOMP_OMP_LOCK_DEFINED" variable (:constant-flag t) nil [1402 1427])
+            ("omp_lock_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("_x" variable
+                             (:dereference 1
+                              :type "unsigned char")
+                              (reparse-symbol classsubparts) [1609 1667]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1590 1681])
+            ("omp_nest_lock_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("_x" variable
+                             (:dereference 1
+                              :type "unsigned char")
+                              (reparse-symbol classsubparts) [1702 1760]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1683 1779])
+            ("omp_set_num_threads" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1861 1865]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1828 1866])
+            ("omp_get_num_threads" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1899 1904]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1867 1905])
+            ("omp_get_max_threads" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1938 1943]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1906 1944])
+            ("omp_get_thread_num" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1976 1981]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1945 1982])
+            ("omp_get_num_procs" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2013 2018]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1983 2019])
+            ("omp_in_parallel" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2049 2054]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2021 2055])
+            ("omp_set_dynamic" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [2086 2090]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2057 2091])
+            ("omp_get_dynamic" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2120 2125]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2092 2126])
+            ("omp_set_nested" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [2156 2160]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2128 2161])
+            ("omp_get_nested" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2189 2194]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2162 2195])
+            ("omp_init_lock" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("omp_lock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2224 2237]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2197 2238])
+            ("omp_destroy_lock" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("omp_lock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2269 2282]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2239 2283])
+            ("omp_set_lock" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("omp_lock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2310 2323]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2284 2324])
+            ("omp_unset_lock" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("omp_lock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2353 2366]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2325 2367])
+            ("omp_test_lock" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("omp_lock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2394 2407]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2368 2408])
+            ("omp_init_nest_lock" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("omp_nest_lock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2442 2460]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2410 2461])
+            ("omp_destroy_nest_lock" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("omp_nest_lock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2497 2515]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2462 2516])
+            ("omp_set_nest_lock" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("omp_nest_lock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2548 2566]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2517 2567])
+            ("omp_unset_nest_lock" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("omp_nest_lock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2601 2619]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2568 2620])
+            ("omp_test_nest_lock" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("omp_nest_lock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2652 2670]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2621 2671])
+            ("omp_get_wtime" function
+               (:type "double"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2702 2707]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2673 2708])
+            ("omp_get_wtick" function
+               (:type "double"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2738 2743]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2709 2744]))          
+    :file "omp.h"
+    :pointmax 2794
+    :fsize 2793
+    :lastmodtime '(20586 14319 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("OMP_H" . ((number "1" 1357 . 1358)))
+          ("_LIBGOMP_OMP_LOCK_DEFINED" . ((number "1" 1428 . 1429)))
+          )
+
+    )
+   (semanticdb-table "float.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_FLOAT_H___" variable (:constant-flag t) nil [1222 1233])
+            ("FLT_RADIX" variable (:constant-flag t) nil [1303 1312])
+            ("FLT_MANT_DIG" variable (:constant-flag t) nil [1459 1471])
+            ("DBL_MANT_DIG" variable (:constant-flag t) nil [1497 1509])
+            ("LDBL_MANT_DIG" variable (:constant-flag t) nil [1535 1548])
+            ("FLT_DIG" variable (:constant-flag t) nil [1918 1925])
+            ("DBL_DIG" variable (:constant-flag t) nil [1947 1954])
+            ("LDBL_DIG" variable (:constant-flag t) nil [1976 1984])
+            ("FLT_MIN_EXP" variable (:constant-flag t) nil [2140 2151])
+            ("DBL_MIN_EXP" variable (:constant-flag t) nil [2176 2187])
+            ("LDBL_MIN_EXP" variable (:constant-flag t) nil [2212 2224])
+            ("FLT_MIN_10_EXP" variable (:constant-flag t) nil [2470 2484])
+            ("DBL_MIN_10_EXP" variable (:constant-flag t) nil [2512 2526])
+            ("LDBL_MIN_10_EXP" variable (:constant-flag t) nil [2554 2569])
+            ("FLT_MAX_EXP" variable (:constant-flag t) nil [2737 2748])
+            ("DBL_MAX_EXP" variable (:constant-flag t) nil [2773 2784])
+            ("LDBL_MAX_EXP" variable (:constant-flag t) nil [2809 2821])
+            ("FLT_MAX_10_EXP" variable (:constant-flag t) nil [3076 3090])
+            ("DBL_MAX_10_EXP" variable (:constant-flag t) nil [3118 3132])
+            ("LDBL_MAX_10_EXP" variable (:constant-flag t) nil [3160 3175])
+            ("FLT_MAX" variable (:constant-flag t) nil [3333 3340])
+            ("DBL_MAX" variable (:constant-flag t) nil [3362 3369])
+            ("LDBL_MAX" variable (:constant-flag t) nil [3391 3399])
+            ("FLT_EPSILON" variable (:constant-flag t) nil [3614 3625])
+            ("DBL_EPSILON" variable (:constant-flag t) nil [3650 3661])
+            ("LDBL_EPSILON" variable (:constant-flag t) nil [3686 3698])
+            ("FLT_MIN" variable (:constant-flag t) nil [3844 3851])
+            ("DBL_MIN" variable (:constant-flag t) nil [3873 3880])
+            ("LDBL_MIN" variable (:constant-flag t) nil [3902 3910])
+            ("FLT_ROUNDS" variable (:constant-flag t) nil [4119 4129]))          
+    :file "float.h"
+    :pointmax 5433
+    :fsize 5432
+    :lastmodtime '(20586 14319 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("LDBL_MAX_10_EXP" . ((symbol "__LDBL_MAX_10_EXP__" 3176 . 3195)))
+          ("FLT_MANT_DIG" . ((symbol "__FLT_MANT_DIG__" 1472 . 1488)))
+          ("FLT_DIG" . ((symbol "__FLT_DIG__" 1927 . 1938)))
+          ("FLT_MIN_EXP" . ((symbol "__FLT_MIN_EXP__" 2152 . 2167)))
+          ("DBL_MAX_EXP" . ((symbol "__DBL_MAX_EXP__" 2785 . 2800)))
+          ("DBL_DIG" . ((symbol "__DBL_DIG__" 1956 . 1967)))
+          ("FLT_MAX_10_EXP" . ((symbol "__FLT_MAX_10_EXP__" 3091 . 3109)))
+          ("LDBL_MIN_10_EXP" . ((symbol "__LDBL_MIN_10_EXP__" 2570 . 2589)))
+          ("LDBL_EPSILON" . ((symbol "__LDBL_EPSILON__" 3699 . 3715)))
+          ("DBL_MIN_EXP" . ((symbol "__DBL_MIN_EXP__" 2188 . 2203)))
+          ("FLT_ROUNDS" . ((semantic-list "(__builtin_flt_rounds ())" 4130 . 4155)))
+          ("FLT_MIN_10_EXP" . ((symbol "__FLT_MIN_10_EXP__" 2485 . 2503)))
+          ("DBL_MAX_10_EXP" . ((symbol "__DBL_MAX_10_EXP__" 3133 . 3151)))
+          ("LDBL_MAX" . ((symbol "__LDBL_MAX__" 3400 . 3412)))
+          ("FLT_EPSILON" . ((symbol "__FLT_EPSILON__" 3626 . 3641)))
+          ("LDBL_MIN" . ((symbol "__LDBL_MIN__" 3911 . 3923)))
+          ("LDBL_MANT_DIG" . ((symbol "__LDBL_MANT_DIG__" 1549 . 1566)))
+          ("DBL_MIN_10_EXP" . ((symbol "__DBL_MIN_10_EXP__" 2527 . 2545)))
+          ("DBL_EPSILON" . ((symbol "__DBL_EPSILON__" 3662 . 3677)))
+          ("LDBL_DIG" . ((symbol "__LDBL_DIG__" 1985 . 1997)))
+          ("LDBL_MAX_EXP" . ((symbol "__LDBL_MAX_EXP__" 2822 . 2838)))
+          ("_FLOAT_H___")
+          ("DBL_MANT_DIG" . ((symbol "__DBL_MANT_DIG__" 1510 . 1526)))
+          ("FLT_MAX" . ((symbol "__FLT_MAX__" 3342 . 3353)))
+          ("FLT_RADIX" . ((symbol "__FLT_RADIX__" 1313 . 1326)))
+          ("FLT_MAX_EXP" . ((symbol "__FLT_MAX_EXP__" 2749 . 2764)))
+          ("DBL_MAX" . ((symbol "__DBL_MAX__" 3371 . 3382)))
+          ("FLT_MIN" . ((symbol "__FLT_MIN__" 3853 . 3864)))
+          ("LDBL_MIN_EXP" . ((symbol "__LDBL_MIN_EXP__" 2225 . 2241)))
+          ("DBL_MIN" . ((symbol "__DBL_MIN__" 3882 . 3893)))
+          )
+
+    )
+   (semanticdb-table "stdarg.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_STDARG_H" variable (:constant-flag t) nil [1275 1284])
+            ("_ANSI_STDARG_H_" variable (:constant-flag t) nil [1293 1308])
+            ("__GNUC_VA_LIST" variable (:constant-flag t) nil [1430 1444])
+            ("__gnuc_va_list" type
+               (:typedef ("__builtin_va_list" type (:type "class") nil nil)
+                :superclasses "__builtin_va_list"
+                :type "typedef")
+                nil [1445 1486])
+            ("va_start" variable (:constant-flag t) nil [1618 1626])
+            ("va_end" variable (:constant-flag t) nil [1664 1670])
+            ("va_arg" variable (:constant-flag t) nil [1702 1708])
+            ("va_copy" variable (:constant-flag t) nil [1809 1816])
+            ("__va_copy" variable (:constant-flag t) nil [1860 1869])
+            ("va_list" type
+               (:typedef ("__gnuc_va_list" type (:type "class") nil nil)
+                :superclasses "__gnuc_va_list"
+                :type "typedef")
+                nil [3651 3682])
+            ("_VA_LIST_" variable (:constant-flag t) nil [3940 3949])
+            ("_VA_LIST" variable (:constant-flag t) nil [3982 3990])
+            ("_VA_LIST_DEFINED" variable (:constant-flag t) nil [4031 4047])
+            ("_VA_LIST_T_H" variable (:constant-flag t) nil [4084 4096])
+            ("__va_list__" variable (:constant-flag t) nil [4132 4143]))          
+    :file "stdarg.h"
+    :pointmax 4318
+    :fsize 4317
+    :lastmodtime '(20586 14319 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__va_list__")
+          ("_VA_LIST_DEFINED")
+          ("va_start" (spp-arg-list ("v" "l") 1626 . 1631) . ((symbol "__builtin_va_start" 1632 . 1650) (semantic-list "(v,l)" 1650 . 1655)))
+          ("_VA_LIST_T_H")
+          ("_STDARG_H")
+          ("va_end" (spp-arg-list ("v") 1670 . 1673) . ((symbol "__builtin_va_end" 1674 . 1690) (semantic-list "(v)" 1690 . 1693)))
+          ("__va_copy" (spp-arg-list ("d" "s") 1869 . 1874) . ((symbol "__builtin_va_copy" 1875 . 1892) (semantic-list "(d,s)" 1892 . 1897)))
+          ("_VA_LIST")
+          ("_ANSI_STDARG_H_")
+          ("_VA_LIST_")
+          ("__GNUC_VA_LIST")
+          ("va_arg" (spp-arg-list ("v" "l") 1708 . 1713) . ((symbol "__builtin_va_arg" 1714 . 1730) (semantic-list "(v,l)" 1730 . 1735)))
+          ("va_copy" (spp-arg-list ("d" "s") 1816 . 1821) . ((symbol "__builtin_va_copy" 1822 . 1839) (semantic-list "(d,s)" 1839 . 1844)))
+          )
+
+    )
+   )
+  :file "!usr!llvm-gcc-4.2!lib!gcc!i686-apple-darwin11!4.2.1!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

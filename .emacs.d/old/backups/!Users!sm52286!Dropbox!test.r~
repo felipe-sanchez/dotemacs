@@ -1,0 +1,23 @@
+setwd("~/Projects/Systemic2")
+source("R/systemic.r", chdir=TRUE)
+
+sets <- list(list(F=0.5, CR=0.9, type='rand'), list(F=0.5, CR=0.2, type='rand'), list(F=0.5, CR=0.9, type='best'),  list(F=0.5, CR=0.2, type='best'),
+             list(F=0.5, CR=0.9, type='current-to-best'),  list(F=0.5, CR=0.2, type='current-to-best'))
+
+col <- 1
+first <- TRUE
+for (set in sets) {
+    for (i in 1:4) {
+        k <- kload('~/Dropbox/rotten.temp.k')
+        k$int.method <- KEPLER
+
+        b <- kminimize.de(k, F=set$F, CR=set$CR, mc.cores=1, type=set$type, max.iterations=2000)
+        if (first) {
+            plot(b$iters[,1], b$iters[,2], col=col, type='l', ylim=c(1, 500), log='y')
+            first <- F
+        } else
+            lines(b$iters[,1], b$iters[,2], col=col, type='l')
+    }
+    col <- col+1
+}
+legend('topright', legend=1:col, col=1:col, lwd=2)

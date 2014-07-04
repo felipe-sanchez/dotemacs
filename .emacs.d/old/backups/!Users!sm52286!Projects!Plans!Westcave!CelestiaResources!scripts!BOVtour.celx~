@@ -1,0 +1,24 @@
+-- -*- mode: lua -*-
+
+if not cwait then
+   celestia:print(string.rep("RUN PREP. SCRIPT FIRST! ", 5), 10)
+   return
+end
+
+local _ = function(name)
+   return celestia:find(name)
+end
+
+
+-- First, start close to Earth.
+celestia:seturl("cel://Follow/Sol:Earth/2014-01-14T17:08:05.85910?x=g/k85HtG+P///////////w&y=AL6rIG921w&z=6Fw1cXo+mg&ow=0.879075&ox=0.454164&oy=-0.0530287&oz=-0.134722&select=Sol:Earth&fov=34.4703&ts=1&ltd=0&p=0&rf=317335&lm=0&tsrc=0&ver=3", obs)
+
+-- Rotate around the Earth
+celestia:settimescale(500)
+obs:synchronous(_"Earth")
+pause_key(10)
+goto(_"Jupiter", 5, ""); pause_key(10)
+
+
+--celestia:runscript("2_Westcave_orbitview.celx")
+wait(0)

@@ -1,0 +1,74 @@
+f <- function(x) sin(x)*x^2+x
+
+open <- function(i, x) {
+    if (is.null(i)) {
+        return(list(c(min(x), 0.5*(min(x)+max(x))),
+                  c(0.5*(min(x)+max(x)), max(x))))
+        
+    } else {
+        i2 <- list()
+        for (int in i) {
+            i2[[length(i2)+1]] <- c(int[1], 0.5*(int[2]+int[1]))
+            i2[[length(i2)+1]] <- c(0.5*(int[2]+int[1]), int[2])
+        }
+        return(i2)
+    }
+}
+
+which.interval <- function(i, x) {
+    return(sapply(x, function(xel) {
+        for (j in seq_along(i))
+            if (xel >= i[[j]][1] & xel <= i[[j]][2])
+                return(j)
+        return(NA)
+    }))
+}
+
+summarize <- function(i, x, int) {
+    print(t(sapply(seq_along(i), function(iidx) c(range(i[[iidx]]), range(v[int==iidx]), sum(int==iidx)))))
+}
+
+N <- 4
+x <- runif(N*10, -10, 10)
+v <- f(x)
+i <- open(NULL, x)
+int <- which.interval(i, x)
+vlast <- min(v)
+
+for (k in 1:50) {
+    print(range(unlist(i)))
+    min.sup <- min(sapply(seq_along(i), function(iidx) max(v[int == iidx])))
+
+    summarize(i, x, int)
+    i2 <- lapply(seq_along(i), function(iidx) if (min(v[int == iidx]) > min.sup) return(NULL) else return(i[[iidx]]))
+    removed <- sapply(i2, is.null)
+    if (any(removed)) {
+        x <- x[!(int %in% which(removed))]
+        v <- v[!(int %in% which(removed))]
+        i2[sapply(i2, is.null)] <- NULL
+        int <- which.interval(i2, x)
+    }
+
+    i <- i2
+
+    i <- open(i, x)
+
+    int <- which.interval(i, x)
+
+    tint <- table(int)
+    if (min(tint) < N) {
+        for (idx in which(tint < N)) {
+            x2 <- runif(N, i[[idx]][1], i[[idx]][2])
+            v2 <- f(x2)
+            x <- c(x, x2)
+            v <- c(v, v2)
+        }
+
+        int <- which.interval(i, x)
+    }
+    summarize(i, x, int)
+    xa <- seq(-10, 10, length.out=100)
+    
+   plot(xa, f(xa), type='l')
+   points(x, v)
+}

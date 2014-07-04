@@ -1,0 +1,506 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "main.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdbool.h" include nil nil [558 578])
+            ("math.h" include nil nil [579 596])
+            ("stdlib.h" include nil nil [597 616])
+            ("stdio.h" include nil nil [617 635])
+            ("unistd.h" include nil nil [636 655])
+            ("assert.h" include nil nil [656 675])
+            ("float.h" include nil nil [676 694])
+            ("signal.h" include nil nil [695 714])
+            ("stdarg.h" include nil nil [715 734])
+            ("gsl/gsl_rng.h" include nil nil [735 759])
+            ("gsl/gsl_randist.h" include nil nil [760 788])
+            ("lsodaw.h" include nil nil [790 809])
+            ("../utils/par.h" include nil nil [851 876])
+            ("../utils/utils.h" include nil nil [877 904])
+            ("../utils/v.h" include nil nil [905 928])
+            ("AU" variable (:constant-flag t) nil [939 941])
+            ("MSUN" variable (:constant-flag t) nil [957 961])
+            ("MJUP" variable (:constant-flag t) nil [975 979])
+            ("MEARTH" variable (:constant-flag t) nil [997 1003])
+            ("MUNIT" variable (:constant-flag t) nil [1019 1024])
+            ("MSTAR" variable (:constant-flag t) nil [1038 1043])
+            ("G" variable (:constant-flag t) nil [1067 1068])
+            ("TUNIT" variable (:constant-flag t) nil [1085 1090])
+            ("YEAR" variable (:constant-flag t) nil [1126 1130])
+            ("RHOUNIT" variable (:constant-flag t) nil [1146 1153])
+            ("SIGMAUNIT" variable (:constant-flag t) nil [1181 1190])
+            ("VUNIT" variable (:constant-flag t) nil [1215 1220])
+            ("VER" variable (:constant-flag t) nil [1241 1244])
+            ("BANNER" variable (:constant-flag t) nil [1259 1265])
+            ("M2IDXF" variable (:constant-flag t) nil [1323 1329])
+            ("M2IDX" variable (:constant-flag t) nil [1433 1438])
+            ("R2IDX" variable (:constant-flag t) nil [1469 1474])
+            ("M2R" variable (:constant-flag t) nil [1613 1616])
+            ("M2N" variable (:constant-flag t) nil [1662 1665])
+            ("MMERGE" variable (:constant-flag t) nil [1706 1712])
+            ("PMERGE" variable (:constant-flag t) nil [1749 1755])
+            ("ZERO_OUT" variable (:constant-flag t) nil [1830 1838])
+            ("DT_SECURITY" variable (:constant-flag t) nil [1888 1899])
+            ("SMALL_MASS" variable (:constant-flag t) nil [1912 1922])
+            ("VD_CONSTANT_SPEED" variable (:constant-flag t) nil [1938 1955])
+            ("INFO" variable (:constant-flag t) nil [1967 1971])
+            ("PERFECT_ACCRETION" variable (:constant-flag t) nil [2103 2120])
+            ("STOP_DT_REDUCED" variable (:constant-flag t) nil [2131 2146])
+            ("INSPECT_IN_OUT" variable (:constant-flag t) nil [2157 2171])
+            ("NO_ZERO_STEP" variable (:constant-flag t) nil [2182 2194])
+            ("NO_BODY_COLLISION" variable (:constant-flag t) nil [2205 2222])
+            ("NO_FRAGMENTS" variable (:constant-flag t) nil [2234 2246])
+            ("SHUTUP" variable (:constant-flag t) nil [2258 2264])
+            ("TELLME" variable (:constant-flag t) nil [2276 2282])
+            ("ERROR_NOT_ENOUGH_BINS" variable (:constant-flag t) nil [2296 2317])
+            ("ERROR_NEGATIVE_BIN" variable (:constant-flag t) nil [2331 2349])
+            ("ERROR_DT_REDUCED" variable (:constant-flag t) nil [2363 2379])
+            ("ERROR_NAN_BIN" variable (:constant-flag t) nil [2393 2406])
+            ("TODO" variable (:constant-flag t) nil [2421 2425])
+            ("DEBUG_FUNCTION_1" variable (:constant-flag t) nil [2441 2457])
+            ("DEBUG_FUNCTION_2" variable (:constant-flag t) nil [2468 2484])
+            ("DEBUG_FUNCTION_3" variable (:constant-flag t) nil [2495 2511])
+            ("DEBUG_FUNCTION_4" variable (:constant-flag t) nil [2522 2538])
+            ("state_struct" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("rho" variable (:type "double") (reparse-symbol classsubparts) [2651 2662])
+                          ("N" variable (:type "long") (reparse-symbol classsubparts) [2698 2705])
+                          ("R_min" variable (:type "double") (reparse-symbol classsubparts) [2745 2758])
+                          ("R_max" variable (:type "double") (reparse-symbol classsubparts) [2800 2813])
+                          ("da" variable (:type "double") (reparse-symbol classsubparts) [2850 2860])
+                          ("a" variable (:type "double") (reparse-symbol classsubparts) [2897 2906])
+                          ("Sigma" variable (:type "double") (reparse-symbol classsubparts) [2946 2959])
+                          ("eps_1" variable (:type "double") (reparse-symbol classsubparts) [2994 3007])
+                          ("eps_2" variable (:type "double") (reparse-symbol classsubparts) [3044 3057])
+                          ("pg" variable (:type "double") (reparse-symbol classsubparts) [3115 3125])
+                          ("R_fill" variable (:type "double") (reparse-symbol classsubparts) [3190 3204])
+                          ("R_dust" variable (:type "double") (reparse-symbol classsubparts) [3263 3277])
+                          ("R_snowball" variable (:type "double") (reparse-symbol classsubparts) [3339 3357])
+                          ("R_boulder" variable (:type "double") (reparse-symbol classsubparts) [3420 3437])
+                          ("R_bounce" variable (:type "double") (reparse-symbol classsubparts) [3506 3522])
+                          ("eps_pl" variable (:type "double") (reparse-symbol classsubparts) [3578 3592])
+                          ("R_planetesimal" variable (:type "double") (reparse-symbol classsubparts) [3666 3688])
+                          ("R_planetesimal_2" variable (:type "double") (reparse-symbol classsubparts) [3763 3787])
+                          ("strength" variable (:type "long") (reparse-symbol classsubparts) [3849 3863])
+                          ("pf" variable (:type "double") (reparse-symbol classsubparts) [3938 3948])
+                          ("vd" variable (:type "long") (reparse-symbol classsubparts) [4020 4028])
+                          ("dv" variable (:type "double") (reparse-symbol classsubparts) [4070 4080])
+                          ("i_min" variable (:type "double") (reparse-symbol classsubparts) [4114 4127])
+                          ("i_r" variable (:type "double") (reparse-symbol classsubparts) [4173 4184])
+                          ("dt_out" variable (:type "double") (reparse-symbol classsubparts) [4224 4238])
+                          ("dt_print" variable (:type "double") (reparse-symbol classsubparts) [4278 4294])
+                          ("t_max" variable (:type "double") (reparse-symbol classsubparts) [4327 4340])
+                          ("N_bin" variable (:type "double") (reparse-symbol classsubparts) [4370 4383])
+                          ("dN_rel" variable (:type "double") (reparse-symbol classsubparts) [4417 4431])
+                          ("dN_abs" variable (:type "double") (reparse-symbol classsubparts) [4465 4479])
+                          ("seed" variable (:type "long") (reparse-symbol classsubparts) [4524 4534])
+                          ("num_threads" variable (:type "long") (reparse-symbol classsubparts) [4560 4577])
+                          ("debug_mode" variable (:type "long") (reparse-symbol classsubparts) [4653 4669])
+                          ("debug_1" variable (:type "long") (reparse-symbol classsubparts) [4703 4716])
+                          ("debug_2" variable (:type "long") (reparse-symbol classsubparts) [4749 4762])
+                          ("debug_3" variable (:type "long") (reparse-symbol classsubparts) [4795 4808])
+                          ("save_outcome" variable (:type "long") (reparse-symbol classsubparts) [4872 4890])
+                          ("h_max" variable (:type "double") (reparse-symbol classsubparts) [4920 4933])
+                          ("iter_max" variable (:type "long") (reparse-symbol classsubparts) [4975 4989])
+                          ("Mjump_max" variable (:type "double") (reparse-symbol classsubparts) [5045 5062])
+                          ("radbin" variable (:type "long") (reparse-symbol classsubparts) [5093 5105])
+                          ("intmethod" variable (:type "long") (reparse-symbol classsubparts) [5167 5182])
+                          ("print_every" variable (:type "long") (reparse-symbol classsubparts) [5206 5223])
+                          ("try_convergence" variable (:type "long") (reparse-symbol classsubparts) [5256 5277])
+                          ("out" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5312 5323])
+                          ("M_r" variable
+                             (:pointer 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [5448 5469])
+                          ("R" variable
+                             (:pointer 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [5512 5531])
+                          ("R_stag" variable
+                             (:pointer 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [5532 5556])
+                          ("M" variable
+                             (:pointer 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [5628 5647])
+                          ("M_stag" variable
+                             (:pointer 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [5648 5672])
+                          ("M_2_pf" variable
+                             (:pointer 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [5673 5697])
+                          ("Omega" variable (:type "double") (reparse-symbol classsubparts) [5714 5727])
+                          ("mass" variable (:type "double") (reparse-symbol classsubparts) [5781 5793])
+                          ("dust" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5822 5834])
+                          ("snowball" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5835 5851])
+                          ("boulder" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5852 5867])
+                          ("planetesimal" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5868 5888])
+                          ("planetesimal_2" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5889 5911])
+                          ("fill" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5912 5924])
+                          ("bounce" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5925 5939])
+                          ("z_min" variable (:type "double") (reparse-symbol classsubparts) [5963 5976])
+                          ("z_max" variable (:type "double") (reparse-symbol classsubparts) [5977 5990])
+                          ("dz" variable (:type "double") (reparse-symbol classsubparts) [5991 6001])
+                          ("t" variable (:type "double") (reparse-symbol classsubparts) [6022 6031])
+                          ("t_out" variable (:type "double") (reparse-symbol classsubparts) [6032 6045])
+                          ("t_print" variable (:type "double") (reparse-symbol classsubparts) [6046 6061])
+                          ("M_merge" variable
+                             (:pointer 2
+                              :type "double")
+                              (reparse-symbol classsubparts) [6108 6125])
+                          ("N_0" variable
+                             (:pointer 2
+                              :type "double")
+                              (reparse-symbol classsubparts) [6126 6139])
+                          ("p_merge" variable
+                             (:pointer 2
+                              :type "long")
+                              (reparse-symbol classsubparts) [6140 6155])
+                          ("rng" variable
+                             (:pointer 1
+                              :type ("gsl_rng" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [6166 6179])
+                          ("log10_Mmax" variable (:type "double") (reparse-symbol classsubparts) [6199 6217])
+                          ("log10_Mmin" variable (:type "double") (reparse-symbol classsubparts) [6218 6236])
+                          ("log10_Rmax" variable (:type "double") (reparse-symbol classsubparts) [6237 6255])
+                          ("log10_Rmin" variable (:type "double") (reparse-symbol classsubparts) [6256 6274])
+                          ("os" variable
+                             (:pointer 1
+                              :type ("oda_str" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [6292 6304])
+                          ("M_1" variable
+                             (:pointer 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [6305 6317])
+                          ("M_2" variable
+                             (:pointer 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [6318 6330])
+                          ("N_out_th" variable
+                             (:pointer 2
+                              :type "double")
+                              (reparse-symbol classsubparts) [6362 6380])
+                          ("fn_outcome" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [6404 6425])
+                          ("mass_0" variable (:type "double") (reparse-symbol classsubparts) [6444 6458])
+                          ("dMdt_last" variable (:type "double") (reparse-symbol classsubparts) [6474 6491]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2542 6507])
+            ("_state" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("state_struct" type (:type "class") nil nil))
+                nil [6509 6537])
+            ("fid_info" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("FILE" type (:type "class") nil nil))
+                nil [6538 6560])
+            ("fill_with_initial_bodies" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("state" variable
+                       (:pointer 1
+                        :type ("state_struct" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6592 6612]))                  
+                :type "void")
+                nil [6562 6613])
+            ("mass" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("state" variable
+                       (:pointer 1
+                        :type ("state_struct" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6626 6646])
+                    ("M_r" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6647 6666]))                  
+                :type "double")
+                nil [6614 6667])
+            ("mass_Rp" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("state" variable
+                       (:pointer 1
+                        :type ("state_struct" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6683 6703])
+                    ("M_r" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6704 6723])
+                    ("r1" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6724 6734])
+                    ("r2" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6735 6745]))                  
+                :type "double")
+                nil [6668 6746])
+            ("mass_Rp_0" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("state" variable
+                       (:pointer 1
+                        :type ("state_struct" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6764 6784])
+                    ("M_r" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6785 6804])
+                    ("r1" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6805 6815])
+                    ("r2" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6816 6826]))                  
+                :type "double")
+                nil [6747 6827])
+            ("output" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("state" variable
+                       (:pointer 1
+                        :type ("state_struct" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6840 6860])
+                    ("outn" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6861 6873])
+                    ("diags_only" variable (:type "bool") (reparse-symbol arg-sub-list) [6874 6890]))                  
+                :type "void")
+                nil [6828 6891])
+            ("info" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tag" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6902 6918])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [6919 6923]))                  
+                :type "void")
+                nil [6892 6924])
+            ("mfrag" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("m1" variable (:type "double") (reparse-symbol arg-sub-list) [6938 6948])
+                    ("m2" variable (:type "double") (reparse-symbol arg-sub-list) [6949 6959])
+                    ("rho_pl" variable (:type "double") (reparse-symbol arg-sub-list) [6960 6974])
+                    ("dv" variable (:type "double") (reparse-symbol arg-sub-list) [6975 6985])
+                    ("strong" variable (:type "bool") (reparse-symbol arg-sub-list) [6986 6998])
+                    ("flag" variable (:type "bool") (reparse-symbol arg-sub-list) [6999 7009]))                  
+                :type "double")
+                nil [6925 7010])
+            ("tcoll_0" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("state" variable
+                       (:pointer 1
+                        :type ("state_struct" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7027 7047]))                  
+                :type "double")
+                nil [7012 7048])
+            ("step_0" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [7061 7070])
+                    ("M_r" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [7071 7084])
+                    ("dMdt" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [7085 7099])
+                    ("params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7100 7113]))                  
+                :type "void")
+                nil [7049 7114])
+            ("hook_0" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [7126 7135])
+                    ("M_r" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [7136 7149])
+                    ("dMdt" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [7150 7164])
+                    ("params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7165 7178]))                  
+                :type "int")
+                nil [7115 7179])
+            ("collide_dust_0" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [7199 7208])
+                    ("M_r" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [7209 7228])
+                    ("dMdt" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [7229 7243])
+                    ("state" variable
+                       (:pointer 1
+                        :type ("state_struct" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7244 7264]))                  
+                :type "int")
+                nil [7180 7265])
+            ("collide_bodies_0" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [7287 7296])
+                    ("M_r" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [7297 7316])
+                    ("dMdt" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [7317 7331])
+                    ("state" variable
+                       (:pointer 1
+                        :type ("state_struct" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7332 7352]))                  
+                :type "int")
+                nil [7266 7353])
+            ("create_planetesimals_0" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [7381 7390])
+                    ("M_r" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [7391 7410])
+                    ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [7411 7421])
+                    ("state" variable
+                       (:pointer 1
+                        :type ("state_struct" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7422 7442])
+                    ("Mp" variable (:type "double") (reparse-symbol arg-sub-list) [7443 7453]))                  
+                :type "int")
+                nil [7354 7454])
+            ("find_convergence" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("state" variable
+                       (:pointer 1
+                        :type ("state_struct" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7477 7497]))                  
+                :type "void")
+                nil [7455 7498])
+            ("calculate_outcomes_0" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("state" variable
+                       (:pointer 1
+                        :type ("state_struct" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7526 7546]))                  
+                :type "void")
+                nil [7500 7547])
+            ("inspector" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [7563 7571]))                  
+                :type "void")
+                nil [7548 7572])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [7584 7593])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7594 7606]))                  
+                :type "int")
+                nil [7575 14278])
+            ("mfrag" function
+               (:arguments 
+                  ( ("m1" variable (:type "double") (reparse-symbol arg-sub-list) [20937 20947])
+                    ("m2" variable (:type "double") (reparse-symbol arg-sub-list) [20948 20958])
+                    ("rho_pl" variable (:type "double") (reparse-symbol arg-sub-list) [20959 20973])
+                    ("dv" variable (:type "double") (reparse-symbol arg-sub-list) [20974 20984])
+                    ("strong" variable (:type "bool") (reparse-symbol arg-sub-list) [20985 20997])
+                    ("flag" variable (:type "bool") (reparse-symbol arg-sub-list) [20998 21008]))                  
+                :type "double")
+                nil [20924 21938])
+            ("step_0" function
+               (:arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [21952 21961])
+                    ("M_r" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [21962 21975])
+                    ("dMdt" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [21976 21990])
+                    ("params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21991 22004]))                  
+                :type "void")
+                nil [21940 23186])
+            ("hook_0" function
+               (:arguments 
+                  ( ("t" variable (:type "double") (reparse-symbol arg-sub-list) [23199 23208])
+                    ("M_r" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [23209 23222])
+                    ("dMdt" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [23223 23237])
+                    ("params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [23238 23251]))                  
+                :type "int")
+                nil [23188 23453])
+            ("rn" function
+               (:arguments 
+                  ( ("y" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [29945 29955])
+                    ("dydt" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [29956 29969])
+                    ("N" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29970 29979]))                  
+                :type "double")
+                nil [29935 30113])
+            ("CONVERGENCE_MAX_STEPS" variable
+               (:constant-flag t
+                :type "unsigned int")
+                nil [30115 30161])
+            ("inspector" function
+               (:arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [32152 32160]))                  
+                :type "void")
+                nil [32137 33497]))          
+    :file "main.c"
+    :pointmax 33498
+    :fsize 33497
+    :lastmodtime '(21264 51776 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!sm52286!Dropbox!Projects!DiskMass!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

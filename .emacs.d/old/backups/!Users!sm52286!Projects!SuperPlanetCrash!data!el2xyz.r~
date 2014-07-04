@@ -1,0 +1,2 @@
+source("~/Projects/Systemic2/R/systemic.r", chdir=TRUE)
+

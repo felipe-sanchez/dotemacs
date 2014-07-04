@@ -1,0 +1,12 @@
+// Additional underscore.js utilities
+_.clone = function(obj) {
+    if (obj === undefined)
+        return obj;
+    return JSON.parse(JSON.stringify(obj));
+};
+
+_.parameter = function(name, url) {
+    url = url || location.search;
+    return(decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(url)||[,""])[1].replace(/\+/g, '%20'))||null);
+};
+

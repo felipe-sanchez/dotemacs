@@ -1,0 +1,82 @@
+;; Object Downloads/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Downloads/"
+  :tables (list 
+   (semanticdb-table "fig_LINEAR_clustering.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("\"\"\"
+Clustering of LINEAR data
+-------------------------
+Figure 10.20
+~~~~~~~~~~~~
+Unsupervised clustering analysis of periodic variable stars from the LINEAR
+data set. The top row shows clusters derived using two attributes (g - i and
+log P) and a mixture of 12 Gaussians. The colorized symbols mark the five most
+significant clusters. The bottom row shows analogous diagrams for clustering
+based on seven attributes (colors u - g, g - i, i - K, and J - K; log P,
+light-curve amplitude, and light-curve skewness), and a mixture of 15
+Gaussians. See figure 10.21 for data projections in the space of other
+attributes for the latter case.
+
+
+Figure 10.21
+~~~~~~~~~~~~
+Unsupervised clustering analysis of periodic variable stars from the LINEAR
+data set. Clusters are derived using seven attributes (colors u - g, g - i,
+i - K, and J - K; log P , light-curve amplitude, and light-curve skewness),
+and a mixture of 15 Gaussians. The log P vs. g - i diagram and log P vs.
+light-curve amplitude diagram for the same clusters are shown in the lower
+panels of figure 10.20.
+\"\"\"" code nil nil [1 1069])
+            ("numpy" include nil nil [1421 1439])
+            ("matplotlib" include nil nil [1440 1476])
+            ("sklearn.mixture" include nil nil [1478 1509])
+            ("astroML.decorators" include nil nil [1511 1556])
+            ("astroML.datasets" include nil nil [1557 1605])
+            ("astroML.plotting" include nil nil [1939 1984])
+            ("setup_text_plots" code nil nil [1985 2026])
+            ("data" variable nil nil [2120 2148])
+            ("filetemplate" variable nil nil [2257 2291])
+            ("attributes" variable nil nil [2292 2384])
+            ("components" variable nil nil [2385 2414])
+            ("Xarrays" variable nil nil [2504 2516])
+            ("for" code nil nil [2517 2598])
+            ("" code nil nil [2725 2750])
+            ("compute_GMM_results" function (:arguments 
+              ( ("components" variable nil (reparse-symbol function_parameters) [2775 2785])
+                ("attributes" variable nil (reparse-symbol function_parameters) [2787 2797]))              ) nil [2751 3248])
+            ("clfs" variable nil nil [3249 3299])
+            ("fig" variable nil nil [3382 3414])
+            ("fig" code nil nil [3415 3458])
+            ("class_labels" variable nil nil [3460 3477])
+            ("plt" code nil nil [7110 7136])
+            ("fig" code nil nil [7137 7191])
+            ("attrs" variable nil nil [7193 7227])
+            ("labels" variable nil nil [7228 7272])
+            ("ylims" variable nil nil [7273 7331])
+            ("for" code nil nil [7333 7737])
+            ("sys" include nil nil [7958 7968])
+            ("if" code nil nil [7969 9026])
+            ("plt" code nil nil [9027 9037]))          
+    :file "fig_LINEAR_clustering.py"
+    :pointmax 9042
+    :fsize 9037
+    :lastmodtime '(21180 40026 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("main" function (:type "int") nil [1 40]))          
+    :file "test.c"
+    :pointmax 44
+    :fsize 40
+    :lastmodtime '(21429 43380 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!sm52286!Downloads!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

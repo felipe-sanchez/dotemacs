@@ -20,6 +20,8 @@ export C_INCLUDE_PATH="/opt/local/include"
 alias emacs="emacsclient -n "
 alias git_status="pushd $HOME/Projects/dotemacs/utils; lua git_global_status.lua --no-daemon; popd"
 
+alias lonestar="ssh smeschia@lonestar.tacc.utexas.edu"
+
 export PS1='`cat ~/.git_global_stats` \u \[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
 
 export LUA_PATH="?.lua;lua/?.lua"

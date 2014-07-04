@@ -1,0 +1,6 @@
+* BAM-lua
+#+CAPTION: Sample BAM template
+[[http://www.stefanom.org/wp-content/uploads/2011/07/headerbam.png]]
+
+BAM is a lightweight, elementary, extensible templating language based on Lua. It attempts to automate the writing of repetitive parts of a scientific papers, or parts that need to be updated frequently with the arrival of new data or better algorithms.
+Our group at UC Santa Cruz also used it to one-click automate the writing of scientific papers about new exoplanets for many different datasets. One paper written entirely using a BAM template is downloadable here. (The referee enjoyed it.)

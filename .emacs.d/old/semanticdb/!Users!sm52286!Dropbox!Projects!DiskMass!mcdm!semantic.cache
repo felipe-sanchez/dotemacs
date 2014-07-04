@@ -1,0 +1,37 @@
+;; Object mcdm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mcdm/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-bsdmake-mode
+    :tags 
+        '( ("CC" variable (:default-value ("clang")) nil [30 41])
+            ("MPICC" variable (:default-value ("mpicc")) nil [41 55])
+            ("DIRS" variable (:default-value ("-I/opt/local/include")) nil [102 130])
+            ("LIBS" variable (:default-value ("-L/opt/local/lib" "-lgsl" "-lgslcblas")) nil [130 172])
+            ("PRODUCTION" variable (:default-value ("$(CC)" "-g3" "-O3" "-msse2" "-DNDEBUG" "-DHAVE_INLINE" "$(DIRS)")) nil [204 271])
+            ("DEBUG" variable (:default-value ("$(CC)" "-g3" "-O0" "-Wall" "-Werror" "-msse2" "$(DIRS)")) nil [271 322])
+            ("DEBUG_FAST" variable (:default-value ("$(CC)" "-g3" "-O3" "-Wall" "-Werror" "-msse2" "$(DIRS)")) nil [322 378])
+            ("MPI_DEBUG_FAST" variable (:default-value ("$(MPICC)" "-g3" "-O3" "-Wall" "-Werror" "-DHAVE_MPI" "-msse2" "$(DIRS)")) nil [378 452])
+            ("TACC" variable (:default-value ("-w1" "-std=c99" "-L$(TACC_GSL_LIB)" "-lgsl" "-lgslcblas" "-I$(TACC_GSL_INC)" "-I$(TACC_GSL_I\\
+NC)/gsl")) nil [461 557])
+            ("MPI_DEBUG_FAST_TACC" variable (:default-value ("$(MPI_DEBUG_FAST)" "$(TACC)")) nil [557 605])
+            ("MODE" variable (:default-value ("$(MPI_DEBUG_FAST)")) nil [842 867])
+            ("DATE" variable (:default-value ("`date +'%y.%m.%d %H.%M.%S'`")) nil [867 902])
+            ("dm_bin" function (:arguments ("objects/par.o" "src/*.c" "utils/*.h" "utils/*.c")) nil [904 1107])
+            ("dm" function (:arguments ("objects/par.o" "src/*.c" "utils/*.h" "utils/*.c")) nil [904 1107])
+            ("objects/par.o" function (:arguments ("utils/par.c" "utils/par.h")) nil [1197 1277])
+            ("clean" function nil nil [1278 1322])
+            ("tacc_upload" function (:arguments ("clean")) nil [1323 1406])
+            ("tacc_download" function nil nil [1407 1502]))          
+    :file "Makefile"
+    :pointmax 1503
+    :fsize 1501
+    :lastmodtime '(21429 51112 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!sm52286!Dropbox!Projects!DiskMass!mcdm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

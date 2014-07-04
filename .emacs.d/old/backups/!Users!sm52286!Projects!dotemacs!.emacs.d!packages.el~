@@ -1,0 +1,31 @@
+;; Loads packages that are not related to specific language modes
+
+;; Autocomplete
+(require 'auto-complete)
+(require 'auto-complete-config)
+(setq ac-auto-start nil)
+(setq ac-auto-show-menu nil)
+
+(require 'auto-complete-clang)
+
+
+;; Semantic
+(semantic-mode)
+
+;; Ack
+(require 'ack-and-a-half)
+
+(defalias 'ack 'ack-and-a-half)
+(defalias 'ack-same 'ack-and-a-half-same)
+(defalias 'ack-find-file 'ack-and-a-half-find-file)
+(defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
+
+;; Autocomplete-clang
+(defun ac-cc-mode-setup ()
+  (setq ac-sources '(ac-source-clang))
+)
+(add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
+
+(define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+
+(provide 'packages)

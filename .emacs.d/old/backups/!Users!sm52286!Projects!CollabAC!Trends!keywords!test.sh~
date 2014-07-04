@@ -1,0 +1,4 @@
+for i in `seq 1 100`;
+do
+curl "http://scholar.google.com/scholar?as_q=extrasolar+planet&as_epq=&as_oq=&as_eq=&as_occt=any&as_sauthors=&as_publication=&as_ylo=1996&as_yhi=1997&btnG=&hl=en&as_sdt=0%2C5"
+done

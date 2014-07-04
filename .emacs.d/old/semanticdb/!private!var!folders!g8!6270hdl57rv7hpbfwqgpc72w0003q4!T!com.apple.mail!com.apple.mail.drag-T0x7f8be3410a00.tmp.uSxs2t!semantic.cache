@@ -1,0 +1,30 @@
+;; Object com.apple.mail.drag-T0x7f8be3410a00.tmp.uSxs2t/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "com.apple.mail.drag-T0x7f8be3410a00.tmp.uSxs2t/"
+  :tables (list 
+   (semanticdb-table "HD5319_intTest.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [2 12])
+            ("datetime" include nil nil [13 42])
+            ("numpy" include nil nil [44 62])
+            ("matplotlib.pyplot" include nil nil [63 94])
+            ("SystPy" include nil nil [96 116])
+            ("times" variable nil nil [118 182])
+            ("allOff" function (:arguments 
+              ( ("k" variable nil (reparse-symbol function_parameters) [196 197]))              ) nil [185 333])
+            ("allOn" function (:arguments 
+              ( ("k" variable nil (reparse-symbol function_parameters) [344 345]))              ) nil [334 469])
+            ("k" variable nil nil [470 502])
+            ("for" code nil nil [503 951]))          
+    :file "HD5319_intTest.py"
+    :pointmax 958
+    :fsize 957
+    :lastmodtime '(21403 37962 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!private!var!folders!g8!6270hdl57rv7hpbfwqgpc72w0003q4!T!com.apple.mail!com.apple.mail.drag-T0x7f8be3410a00.tmp.uSxs2t!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

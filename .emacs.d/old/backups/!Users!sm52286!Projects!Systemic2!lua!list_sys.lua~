@@ -1,0 +1,10 @@
+require 'utils'
+
+local sys = ex.capture("ls ../datafiles/*.sys")
+local sys = ex.split(sys, "\n")
+local fid = io.open("../packaging/forweb/systems.html", "w")
+for _, v in ipairs(sys) do 
+	local fn = ex.basename(v)
+	fid:write("<option>" .. fn .. "</option>\n")
+end
+fid:close()

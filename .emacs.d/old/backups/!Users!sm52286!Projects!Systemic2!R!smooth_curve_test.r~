@@ -1,0 +1,7 @@
+k <- knew()
+kload.datafile(k, 'datafiles/51peg_B06L.sys')
+
+
+b <- kperiodogram(k, samples=40000)
+plot(b, xlim=c(4, 5))
+

@@ -1,0 +1,26 @@
+#ifndef PAR_H
+#define PAR_H
+
+#include "stdio.h"
+#include "string.h"
+#include "stdlib.h"
+#include "stdbool.h"
+#define BANNER_LINE "==================================================\n"
+
+typedef char string[512];
+#define MAX_LINE 1000
+
+extern FILE* doc_out;
+extern bool doc_new;
+
+extern void par_init(int argc, char** argv);
+extern void par_dread(double* v, char* tag, char* desc);
+extern void par_lread(long* v, char* tag, char* desc);
+extern void par_sread(string v, char* tag, char* desc);
+extern void par_done();
+
+#define dset(name, def, desc) name = def; par_dread(&(name), #name, desc);
+#define lset(name, def, desc) name = def; par_lread(&(name), #name, desc);
+#define sset(name, def, desc) strcpy(name, def); par_sread(name, #name, desc);
+
+#endif

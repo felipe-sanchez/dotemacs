@@ -1,0 +1,17 @@
+b <- read.table('positions.txt')
+quartz()
+data <- read.table('exo3.txt', header=TRUE)
+data <- rbind(read.table("sol2.txt", header=TRUE), data)
+
+cols <- c("#007AFF", "#FF3B30", "#4CD964", "#5856D6", "#FF9500", "#34AADC")
+quartz()
+png('Rplot%03d.png', width=768, height=768)
+for (year in 1994:2013) {
+    idx <- data[, 'DATE'] <= year
+    par(bg='black')
+    symbols(b[idx,1], b[idx,2], b[idx,3]*0.95, new=T, fg=cols[1], inches=FALSE, bg=cols[1],
+            xlim=c(0, 1000), ylim=c(0, 800),xaxt='n', yaxt='n', xlab='', ylab='',
+            background='black')
+    text(180, 760, year, cex=4, col='white')
+}
+dev.off()

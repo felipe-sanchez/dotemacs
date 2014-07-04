@@ -1,0 +1,20 @@
+
+var background = new Path.Rectangle(view.bounds);
+background.fillColor = {
+    gradient: {
+        radial:'true',
+        stops:[['#444444', 0], ['black', 1]]
+    },
+    origin: view.center,
+    destination: view.bounds.rightCenter
+};
+
+
+
+function onResize(event) {
+    background.center = view.center;
+}
+
+
+function onFrame(event) {
+}

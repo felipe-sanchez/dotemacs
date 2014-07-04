@@ -1,0 +1,236 @@
+#ifndef V_H
+#define V_H
+#include "math.h"
+#include "stdlib.h"
+#include "string.h"
+#include "gsl/gsl_interp.h"
+#include "gsl/gsl_rng.h"
+#include "stdbool.h"
+#define pow2(x) ((x)*(x))
+#define pow3(x) ((x)*pow2(x))
+#define MAX(x,y) (((x)>(y)?(x):(y)))
+#define MIN(x,y) (((x)<(y)?(x):(y)))
+
+#define SGN(x) ((x) < 0. ? -1. : 1.)
+
+typedef double (*t_function)(double, void*);
+
+static inline double* zeros(const int N) {
+	return (double*) calloc(N, sizeof(double));
+}
+
+static inline int* izeros(const int N) {
+  return (int*) calloc(N, sizeof(int));
+}
+
+static inline void ifill(int* v, const int N, const int value) {
+  for (int i = 0; i < N; i++)
+    v[i] = value;
+}
+
+#define zero(x, N) do { memset(x, 0, N*sizeof(double)); } while (0)
+
+
+static inline double* linspace(const int N, const double a, const double b) {
+	double* v = zeros(N);
+	double dv = (b-a)/(double) (N-1);
+	
+	for (int i = 0; i < N; i++)
+		v[i] = a + dv * (double)i;
+	return v;
+}
+
+static inline double* logspace(const int N, const double a, const double b) {
+	double* v = linspace(N, a, b);
+	for (int i = 0; i < N; i++)
+		v[i] = pow(10., v[i]);
+	
+	return v;
+}
+
+static inline double** square(const int N) {
+  double** m = malloc(N*sizeof(double*));
+  for (int i = 0; i < N; i++)
+    m[i] = malloc(N*sizeof(double*));
+  return m;
+}
+
+static inline double** ltriang(const int N) {
+	double** m = malloc(N * sizeof(double*));
+	for (int i = 0; i < N; i++)
+		m[i] = malloc((i+1) * sizeof(double*));
+	return m;
+}
+
+static inline long** ltriangl(const int N) {
+	long** m = malloc(N * sizeof(long*));
+	for (int i = 0; i < N; i++)
+		m[i] = malloc((i+1) * sizeof(long*));
+	return m;
+}
+
+static inline int trunc_prec(const double v, const double prec) {
+	return (floor(v+prec) >= floor(v+1) ? floor(v+1) : floor(v));
+}
+
+static inline double sum(const double v[], const int N) {
+	if (N == 0)
+		return 0;
+	double s = v[0];
+	for (int i = 1; i < N; i++)
+		s += v[i];
+	return s; 
+}
+
+static inline double sum2(const double v[], const double v1[], const int N) {
+	if (N == 0)
+		return 0;
+	double s = v[0] * v1[0];
+	for (int i = 1; i < N; i++)
+		s += v[i] * v1[i];
+	return s; 
+}
+
+
+static inline double norm(const double* v, const int N) {
+	double d = v[0]*v[0];
+	for (int i = 1; i < N; i++)
+		d += v[i]*v[i];
+	return sqrt(d);
+}
+
+static inline void vcopy(double* dest, const double* src, const int N) {
+	memcpy(dest, src, N*sizeof(double));
+}
+
+static inline double vdiff(const double* a1, const double* a2, const int N, const double eps) {
+	double d = 0.;
+	
+	for (int i = 0; i < N; i++)
+		if (a1[i] > 0.)
+		d += fabs((a1[i]-a2[i])/a1[i]);
+	return d;
+}
+
+static inline double minv(const double* v, const int N) {
+	double m = v[0];
+	
+	for (int i = 1; i < N; i++)
+		m = MIN(m, v[i]);
+	return m;
+}
+
+static inline double maxv(const double* v, const int N) {
+	double m = v[0];
+	
+	for (int i = 1; i < N; i++)
+		m = MAX(m, v[i]);
+	return m;
+}
+
+static inline int iminv(const double* v, const int N) {
+	double m = v[0];
+  int k = 0;
+	
+	for (int i = 1; i < N; i++)
+    if (m > v[i]) {
+      m = v[i];
+      k = i;
+    }
+	return k;
+}
+
+static inline int imaxv(const double* v, const int N) {
+	double m = v[0];
+	int k = 0;
+	for (int i = 1; i < N; i++)
+    if (m < v[i]) {
+      m = v[i];
+      k = i;
+    }
+	return k;
+}
+
+static inline void minmax_ik(double** v, const int N, const int M, int* maxi, int* maxk, bool is_max) {
+  double max = v[0][0];
+  *maxi = 0;
+  *maxk = 0;
+  double fac = (is_max ? 1. : -1.);
+
+  for (int i = 0; i < N; i++)
+    for (int k = 0; k < M; k++) {
+      if (v[i][k]*fac > max*fac) {
+        *maxi = i;
+        *maxk = k;
+        max = v[i][k];
+      }
+    }
+
+}
+
+static inline double cumsum(const double* v, double* out, const int N) {
+  out[0] = v[0];
+  for (int i = 1; i < N; i++)
+    out[i] = out[i-1] + v[i];
+  return out[N-1];
+}
+
+// Returns N random numbers sampled from the given distribution
+static inline void sample(t_function distribution, void* context, gsl_rng* r, const double min, const double max, const int N, double* out) {
+
+  const int SIZE = 5000;
+  double* CUM = zeros(SIZE);
+  double* X = linspace(SIZE, min, max);
+
+  for (int i = 1; i < SIZE; i++) {
+    CUM[i] = CUM[i-1] + distribution(X[i], context) * (X[i]-X[i-1]);
+  }
+  
+  gsl_interp* interp = gsl_interp_alloc(gsl_interp_linear, SIZE);
+  gsl_interp_init(interp, CUM, X, SIZE);
+  
+  for (int i = 0; i < N; i++) {
+    double v = CUM[SIZE-1] * gsl_rng_uniform(r);
+
+    out[i] = gsl_interp_eval(interp, CUM, X, v, NULL);
+  }
+
+  if (N == 1) {
+    for (int i = 0; i < SIZE; i+=10)
+      printf("%e %e\n", X[i], CUM[i]/CUM[SIZE-1]);
+    exit(0);
+  }
+  
+  free(CUM);
+  free(X);
+  gsl_interp_free(interp);
+}
+
+// Returns N random numbers sampled from the given distribution
+static inline double* log_sample(t_function distribution, void* context, gsl_rng* r, const double min, const double max, const int N) {
+
+  const int SIZE = 5000;
+  double* CUM = zeros(SIZE);
+  double* X = logspace(SIZE, log10(min), log10(max));
+
+  for (int i = 1; i < SIZE; i++) {
+    CUM[i] = CUM[i-1] + distribution(X[i], context) * (X[i]-X[i-1]);
+  }
+  
+  gsl_interp* interp = gsl_interp_alloc(gsl_interp_linear, SIZE);
+  gsl_interp_init(interp, CUM, X, SIZE);
+  
+  double* out = zeros(N);
+  for (int i = 0; i < N; i++) {
+    double v = CUM[SIZE-1] * gsl_rng_uniform(r);
+
+    out[i] = gsl_interp_eval(interp, CUM, X, v, NULL);
+  }
+
+  free(CUM);
+  free(X);
+  gsl_interp_free(interp);
+  return out;
+}
+
+#endif

@@ -1,0 +1,483 @@
+;; Object com.apple.mail.drag-T0x7fcd88410a90.tmp.BQAVJq/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "com.apple.mail.drag-T0x7fcd88410a90.tmp.BQAVJq/"
+  :tables (list 
+   (semanticdb-table "main.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdbool.h" include nil nil [395 415])
+            ("math.h" include nil nil [416 433])
+            ("stdlib.h" include nil nil [434 453])
+            ("stdio.h" include nil nil [454 472])
+            ("unistd.h" include nil nil [473 492])
+            ("assert.h" include nil nil [493 512])
+            ("float.h" include nil nil [513 531])
+            ("signal.h" include nil nil [532 551])
+            ("stdarg.h" include nil nil [552 571])
+            ("gsl/gsl_rng.h" include nil nil [612 636])
+            ("gsl/gsl_randist.h" include nil nil [637 665])
+            ("gsl/gsl_interp.h" include nil nil [666 693])
+            ("gsl/gsl_sort.h" include nil nil [694 719])
+            ("../utils/par.h" include nil nil [721 746])
+            ("../utils/utils.h" include nil nil [747 774])
+            ("../utils/v.h" include nil nil [775 798])
+            ("sqr" variable (:constant-flag t) nil [808 811])
+            ("AU" variable (:constant-flag t) nil [834 836])
+            ("MSUN" variable (:constant-flag t) nil [852 856])
+            ("MJUP" variable (:constant-flag t) nil [870 874])
+            ("MEARTH" variable (:constant-flag t) nil [892 898])
+            ("MU_ICE" variable (:constant-flag t) nil [914 920])
+            ("MUNIT" variable (:constant-flag t) nil [941 946])
+            ("MSTAR" variable (:constant-flag t) nil [960 965])
+            ("G" variable (:constant-flag t) nil [989 990])
+            ("TUNIT" variable (:constant-flag t) nil [1007 1012])
+            ("YEAR" variable (:constant-flag t) nil [1048 1052])
+            ("RHOUNIT" variable (:constant-flag t) nil [1076 1083])
+            ("SIGMAUNIT" variable (:constant-flag t) nil [1111 1120])
+            ("VUNIT" variable (:constant-flag t) nil [1145 1150])
+            ("RUNIT" variable (:constant-flag t) nil [1170 1175])
+            ("STOP_ZERO_RATE" variable (:constant-flag t) nil [1189 1203])
+            ("VER" variable (:constant-flag t) nil [1216 1219])
+            ("BANNER" variable (:constant-flag t) nil [1234 1240])
+            ("DIAGS" variable (:constant-flag t) nil [1300 1305])
+            ("unused" variable (:constant-flag t) nil [1516 1522])
+            ("output" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("time" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1610 1628])
+                    ("dt" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1629 1645]))                  
+                :type "double")
+                nil [1596 1646])
+            ("rho" variable (:type "double") nil [1840 1851])
+            ("N" variable (:type "long") nil [1890 1897])
+            ("R_min" variable (:type "double") nil [1935 1948])
+            ("R_max" variable (:type "double") nil [1988 2001])
+            ("da" variable (:type "double") nil [2035 2045])
+            ("a" variable (:type "double") nil [2080 2089])
+            ("Sigma_0" variable (:type "double") nil [2136 2151])
+            ("Sigma_p" variable (:type "double") nil [2211 2226])
+            ("gas_to_dust_ratio" variable (:type "double") nil [2254 2279])
+            ("a_ice" variable (:type "double") nil [2323 2336])
+            ("f_ice" variable (:type "double") nil [2385 2398])
+            ("h" variable (:type "double") nil [2475 2484])
+            ("H" variable (:type "double") nil [2524 2533])
+            ("P_gas" variable (:type "double") nil [2550 2563])
+            ("P_gas" variable (:type "double") nil [2583 2596])
+            ("alpha" variable (:type "double") nil [2623 2636])
+            ("pg" variable (:type "double") nil [2692 2702])
+            ("R_fill" variable (:type "double") nil [2765 2779])
+            ("R_dust" variable (:type "double") nil [2836 2850])
+            ("R_source_min" variable (:type "double") nil [2910 2930])
+            ("R_source_max" variable (:type "double") nil [2991 3011])
+            ("R_bounce" variable (:type "double") nil [3076 3092])
+            ("eps_pl" variable (:type "double") nil [3146 3160])
+            ("R_planetesimal" variable (:type "double") nil [3229 3251])
+            ("R_planetesimal_2" variable (:type "double") nil [3321 3345])
+            ("strength" variable (:type "long") nil [3405 3419])
+            ("pf" variable (:type "double") nil [3514 3524])
+            ("pp" variable (:type "double") nil [3591 3601])
+            ("vd" variable (:type "long") nil [3720 3728])
+            ("group_collisions" variable (:type "long") nil [3770 3792])
+            ("dM_prec" variable (:type "double") nil [3841 3856])
+            ("M_threshold" variable (:type "double") nil [3961 3980])
+            ("dv_fixed" variable (:type "double") nil [4041 4057])
+            ("young_m" variable (:type "double") nil [4247 4262])
+            ("f_damage" variable (:type "double") nil [4343 4359])
+            ("P_premelt" variable (:type "double") nil [4468 4485])
+            ("T_ice" variable (:type "int") nil [4610 4616])
+            ("T_melt" variable (:type "double") nil [4663 4677])
+            ("rho_premelt" variable (:type "double") nil [4727 4746])
+            ("q_fusion" variable (:type "double") nil [4815 4831])
+            ("k_therm" variable (:type "double") nil [4895 4910])
+            ("c_solid" variable (:type "double") nil [4957 4972])
+            ("dt_out" variable (:type "double") nil [5010 5024])
+            ("dt_rates" variable (:type "double") nil [5118 5134])
+            ("t_max" variable (:type "double") nil [5173 5186])
+            ("t_seeds" variable (:type "double") nil [5265 5280])
+            ("R_seeds" variable (:type "double") nil [5306 5321])
+            ("N_bin" variable (:type "double") nil [5349 5362])
+            ("N_phys_limit" variable (:type "double") nil [5456 5476])
+            ("debug_level" variable (:type "long") nil [5525 5542])
+            ("seed" variable (:type "long") nil [5585 5595])
+            ("tag" variable (:type "long") nil [5607 5616])
+            ("out" variable (:type ("string" type (:type "class") nil nil)) nil [5641 5652])
+            ("format" variable (:type ("string" type (:type "class") nil nil)) nil [5669 5683])
+            ("M" variable
+               (:pointer 1
+                :type "double")
+                nil [5723 5733])
+            ("R" variable
+               (:pointer 1
+                :type "double")
+                nil [5734 5744])
+            ("M_tot" variable (:type "double") nil [5769 5782])
+            ("Omega" variable (:type "double") nil [5805 5818])
+            ("Sigma" variable (:type "double") nil [5835 5848])
+            ("Sigma_g" variable (:type "double") nil [5862 5877])
+            ("rho_g" variable (:type "double") nil [5893 5906])
+            ("c_g" variable (:type "double") nil [5926 5937])
+            ("P_gas" variable (:type "double") nil [5954 5967])
+            ("Re_t" variable (:type "double") nil [6023 6042])
+            ("v_e" variable (:type "double") nil [6079 6090])
+            ("M_dust" variable (:type "double") nil [6107 6121])
+            ("M_mc" variable (:type "double") nil [6143 6155])
+            ("tau" variable (:type "double") nil [6196 6207])
+            ("rng" variable
+               (:pointer 1
+                :type ("gsl_rng" type (:type "class") nil nil))
+                nil [6215 6228])
+            ("time" variable (:type "double") nil [6237 6254])
+            ("t_out" variable (:type "double") nil [6255 6273])
+            ("rates_ik" variable
+               (:pointer 2
+                :type "double")
+                nil [6290 6308])
+            ("events_normal_ik" variable
+               (:pointer 2
+                :type "double")
+                nil [6309 6335])
+            ("dv_ik" variable
+               (:pointer 2
+                :type "double")
+                nil [6336 6351])
+            ("rates" variable
+               (:pointer 1
+                :type "double")
+                nil [6368 6382])
+            ("pl_creation_rate" variable (:type "double") nil [6383 6407])
+            ("cum_rates" variable
+               (:pointer 1
+                :type "double")
+                nil [6408 6426])
+            ("interacting" variable
+               (:pointer 1
+                :type "int")
+                nil [6427 6444])
+            ("indices" variable
+               (:pointer 1
+                :type "int")
+                nil [6510 6523])
+            ("dt_average" variable (:type "double") nil [6578 6600])
+            ("dt_average_N" variable (:type "double") nil [6601 6625])
+            ("eformat" variable (:type ("string" type (:type "class") nil nil)) nil [6659 6674])
+            ("sformat" variable (:type ("string" type (:type "class") nil nil)) nil [6675 6690])
+            ("rank" variable (:type "int") nil [6713 6722])
+            ("world_size" variable (:type "int") nil [6723 6738])
+            ("fid_info" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("FILE" type (:type "class") nil nil))
+                nil [6771 6800])
+            ("fid_out" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("FILE" type (:type "class") nil nil))
+                nil [6801 6829])
+            ("fid_diags" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("FILE" type (:type "class") nil nil))
+                nil [6830 6860])
+            ("fid_summ" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("FILE" type (:type "class") nil nil))
+                nil [6861 6890])
+            ("FRAG_LIKELY_ACCRETING_HIGH_MASS_RATIO" variable (:constant-flag t) nil [7042 7079])
+            ("FRAG_PRINT_DEBUG_INFO" variable (:constant-flag t) nil [7090 7111])
+            ("FRAG_BOUNCING_ALWAYS" variable (:constant-flag t) nil [7122 7142])
+            ("VD_FIXED" variable (:constant-flag t) nil [7154 7162])
+            ("VD_TURBULENCE_ONLY" variable (:constant-flag t) nil [7173 7191])
+            ("VD_FULL" variable (:constant-flag t) nil [7203 7210])
+            ("mfrag" function
+               (:arguments 
+                  ( ("m1" variable (:type "double") (reparse-symbol arg-sub-list) [7356 7366])
+                    ("m2" variable (:type "double") (reparse-symbol arg-sub-list) [7367 7377])
+                    ("rho_pl" variable (:type "double") (reparse-symbol arg-sub-list) [7378 7392])
+                    ("dv" variable (:type "double") (reparse-symbol arg-sub-list) [7393 7403])
+                    ("strength" variable (:type "int") (reparse-symbol arg-sub-list) [7404 7417])
+                    ("flag" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [7418 7428]))                  
+                :type "double")
+                nil [7343 8524])
+            ("stopping_time" function
+               (:arguments 
+                  ( ("m" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [8612 8627])
+                    ("r" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [8628 8643]))                  
+                :type "double")
+                nil [8591 8699])
+            ("outcome_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("STICKING" variable
+                             (:constant-flag t
+                              :default-value (8730 8731)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8719 8731])
+                          ("BOUNCING" variable
+                             (:constant-flag t
+                              :default-value (8769 8770)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8758 8770])
+                          ("TRANSFER" variable
+                             (:constant-flag t
+                              :default-value (8803 8804)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8792 8804])
+                          ("FRAGMENTING" variable
+                             (:constant-flag t
+                              :default-value (8846 8847)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8832 8847])
+                          ("MERGING_VESC" variable
+                             (:constant-flag t
+                              :default-value (8930 8931)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8915 8931])
+                          ("FREEZING" variable
+                             (:constant-flag t
+                              :default-value (8963 8964)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8952 8964]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [8702 9008])
+            ("freeze" function
+               (:arguments 
+                  ( ("M_i" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [9023 9040])
+                    ("M_k" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [9041 9058])
+                    ("R_i" variable
+                       (:constant-flag t
+                        :type ("dobule" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9071 9088])
+                    ("R_k" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [9089 9106])
+                    ("dv" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [9119 9135]))                  
+                :type "bool")
+                nil [9011 10651])
+            ("outcome" function
+               (:arguments 
+                  ( ("M_i" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [10781 10798])
+                    ("M_k" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [10799 10816])
+                    ("R_i" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [10835 10852])
+                    ("R_k" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [10853 10870])
+                    ("dv" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [10889 10905])
+                    ("M_t_new" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [10924 10940])
+                    ("M_p_new" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [10941 10957])
+                    ("flag" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [10958 10968]))                  
+                :type ("outcome_t" type (:type "class") nil nil))
+                nil [10763 13630])
+            ("disk_height" function
+               (:arguments 
+                  ( ("M_i" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [13682 13699])
+                    ("R_i" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [13700 13717]))                  
+                :type "double")
+                nil [13663 13884])
+            ("turbulent_coll_speed" function
+               (:arguments 
+                  ( ("M_i" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [13986 14003])
+                    ("M_k" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [14004 14021])
+                    ("R_i" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [14050 14067])
+                    ("R_k" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [14068 14085]))                  
+                :type "double")
+                nil [13958 14662])
+            ("save_velocity_outcome" function (:type "void") nil [14664 15655])
+            ("power_law_distribution" function
+               (:arguments 
+                  ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [15688 15697])
+                    ("alpha" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15698 15710]))                  
+                :type "double")
+                nil [15658 15751])
+            ("get_planetesimal" function
+               (:arguments 
+                  ( ("M_pl" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [15859 15872])
+                    ("R_pl" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [15873 15886]))                  
+                :type "void")
+                nil [15837 16443])
+            ("count" function
+               (:arguments 
+                  ( ("R_1" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [16822 16839])
+                    ("R_2" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [16840 16857]))                  
+                :type "int")
+                nil [16812 16973])
+            ("sample_cum" function
+               (:arguments 
+                  ( ("cum_rates" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [16990 17014]))                  
+                :type "int")
+                nil [16975 17234])
+            ("update_interaction_rates" function
+               (:arguments 
+                  ( ("from" variable (:type "int") (reparse-symbol arg-sub-list) [17540 17549])
+                    ("to" variable (:type "int") (reparse-symbol arg-sub-list) [17550 17557]))                  
+                :type "void")
+                nil [17510 20917])
+            ("get_random_planetesimal_source" function (:type "int") nil [21013 21256])
+            ("pre_evolve_actions" function (:type "void") nil [21260 22438])
+            ("evolve" function (:type "double") nil [22440 25872])
+            ("mass_frac_between" function
+               (:arguments 
+                  ( ("R_1" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [25900 25917])
+                    ("R_2" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [25918 25935]))                  
+                :type "double")
+                nil [25875 25996])
+            ("output" function
+               (:arguments 
+                  ( ("time" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [26539 26557])
+                    ("dt" variable
+                       (:constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [26558 26574]))                  
+                :type "double")
+                nil [26525 29048])
+            ("output_rates" function
+               (:arguments 
+                  ( ("time" variable (:type "double") (reparse-symbol arg-sub-list) [29319 29331]))                  
+                :type "void")
+                nil [29301 30370])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [30381 30390])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [30391 30403]))                  
+                :type "int")
+                nil [30372 35054]))          
+    :file "main.c"
+    :pointmax 35132
+    :fsize 35130
+    :lastmodtime '(21353 779 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MSUN" . ((number "2e33" 857 . 861)))
+          ("unused" . ((symbol "__attribute" 1523 . 1534) (semantic-list "((unused))" 1534 . 1544)))
+          ("DIAGS" (spp-arg-list ("label" "value") 1305 . 1319) . 
+              ((DO "do" 1320 . 1322) (semantic-list "{ if (fid_diags == NULL) break; fprintf(fid_diags, sformat, label); fprintf(fid_diags, eformat, (double) value); fprintf(fid_diags, \"\\n\"); fflush(fid_diags); }" 1323 . 1482) (WHILE "while" 1483 . 1488) (semantic-list "(0)" 1488 . 1491)))
+          ("FRAG_LIKELY_ACCRETING_HIGH_MASS_RATIO" . ((number "1" 7080 . 7081)))
+          ("TUNIT" . ((semantic-list "(sqrt(AU*AU*AU/(G*MUNIT)))" 1013 . 1039)))
+          ("RHOUNIT" . ((semantic-list "(MUNIT/(AU*AU*AU))" 1084 . 1102)))
+          ("STOP_ZERO_RATE" . ((punctuation "-" 1204 . 1205) (number "1" 1205 . 1206)))
+          ("VD_FULL" . ((number "1" 7211 . 7212)))
+          ("FRAG_BOUNCING_ALWAYS" . ((number "4" 7143 . 7144)))
+          ("sqr" (spp-arg-list ("x") 811 . 814) . ((semantic-list "((x)*(x))" 815 . 824)))
+          ("G" . ((number "6.67e-8" 991 . 998)))
+          ("AU" . ((number "1.5e13" 837 . 843)))
+          ("MU_ICE" . ((number "18." 921 . 924)))
+          ("MUNIT" . ((symbol "MSUN" 947 . 951)))
+          ("MSTAR" . ((semantic-list "(MSUN/(MUNIT))" 966 . 980)))
+          ("VUNIT" . ((semantic-list "(AU/TUNIT)" 1151 . 1161)))
+          ("VD_FIXED" . ((number "0" 7163 . 7164)))
+          ("RUNIT" . ((symbol "AU" 1176 . 1178)))
+          ("VER" . ((string "\"1.0\"" 1220 . 1225)))
+          ("VD_TURBULENCE_ONLY" . ((punctuation "-" 7192 . 7193) (number "1" 7193 . 7194)))
+          ("MJUP" . ((number "1.989e30" 875 . 883)))
+          ("MEARTH" . ((number "5.9e27" 899 . 905)))
+          ("YEAR" . ((semantic-list "(TUNIT/3.14e7)" 1053 . 1067)))
+          ("SIGMAUNIT" . ((semantic-list "(MUNIT/(AU*AU))" 1121 . 1136)))
+          ("BANNER" . 
+              ((string "\"MCDiskMass \"" 1241 . 1254) (symbol "VER" 1255 . 1258) (string "\" - Stefano Meschiari - 2014\\n\"" 1259 . 1290)))
+          ("FRAG_PRINT_DEBUG_INFO" . ((number "2" 7112 . 7113)))
+          )
+
+    )
+   )
+  :file "!private!var!folders!g8!6270hdl57rv7hpbfwqgpc72w0003q4!T!com.apple.mail!com.apple.mail.drag-T0x7fcd88410a90.tmp.BQAVJq!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

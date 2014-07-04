@@ -1,6 +1,6 @@
 require(stringr)
 require(compiler)
-enableJIT(3)
+invisible(enableJIT(3))
 options(max.print = 100)
 suppressPackageStartupMessages(library(stringr, logical.return=TRUE))
 
@@ -15,3 +15,5 @@ logseq <- function(from=0, to=1, by=((to-from)/(length.out - 1)), length.out=NUL
 printf <- function(...) {
     cat(sprintf(...))
 }
+
+cat(getwd(), '\n')

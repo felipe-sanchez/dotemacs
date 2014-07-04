@@ -1,0 +1,2 @@
+
+UI.setToken(encodeURIComponent("<?= $token ?>"));

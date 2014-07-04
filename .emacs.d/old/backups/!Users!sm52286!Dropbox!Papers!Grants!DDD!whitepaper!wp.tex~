@@ -1,0 +1,46 @@
+\documentclass[justified]{tufte-handout}
+
+\usepackage{upgreek}
+\usepackage{listings}
+\usepackage{graphicx}
+
+\newcommand{\ve}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\aj}{Astronomical Journal}
+\newcommand{\apj}{Astrophysical Journal}
+\newcommand{\mnras}{MNRAS}
+\newcommand{\pasp}{PASP}
+\newcommand{\cc}[1]{\texttt{#1}}
+\newcommand{\smthanks}[1]{{\small $^{#1}$}}
+\newcommand{\Systemic}{\textcolor{Cerulean}{\href{http://www.stefanom.org/systemic}{Systemic2}}}
+\newcommand{\ucolick}{UCO/Lick Observatory, University of California at Santa Cruz}
+\newcommand{\carnegie}{Carnegie Institute of Washington}
+\newcommand{\mcdonald}{McDonald Observatory, University of Texas at Austin}
+\newcommand{\hyper}[2]{\textcolor{Cerulean}{\href{#1}{#2}}}
+
+\title{Searching for Exoplanets with Systemic2}
+\author{Stefano Meschiari, Gregory P. Laughlin, Steve S. Vogt\smthanks{2}, Paul R. Butler, Jennifer Burt\smthanks{2}, Russell Hanson\smthanks{2}, Joel Green\smthanks{1}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present Systemic Console 2, a new software package specifically written for the analysis of exoplanetary time series (radial velocity and transit timing). We review some of its data analysis workflows, present applications to real exoplanetary data, and finally discuss a few planned features for the software.\footnote{This document is a ``live'' document, and will be updated as the software evolves.}
+\end{abstract}
+
+\section{Motivation}
+Development of astronomical software has become a crucial part of professional astronomers' work in recent years (ref.). This trend has been in part a reaction to the ever-increasing stream of data being produced from disparate observatories in multiple wavelengths (ref.), and in part because of the need for more sophisticated tools for data analysis (ref.), astrophysical simulations (ref.), and modelling (ref.). The community at large is also recognizing the importance of open-sourcing their software. As astronomical codes get increasingly complex, open-source projects have several advantages, such as transparency (ref.), flexibility and increased potential for adaptation. Adopting an open-source approach to write software benefits the entire community, avoiding the need to ``reinvent the wheel'' to solve common needs and exponentially increasing the scientific return on the team's time investment. During a recent meeting of the American Astronomical Society\footnote{\hyper{http://aas.org/posts/story/2014/01/astrophysics-code-sharing-ii-sequel}{Astrophysics Code Sharing, the sequel}}, it was argued that ``\textit{widely used software has enabled at least as much science as a new instrument would}''. However, it was also noted that ``\textit{nothing within the funding agencies offer support for software development}'', highlighting a fundamental issue in astronomical software development. We believe this mismatch between funding requirements and modern astrophysical practice will be self-correcting, as sophisticated astronomical software will be more and more critical for modern astrophysics.
+
+In keeping with the notions above, our group recently released a new version of the \Systemic{} Console. It is a completely rewritten version of the widely used Systemic package \citep[the previous version is now called Systemic 1, in order to distinguish it from the rewritten package;][]{Meschiari09, Meschiari10}. The \Systemic{} package enables the user to quickly and interactively prototype the analysis of exoplanetary time series, both radial velocity (RV) and timing data. It consists of a fast, parallelized C library (which can be easily integrate into existing projects), an R package providing a high-level interface to the library, and an easy-to-use  ``studio'' user interface for interactive use and plotting. A Python interface is also in the works.
+
+In the following sections, we will highlight some of the sophisticated features that are easily accessible within \Systemic{}.
+
+\section{Overview}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{scheme.pdf}
+\caption{A schematic view of the architecture of Systemic, in order of increasing ``complexity'' for the user (from top to bottom). There are three ways to use Systemic: (1) Using the graphical user interface (GUI); (2) Using the high-level R interface (Python and IDL interfaces are in the works); (3) Linking to the C library. Each level depends on the next; the Systemic library makes use of several public packages.}
+\end{marginfigure}
+
+In this section, we give a quick overview of the data-analysis tools offered by the \Systemic{} package. Each of these tools may be accessed in three different ways, depending on the user's expertise: (1) through the ``studio'' user interface; (2) through the R package; and (3) linking to the C library. 
+
+\bibliographystyle{apj}
+\bibliography{../../../Articles/biblio}
+\end{document}

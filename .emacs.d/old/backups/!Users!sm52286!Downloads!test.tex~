@@ -1,0 +1,5 @@
+\documentclass{article}
+\begin{document}
+\textbf{Hi!}
+$x^2+3$
+\end{document}

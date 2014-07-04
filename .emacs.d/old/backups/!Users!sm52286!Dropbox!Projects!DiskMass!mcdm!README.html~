@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>README</title>
+<!-- 2014-03-04 Tue 21:50 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Stefano Meschiari" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">README</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. MCDM/Simple</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Introduction</a></li>
+<li><a href="#sec-1-2">1.2. Numerical algorithm</a></li>
+<li><a href="#sec-1-3">1.3. Initialization</a></li>
+<li><a href="#sec-1-4">1.4. Evolution</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> MCDM/Simple</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Introduction</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+A Monte Carlo code modeled on Zsom et al., 2010.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Numerical algorithm</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+The algorithm follows the evolution of n <span class="underline">representative</span> particles out
+of N <span class="underline">physical</span> particles . At each step, rng decides which particles
+collide, and a function decides the collisional outcome.
+</p>
+
+<p>
+Algorithm:
+</p>
+<ul class="org-ul">
+<li>Start with n particles with mass m<sub>i</sub>. The representative particles (n
+  &Lt; N) will only collide with physical particles.
+</li>
+<li>Choose a particle, say i = 20; what particles will collide with it?
+Assume physical particles are distributed the same &#x2013; then for each
+value k = 1..n, there are <img src="ltxpng/README_44637af91273521399844c8812864c35351ab478.png" alt="$n_k = M_tot/nm_k \times V$" /> physical
+particles per cubic cm with mass m<sub>k</sub>. I.e. each representative
+particle i represents <img src="ltxpng/README_489da4e85e34da0ca80b1f61b21d5deaca9cebe9.png" alt="$M_{tot}/nm_i$" /> physical particles.
+</li>
+<li>The rate of collision is  <img src="ltxpng/README_0f73733b67f4230443e137ab92f31528743d52c6.png" alt="$r_i(k) = n_k \sigma_ik \Delta{}v_ik = M_{tot} / nm_k V \sigma_{ik}
+  \Delta{}v_{ik}$" /> 
+between particles i and k; then the rate of collisions for
+particle i is r<sub>i</sub>=&sum;r<sub>ik</sub> and the total rate is r = &sum;<sub>i</sub> r<sub>i</sub>.
+</li>
+<li>Choose a timestep &delta;t = -1/r log(ran()) (it's a Poisson process) -&gt; 1
+collision event.
+</li>
+<li>P(i) = r<sub>i</sub>/r is the probability that there's a collision with
+particle i; P(k|i) = r<sub>i</sub>(k)/r<sub>i</sub> probability of k is involved in the
+collision. (i and k can be equal). 
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Initialization</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Initially, it is assumed that all the mass in solid is distributed between R = R<sub>min</sub> and R<sub>fill</sub> as dN/dR = N<sub>0</sub> R<sup>-pg</sup>; &rho; is assumed constant (e.g. = 2 g/cm<sup>3</sup>). Therefore, M<sub>tot</sub> = &int; N<sub>0</sub> R<sup>-pg</sup> M dR = 4/3 &pi; &rho; N<sub>0</sub> &int; R<sup>-pg+3</sup> dR &rarr; N<sub>0</sub> = M (4-pg) / (4/3 &pi;&rho; R<sub>fill</sub><sup>4-pg</sup>)
+</li>
+
+<li>M<sub>tot</sub> is distributed in two ways; between 0 and R<sub>dust</sub> it goes in the M<sub>dust</sub> bin (where we don't follow the detailed evolution of radii). The rest is initially going into the MC particles, distributed between R<sub>dust</sub> and R<sub>fill</sub>.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> Evolution</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>First, calculate r<sub>ik</sub> (a lower triangular matrix if r<sub>i</sub>(k) = M<sub>tot</sub>/nV &sigma;<sub>ik</sub>&Delta; v<sub>ik</sub>; notice I removed the m<sub>k</sub> factor and will add it later when calculating sums, so that the expression is symmetric). r<sub>ik</sub> is the "collision rate" matrix.
+</li>
+<li>Next, calculate the rate at which material in the [R<sub>snowball</sub>, R<sub>boulder</sub> ] range is converted into material in the [R<sub>planetesimal1</sub>, R<sub>planetesimal2</sub>] range. At each step, take a planetesimal mass M<sub>pl</sub> (sampled from a distribution dN/dR ~ R<sup>-pp</sup>; pp = 0 by default), and calculate the rate of planetesimal production as 
+</li>
+</ul>
+
+<p>
+dN/dt = M<sub>available</sub>/M<sub>pl</sub>&tau; = M<sub>available</sub>/M<sub>pl</sub> &epsilon;<sub>pl</sub>&Omega;/2&pi;  &rarr; r<sub>pl</sub> = (dN/dt)<sup>-1</sup>
+</p>
+
+<p>
+(where M<sub>available</sub> is the mass available to create planetesimals, &epsilon;<sub>pl</sub> is the efficiency and &Omega; the local angular speed). 
+</p>
+<ul class="org-ul">
+<li>The total rate is r = &sum;<sub>i</sub> &sum;<sub>k</sub> r<sub>ik</sub> + r<sub>pl</sub>. Choose dt = -1/r log(rng()).
+</li>
+<li>Choose a number q between 1 and r; if q &gt; &sum;<sub>i</sub> &sum;<sub>k</sub> r<sub>ik</sub>, then collision, otherwise conversion.
+<ul class="org-ul">
+<li>Collision: probability happening to particle i is P(i) = r<sub>i</sub>/r, so select particle according to r<sub>i</sub> distribution.
+</li>
+<li>then, choose k such that P(k|i) = r<sub>ik</sub>/r<sub>i</sub>, then compute outcome (still WIP).
+</li>
+</ul>
+</li>
+<li>Conversion: choose the particle i that will be converted among the ones that participate in conversion, and substitute its characteristics (M and R) with the planetesimal's.
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Stefano Meschiari</p>
+<p class="date">Created: 2014-03-04 Tue 21:50</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.5h)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
