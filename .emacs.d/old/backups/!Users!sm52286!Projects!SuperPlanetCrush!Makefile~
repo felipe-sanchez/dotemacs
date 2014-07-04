@@ -1,2 +1,0 @@
-js/ps.min.js:
-	uglifyjs -c -o js/ps.min.js js/ps.js

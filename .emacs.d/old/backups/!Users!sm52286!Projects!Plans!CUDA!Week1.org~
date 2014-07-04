@@ -1,5 +1,0 @@
-* Vector addition
-** Kernel function: prefix with __global__
-** i = threadidx.x + blockDim.x * blockIdx.x
-** vecAddKernel<<<ceil(n/256.), 256>>>(d_A, d_B, d_C, n)
-

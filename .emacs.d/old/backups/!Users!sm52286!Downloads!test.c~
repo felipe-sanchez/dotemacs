@@ -1,3 +1,0 @@
-int main() {
-  *(uint8_t*)0x1234 = 0xFF;
-}

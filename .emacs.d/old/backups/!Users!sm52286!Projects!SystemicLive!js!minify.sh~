@@ -1,4 +1,0 @@
-uglifyjs js/systemic.js -c -o js/systemic.min.js
-uglifyjs js/ui.js -c -o js/ui.min.js
-uglifyjs js/help.js -c -o js/help.min.js
-	

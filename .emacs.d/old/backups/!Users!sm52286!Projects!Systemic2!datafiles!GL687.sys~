@@ -1,8 +1,0 @@
-Data {
-	RV[] "GL687_HET03.vels"
-	RV[] "GL687_KECK.vels"
-	RV[] "GL687_APF.vels"
-}
-"GL687" {
- Mass 0.401
-}
