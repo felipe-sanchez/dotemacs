@@ -11,6 +11,8 @@
 (setq imenu-auto-rescan t)
 
 
+(require 'quickrun)
+
 ;; Autocomplete -- using company-mode for now
 (require 'auto-complete)
 (require 'auto-complete-config)
