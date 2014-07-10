@@ -31,8 +31,9 @@ export LUA_PATH="?.lua;lua/?.lua"
       . /opt/local/etc/profile.d/bash_completion.sh
   fi
 
-. ~/.git-completion.bash
+. ~/Projects/dotemacs/.git-completion.bash
 . ~/Projects/dotemacs/git-flow-completion.bash
+. ~/Projects/dotemacs/z.sh
 
 ##
 # Your previous /Users/sm52286/.bash_profile file was backed up as /Users/sm52286/.bash_profile.macports-saved_2014-07-06_at_14:30:18
