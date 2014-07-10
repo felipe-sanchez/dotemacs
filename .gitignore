@@ -13,4 +13,5 @@
 .emacs.d/request
 .emacs.d/backups
 .emacs.d/.*
+.emacs.d/elpa/*.txt
 .Rh*
