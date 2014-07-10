@@ -10,7 +10,7 @@
 (add-hook 'prog-mode-hook 'imenu-add-menubar-index)
 (setq imenu-auto-rescan t)
 
-
+(require 'org)
 (require 'quickrun)
 
 ;; Autocomplete -- using company-mode for now
@@ -144,5 +144,5 @@
 
 (add-hook 'custom-mode-hook (lambda () (linum-mode -1)))
 
-(provide 'my-packages)
 
+(provide 'my-packages)
