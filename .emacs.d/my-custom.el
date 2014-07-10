@@ -42,7 +42,8 @@
  '(tool-bar-mode nil)
  '(vc-annotate-background "#d4d4d4")
  '(vc-annotate-color-map (quote ((20 . "#437c7c") (40 . "#336c6c") (60 . "#205070") (80 . "#2f4070") (100 . "#1f3060") (120 . "#0f2050") (140 . "#a080a0") (160 . "#806080") (180 . "#704d70") (200 . "#603a60") (220 . "#502750") (240 . "#401440") (260 . "#6c1f1c") (280 . "#935f5c") (300 . "#834744") (320 . "#732f2c") (340 . "#6b400c") (360 . "#23733c"))))
- '(vc-annotate-very-old-color "#23733c"))
+ '(vc-annotate-very-old-color "#23733c")
+ '(yascroll:delay-to-hide nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -56,4 +57,4 @@
  '(powerline-active1 ((t (:inherit mode-line :background "gray60"))) t)
  '(powerline-active2 ((t (:inherit mode-line :background "gray60"))) t)
  '(rainbow-delimiters-unmatched-face ((t (:foreground "#f2777a" :underline t))))
- '(which-func ((t (:foreground "dark red" :weight bold)))))
+ '(which-func ((t (:foreground "dark red" :weight bold))) t))
