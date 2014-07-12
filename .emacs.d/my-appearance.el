@@ -3,9 +3,7 @@
 ;; Appearance-related settings
 
 ;; Enables scrollbar, disable toolbar
-(if (display-graphic-p)
-    (scroll-bar-mode))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(tool-bar-mode -1)
 
 ;; Show path of file in titlebar
 (setq-default frame-title-format "%b (%f)")
@@ -14,7 +12,7 @@
 (require 'hl-line)
 (global-hl-line-mode)
 
-;;(sml/setup)
+(sml/setup)
 (column-number-mode)
 
 ;; I want "q" to actually *close* the buffer. I almost

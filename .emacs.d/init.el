@@ -25,8 +25,7 @@
   (ns-do-applescript "tell application \"Emacs\" to activate"))  
 (add-hook 'server-visit-hook 'ns-raise-emacs)
 
-;; Appearance settings
-(require 'my-appearance)
+
 ;; Loads and set up general settings (e.g. autocomplete, undo, etc.)
 (require 'my-packages)
 
@@ -46,6 +45,9 @@
 
 (setq custom-file (expand-file-name "my-custom.el" user-emacs-directory))
 (load custom-file)
+
+;; Appearance settings
+(require 'my-appearance)
 
 ;; Refresh screen (to prevent display glitches)
 (redraw-display)

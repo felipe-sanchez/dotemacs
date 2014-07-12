@@ -65,7 +65,7 @@ Symbols matching the text at point are put first in the completion list."
 
 
 
-(global-set-key (kbd "s-.") 'idomenu)
+(global-set-key (kbd "s-.") 'ido-imenu)
 (global-set-key (kbd "s->") 'imenu-anywhere)
 (global-set-key (kbd "s-\\") 'magit-status)
 (global-set-key (kbd "s-+") 'text-scale-increase)

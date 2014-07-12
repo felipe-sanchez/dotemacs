@@ -32,7 +32,7 @@ as well as the GUI.
     (((class color) (min-colors 16))       (:foreground "#fff" :background "#000"))
     (((class color) (min-colors 8))        (:foreground "#fff" :background "#000")))
    )
- '(linum                               ((t (:foreground "#434844"  :background "#110B14" :height 70                                    ))))
+ '(linum                               ((t (:foreground "#6a6a6a"  :background "#110B14" :height 96                                    ))))
  '(minibuffer-prompt                   ((t (:foreground "#1278A8"  :background nil       :weight bold                                  ))))
  '(escape-glyph                        ((t (:foreground "orange"   :background nil                                                     ))))
  '(highlight                           ((t (:foreground "orange"   :background nil                                                     ))))
@@ -88,12 +88,11 @@ as well as the GUI.
  '(git-gutter:added                    ((t (:foreground "#609f60" :bold t))))
  '(git-gutter:modified                 ((t (:foreground "#3388cc" :bold t))))
  '(git-gutter:deleted                  ((t (:foreground "#cc3333" :bold t))))
- '(diff-added                          ((t (:background "#132013"))))
- '(diff-removed                        ((t (:background "#290a0a"))))
+ '(diff-added                          ((t (:background "#305030"))))
+ '(diff-removed                        ((t (:background "#903010"))))
  '(diff-file-header                    ((t (:background "#362145"))))
  '(diff-context                        ((t (:foreground "#E0E4CC"))))
  '(diff-hunk-header                    ((t (:background "#242130"))))
-
  )
 
 Rainbow delimiters
