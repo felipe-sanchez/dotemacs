@@ -126,7 +126,10 @@
 ;;(global-git-gutter-mode)
 
 ;; Global linum
+(require 'linum-off)
 (global-linum-mode)
+
+
 
 ;; Global paredit
 (show-paren-mode 1)

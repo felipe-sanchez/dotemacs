@@ -82,6 +82,23 @@ Symbols matching the text at point are put first in the completion list."
 (global-set-key (kbd "s-W") 'delete-frame)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
+;; Backwards word delete instead of kill
+(defun delete-word (arg)
+  "Delete characters forward until encountering the end of a word.
+With argument, do this that many times."
+  (interactive "p")
+  (delete-region (point) (progn (forward-word arg) (point))))
+
+(defun backward-delete-word (arg)
+  "Delete characters backward until encountering the end of a word.
+With argument, do this that many times."
+  (interactive "p")
+  (delete-word (- arg)))
+
+(global-set-key (read-kbd-macro "<M-DEL>") 'backward-delete-word)
+(global-set-key (read-kbd-macro "<C-DEL>") 'backward-delete-word)
+
+
 ;; Don't open dialogs on Mac OS X
 (global-set-key (kbd "s-o") 'ido-find-file)
 (global-set-key (kbd "s-s") 'save-buffer)

@@ -14,5 +14,5 @@
                             "moment" "location"))
 (require 'ac-js2)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
-
+(add-hook 'js2-mode-hook 'pretty-symbols-mode)
 (provide 'my-js2-mode)
