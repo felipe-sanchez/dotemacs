@@ -19,6 +19,9 @@ export PATH="/usr/texbin/:$PATH"
 export C_INCLUDE_PATH="/opt/local/include"
 alias emacs="emacsclient -n "
 alias git_status="pushd $HOME/Projects/dotemacs/utils; lua git_global_status.lua --no-daemon; popd"
+alias java6="/usr/libexec/java_home -v 1.6 --exec java"
+alias java7="/usr/libexec/java_home -v 1.7 --exec java"
+alias java8="/usr/libexec/java_home -v 1.8 --exec java"
 
 alias lonestar="ssh lonestar.tacc.utexas.edu"
 
