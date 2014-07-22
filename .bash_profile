@@ -5,19 +5,20 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
+function emacs_open {
+    open -a Emacs && emacsclient -n $1 
+}
 
-alias aquamacs='open -b org.gnu.Aquamacs'
 # MacPorts Installer addition on 2012-10-01_at_17:56:59: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 
 # added by Anaconda 1.6.1 installer
-export PATH="$HOME/anaconda/bin:$PATH"
 export PATH="$HOME/local/emsdk_portable:$HOME/local/emsdk_portable/emscripten/incoming:$PATH"
 export PATH="/usr/texbin/:$PATH"
 export C_INCLUDE_PATH="/opt/local/include"
-alias emacs="emacsclient -n "
+alias emacs=emacs_open
 alias git_status="pushd $HOME/Projects/dotemacs/utils; lua git_global_status.lua --no-daemon; popd"
 alias java6="/usr/libexec/java_home -v 1.6 --exec java"
 alias java7="/usr/libexec/java_home -v 1.7 --exec java"
@@ -45,4 +46,4 @@ export LUA_PATH="?.lua;lua/?.lua"
 # MacPorts Installer addition on 2014-07-06_at_14:30:18: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
-
+export PATH="$HOME/anaconda/bin:$PATH"

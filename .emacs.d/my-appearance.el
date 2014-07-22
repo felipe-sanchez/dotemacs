@@ -12,6 +12,8 @@
 (require 'hl-line)
 (global-hl-line-mode)
 
+(setq ns-pop-up-frames nil)
+
 (sml/setup)
 (column-number-mode)
 
