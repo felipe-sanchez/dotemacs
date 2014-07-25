@@ -5,8 +5,22 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
+
+# Opens emacs GUI if not already running
 function emacs_open {
-    open -a Emacs && emacsclient -n $1 
+    open -a Emacs
+    
+    while [ `emacsclient -n $1 2>&1 | grep socket | wc -l` -gt 0 ]; do
+        sleep 1
+    done
+}
+
+function emacs_wait {
+    open -a Emacs
+    
+    while [ `emacsclient $1 2>&1 | grep socket | wc -l` -gt 0 ]; do
+        sleep 1
+    done
 }
 
 # MacPorts Installer addition on 2012-10-01_at_17:56:59: adding an appropriate PATH variable for use with MacPorts.
@@ -14,10 +28,10 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 
-# added by Anaconda 1.6.1 installer
 export PATH="$HOME/local/emsdk_portable:$HOME/local/emsdk_portable/emscripten/incoming:$PATH"
 export PATH="/usr/texbin/:$PATH"
 export C_INCLUDE_PATH="/opt/local/include"
+export EDITOR=emacs_wait
 alias emacs=emacs_open
 alias git_status="pushd $HOME/Projects/dotemacs/utils; lua git_global_status.lua --no-daemon; popd"
 alias java6="/usr/libexec/java_home -v 1.6 --exec java"
