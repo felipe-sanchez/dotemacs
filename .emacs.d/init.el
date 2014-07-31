@@ -13,7 +13,7 @@
       (expand-file-name "site-lisp" user-emacs-directory))
 
 ;; Set up load path
-(add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path "~/.emacs.d/my-lisp")
 (add-to-list 'load-path site-lisp-dir)
 (add-to-list 'load-path "~/.emacs.d/breadcrumb")
 

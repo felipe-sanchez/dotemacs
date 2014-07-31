@@ -1,0 +1,19 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".stefanom.org"
+  [url-cookie "__cfduid" "da2df66a801a3f7e689402f2dc300ade01406472022605" "23-Dec-2019 23:50:00.00 GMT" "/" ".stefanom.org" nil]
+  [url-cookie "HttpOnly" nil "23-Dec-2019 23:50:00.00 GMT" "/" ".stefanom.org" nil])
+ (".google.com"
+  [url-cookie "PREF" "ID=2303b0bda052bb44:FF=0:TM=1406471999:LM=1406471999:S=uHwRbzWH-PHeBiMm" "26-Jul-2016 14:39:59.00 GMT" "/" ".google.com" nil]
+  [url-cookie "NID" "67=NyM-ja8GWP7_KZMEGvm5U_klWLXk7DrP_Fl5EOqG0MEkeAWjaYLhRTEhDACXPsJmS2fexiRs2FexCHqPdzSp6vHjkDVJ9Yuq8e7jWUcMZnrgz5bn78PYf7EpWtwY7FoZ" "26-Jan-2015 14:39:59.00 GMT" "/" ".google.com" nil]
+  [url-cookie "HttpOnly" nil "26-Jan-2015 14:39:59.00 GMT" "/" ".google.com" nil]))
+)
+(setq url-cookie-secure-storage
+ 'nil)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:
