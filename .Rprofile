@@ -7,6 +7,18 @@ require(compiler)
 invisible(enableJIT(3))
 options(max.print = 100)
 
+plot.log.x <- function(x, ...) {
+    m <- floor(log10(min(x)))
+    M <- ceiling(log10(max(x)))
+
+    tickn <- ceiling((M-m)/5)
+    
+    ticks <- seq(m, M, by=tickn)
+    labels <- sapply(ticks, function(i) as.expression(bquote(10^ .(i))))
+
+    plot(x, ..., xaxt='n')
+    axis(1, at=10^ticks, labels=labels)
+}
 
 logseq <- function(from=1, to=10, length.out=10) {
     return(10^seq(log10(from), log10(to), length.out=length.out))
