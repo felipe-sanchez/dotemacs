@@ -104,6 +104,10 @@ With argument, do this that many times."
 (global-set-key (kbd "s-s") 'save-buffer)
 (global-set-key (kbd "s-S") 'ido-write-file)
 
+;; Create new temp file
+(global-set-key (kbd "C-c C-n") 'find-temp-file)
+(global-set-key (kbd "s-n") 'find-temp-file)
+
 ;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
