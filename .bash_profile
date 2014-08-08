@@ -61,3 +61,6 @@ export LUA_PATH="?.lua;lua/?.lua"
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 export PATH="$HOME/anaconda/bin:$PATH"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
