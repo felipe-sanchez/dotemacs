@@ -87,6 +87,8 @@ dpareto <- function(x, a=2.5, b=1) a*b^a/x^(a+1)
 ppareto <- function(x, a=2.5, b=1) (x > b)*(1-(b/x)^a)
 qpareto <- function(u, a=2.5, b=1) b/(1-u)^(1/a)
 rpareto <- function(n, a=2.5, b=1) qpareto(runif(n),a,b)
-
+systemic <- function() {
+    source("~/Projects/Systemic2/R/systemic.r", chdir=TRUE)
+}
 
 cat(getwd(), '\n')
