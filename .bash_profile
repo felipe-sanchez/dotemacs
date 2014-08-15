@@ -64,3 +64,12 @@ export PATH="$HOME/anaconda/bin:$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+##
+# Your previous /Users/stefano/.bash_profile file was backed up as /Users/stefano/.bash_profile.macports-saved_2014-08-14_at_10:50:28
+##
+
+# MacPorts Installer addition on 2014-08-14_at_10:50:28: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
