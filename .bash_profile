@@ -5,6 +5,7 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
+alias emacsclient=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
 
 # Opens emacs GUI if not already running
 function emacs_open {
