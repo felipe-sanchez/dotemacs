@@ -1,11 +1,17 @@
 function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
 }
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+}
+function phpserve {
+    num=$RANDOM
+    sleep 2 && open http://localhost:$num &
+    php -S localhost:$num
 }
 
 alias emacsclient=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
+alias phpserve=phpserve
 
 # Opens emacs GUI if not already running
 function emacs_open {
@@ -46,9 +52,9 @@ export PS1='`cat ~/.git_global_stats` \u \[\033[1;33m\]\w\[\033[0m\]$(parse_git_
 export LUA_PATH="?.lua;lua/?.lua"
 
 # Adds git completions
-  if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
-      . /opt/local/etc/profile.d/bash_completion.sh
-  fi
+if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+    . /opt/local/etc/profile.d/bash_completion.sh
+fi
 
 . ~/Projects/dotemacs/.git-completion.bash
 . ~/Projects/dotemacs/git-flow-completion.bash
@@ -74,3 +80,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+. ~/.bash_profile_local
