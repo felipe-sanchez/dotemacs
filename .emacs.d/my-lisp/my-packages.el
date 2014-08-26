@@ -6,6 +6,7 @@
 ;; Graphene (saner emacs defaults)
 (require 'graphene)
 
+
 (require 'imenu)
 (add-hook 'prog-mode-hook 'imenu-add-menubar-index)
 (setq imenu-auto-rescan t)
@@ -19,6 +20,18 @@
 (setq ac-auto-start nil)
 (setq ac-auto-show-menu nil)
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+
+;; Prettify symbols for JavaScript
+(global-prettify-symbols-mode 1)
+
+;; Mode line bell
+ (defun my-terminal-visible-bell ()
+   "A friendlier visual bell effect."
+   (invert-face 'mode-line)
+   (run-with-timer 0.1 nil 'invert-face 'mode-line))
+ 
+ (setq visible-bell nil
+       ring-bell-function 'my-terminal-visible-bell)
 
 ;;(add-hook 'after-init-hook 'global-company-mode)
 

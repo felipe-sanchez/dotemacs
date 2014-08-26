@@ -12,6 +12,11 @@
                             "clearTimeout" "setInterval" "clearInterval" "runs" "waits" "module" "Marionette"
                             "Ember" "angular" "process" "__dirname" "define" "sinon" "before" "after" "chai"
                             "moment" "location"))
+
+(add-hook 'js2-mode-hook
+            (lambda ()
+              (push '("function" . ?λ) prettify-symbols-alist)))
+
 (require 'ac-js2)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 (provide 'my-js2-mode)
