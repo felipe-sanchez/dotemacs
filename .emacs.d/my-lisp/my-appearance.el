@@ -4,6 +4,7 @@
 
 ;; Enables scrollbar, disable toolbar
 (tool-bar-mode -1)
+(menu-bar-mode 1)
 
 ;; Show path of file in titlebar
 (setq-default frame-title-format "%b (%f)")

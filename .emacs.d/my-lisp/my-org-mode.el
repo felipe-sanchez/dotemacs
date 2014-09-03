@@ -10,7 +10,15 @@
 (global-set-key "\C-ca" 'org-agenda)
 
 (add-hook 'org-mode-hook 'org-preview-latex-fragment)
+(add-hook 'org-mode-hook 'org-indent-mode)
+
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 (provide 'my-org-mode)
 
+;; Resolve conflict with wind-move
+
+(add-hook 'org-shiftup-final-hook 'windmove-up)
+(add-hook 'org-shiftleft-final-hook 'windmove-left)
+(add-hook 'org-shiftdown-final-hook 'windmove-down)
+(add-hook 'org-shiftright-final-hook 'windmove-right)
