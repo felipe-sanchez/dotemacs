@@ -46,9 +46,8 @@
  '(multi-term-program "/bin/bash" t)
  '(org-agenda-files
    (quote
-    ("~/Dropbox/Org/Today.org" "~/Projects/Plans/plans.org")))
+    ("~/Projects/Plans/Website/TODO.org" "~/Dropbox/Org/Today.org" "~/Projects/Plans/plans.org")))
  '(org-pretty-entities t)
- '(org-support-shift-select (quote always))
  '(powerline-color1 "#3d3d68")
  '(powerline-color2 "#292945")
  '(pretty-symbol-categories (lambda))
