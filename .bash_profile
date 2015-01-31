@@ -4,15 +4,19 @@ function parse_git_dirty {
 function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
+
+export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 3)\]\h \[$(tput setaf 4)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]$(parse_git_branch)\\$ \[$(tput sgr0)\]"
+
+
 function phpserve {
-    num=$RANDOM
+    num=25555
     sleep 2 && open http://localhost:$num &
     php -S localhost:$num
 }
 
-alias emacsclient=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
 alias phpserve=phpserve
 
+alias emacsclient=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
 # Opens emacs GUI if not already running
 function emacs_open {
     open -a Emacs
@@ -21,6 +25,9 @@ function emacs_open {
         sleep 1
     done
 }
+export EDITOR=emacs_open
+alias emacs=emacs_open
+
 
 function emacs_wait {
     open -a Emacs
@@ -30,6 +37,8 @@ function emacs_wait {
     done
 }
 
+
+
 # MacPorts Installer addition on 2012-10-01_at_17:56:59: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
@@ -38,8 +47,6 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH="$HOME/local/emsdk_portable:$HOME/local/emsdk_portable/emscripten/incoming:$PATH"
 export PATH="/usr/texbin/:$PATH"
 export C_INCLUDE_PATH="/opt/local/include"
-export EDITOR=emacs_wait
-alias emacs=emacs_open
 alias git_status="pushd $HOME/Projects/dotemacs/utils; lua git_global_status.lua --no-daemon; popd"
 alias java6="/usr/libexec/java_home -v 1.6 --exec java"
 alias java7="/usr/libexec/java_home -v 1.7 --exec java"
@@ -47,7 +54,6 @@ alias java8="/usr/libexec/java_home -v 1.8 --exec java"
 
 alias lonestar="ssh lonestar.tacc.utexas.edu"
 
-export PS1='`cat ~/.git_global_stats` \u \[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
 
 export LUA_PATH="?.lua;lua/?.lua"
 
@@ -59,6 +65,9 @@ fi
 . ~/Projects/dotemacs/.git-completion.bash
 . ~/Projects/dotemacs/git-flow-completion.bash
 . ~/Projects/dotemacs/z.sh
+
+export DATABASE_URL="postgres://$(whoami)@localhost:5432/$(whoami)"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin/:$PATH"
 
 ##
 # Your previous /Users/sm52286/.bash_profile file was backed up as /Users/sm52286/.bash_profile.macports-saved_2014-07-06_at_14:30:18
