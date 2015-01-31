@@ -5,7 +5,7 @@ function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
-export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 3)\]\h \[$(tput setaf 4)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]$(parse_git_branch)\\$ \[$(tput sgr0)\]"
+export PS1='\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 3)\]\h \[$(tput setaf 2)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]$(parse_git_branch)\\$ \[$(tput sgr0)\]'
 
 
 function phpserve {
