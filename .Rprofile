@@ -149,4 +149,9 @@ systemic <- function() {
     source("~/Projects/Systemic2/R/systemic.r", chdir=TRUE)
 }
 
+capply <- function(...) {
+    l <- sapply(...)
+    return(Filter(Negate(is.null), x))
+}
+
 cat(getwd(), '\n')
