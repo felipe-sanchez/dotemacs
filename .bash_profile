@@ -7,7 +7,7 @@ function parse_git_branch {
 function phpserve {
     num=$RANDOM
     sleep 2 && open http://localhost:$num &
-    php -S localhost:$num
+    /opt/local/bin/php55 -S localhost:$num
 }
 
 alias emacsclient=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
@@ -37,6 +37,8 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 export PATH="$HOME/local/emsdk_portable:$HOME/local/emsdk_portable/emscripten/incoming:$PATH"
 export PATH="/usr/texbin/:$PATH"
+export PATH=/opt/local/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin/:$PATH
+export DATABASE_URL="postgres://$(whoami)@localhost:5432/$(whoami)"
 export C_INCLUDE_PATH="/opt/local/include"
 export EDITOR=emacs_wait
 alias emacs=emacs_open
