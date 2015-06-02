@@ -70,7 +70,6 @@
      '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")))
 
 ;; Use rainbow-delimiters and highlight-parentheses
-(global-rainbow-delimiters-mode)
 (define-globalized-minor-mode global-highlight-parentheses-mode
   highlight-parentheses-mode
   (lambda ()

@@ -5,8 +5,7 @@ function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
-export PS1='\[$(tput bold)\]\[$(tput setaf 1)\]\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 3)\]\h \[$(tput setaf 2)\]\w\[$(tput setaf 1)\]\[$(tput setaf 7)\]$(parse_git_branch) \[$(tput setaf 1)\]▶\[$(tput sgr0)\] '
-
+export PS1='\[$(tput bold)\]\[$(tput setaf 1)\]\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 3)\]\h \[$(tput setaf 2)\]\W\[$(tput setaf 1)\]\[$(tput setaf 6)\]$(parse_git_branch) \[$(tput setaf 1)\]▶\[$(tput sgr0)\] '
 
 function phpserve {
     num=25555
@@ -89,4 +88,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+alias fucking=''
 . ~/.bash_profile_local
