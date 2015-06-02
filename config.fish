@@ -9,18 +9,18 @@ function emacs_open
 end
 set -x EDITOR emacs_open
 alias emacs emacs_open
-set -x PATH /opt/local/bin:/opt/local/sbin:$PATH
-set -x PATH "$HOME/local/emsdk_portable:$HOME/local/emsdk_portable/emscripten/incoming:$PATH"
-set -x PATH "/usr/texbin/:$PATH"
+set -x PATH /opt/local/bin /opt/local/sbin $PATH
+set -x PATH $HOME/local/emsdk_portable $HOME/local/emsdk_portable/emscripten/incoming $PATH
+set -x PATH /usr/texbin/ $PATH
 
 set -x DATABASE_URL "postgres://(whoami)@localhost:5432/(whoami)"
-set -x PATH "/Applications/Postgres.app/Contents/Versions/9.3/bin/:$PATH"
-set -x PATH "/opt/local/bin:/opt/local/sbin:$PATH"
+set -x PATH /Applications/Postgres.app/Contents/Versions/9.3/bin/ $PATH
+set -x PATH /opt/local/bin /opt/local/sbin $PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
-set -x PATH "$HOME/anaconda/bin:$PATH"
+set -x PATH $HOME/anaconda/bin $PATH
 
 ### Added by the Heroku Toolbelt
-set -x PATH "/usr/local/heroku/bin:$PATH"
+set -x PATH /usr/local/heroku/bin $PATH
 
 function condalist -d 'List conda environments.'
   for dir in (ls $HOME/anaconda/envs)
