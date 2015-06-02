@@ -101,3 +101,9 @@ alias fucking=''
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+
+# added by Anaconda 2.2.0 installer
+export PATH="//anaconda/bin:$PATH"
+
+# added by Anaconda 2.2.0 installer
+export PATH="/Users/stefano/anaconda/bin:$PATH"
