@@ -73,6 +73,7 @@ logseq <- function(from=1, to=10, length.out=10) {
     return(a >= min(interval) && a <= max(interval))
 }
 
+
 printf <- function(...) {
     cat(sprintf(...))
 }
@@ -147,6 +148,11 @@ if (missing(key.axes)) {if (axes){axis(4)}}
 
 systemic <- function() {
     source("~/Projects/Systemic2/R/systemic.r", chdir=TRUE)
+}
+
+capply <- function(...) {
+    l <- sapply(...)
+    return(Filter(Negate(is.null), x))
 }
 
 cat(getwd(), '\n')

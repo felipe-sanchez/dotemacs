@@ -42,7 +42,7 @@
 
 
 
-
+(setq ess-fancy-comments nil)
 (add-hook 'Rnw-mode-hook 
           '(lambda() 
              (local-set-key [(shift return)] 'my-ess-eval))) 
@@ -50,4 +50,5 @@
 
 
 (provide 'my-r-mode)
+
 
