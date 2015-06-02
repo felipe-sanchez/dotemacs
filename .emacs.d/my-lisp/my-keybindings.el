@@ -73,6 +73,7 @@ Symbols matching the text at point are put first in the completion list."
 (global-set-key (kbd "s-z") 'undo-tree-undo)
 (global-set-key (kbd "s-Z") 'undo-tree-redo)
 (global-set-key (kbd "s-F") 'anything-occur)
+(global-set-key (kbd "s-G") 'isearch-repeat-backward)
 (global-set-key (kbd "s-X") 'smex)
 (global-set-key (kbd "<s-left>") 'beginning-of-visual-line)
 (global-set-key (kbd "<s-right>") 'end-of-visual-line)
