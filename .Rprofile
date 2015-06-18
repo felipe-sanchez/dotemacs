@@ -1,11 +1,12 @@
-options(repos=structure(c(CRAN="http://cran.revolutionanalytics.com")))
-
-library(stringr)
-library(compiler)
-library(magrittr)
-library(foreach)
-library(ggplot2)
-library(doParallel)
+options(repos=c(CRAN="http://cran.revolutionanalytics.com"))
+library(tools, quietly=TRUE)
+library(stringr, quietly=TRUE)
+library(compiler, quietly=TRUE)
+library(magrittr, quietly=TRUE)
+library(foreach, quietly=TRUE)
+library(ggplot2, quietly=TRUE)
+library(plyr, quietly=TRUE)
+library(doParallel, quietly=TRUE)
 registerDoParallel()
 source("~/Projects/rutils/utils.r")
 
@@ -13,6 +14,61 @@ invisible(setCompilerOptions(suppressAll=TRUE))
 invisible(enableJIT(2))
 options(max.print = 100)
 
+dots_names <- function(...) sapply( substitute(list(...)), deparse )[-1]
+
+str_rep <- function(ch, times) str_c(rep(ch, times), collapse='')
+
+cache <- function(exp, fn, dependencies=NULL) {
+    depsfn <- str_c(fn, '.deps')
+    if (file.exists(fn)) {
+        if (is.null(dependencies) && !file.exists(depsfn))
+            return(readRDS(fn))
+        else {
+            sums <- md5sum(dependencies)
+            if (file.exists(str_c(fn, '.deps')) && all(readRDS(depsfn) == sums))
+                return(readRDS(fn))
+        }
+    }
+    print(depsfn)
+    ret <- force(exp)
+    saveRDS(ret, fn)
+    if (!is.null(dependencies)) {
+        sums <- md5sum(dependencies)
+        saveRDS(sums, depsfn)
+    }
+    return(ret)
+}
+
+echo <- function(...) {
+    dnames <- dots_names(...)
+    args <- list(...)
+    stopifnot(length(args) > 0)
+    max_length <- max(sapply(dnames, nchar)) 
+    label_fmt <- str_c("%", max_length, "s |  ")
+    value_pad <- sprintf(str_c("%", max_length, "s | "), "")
+
+    out <- lapply(seq_along(dnames), function(i) {
+        tc <- textConnection(str_c('echo__', runif(1)), open='w')
+        label <- sprintf(label_fmt, dnames[[i]])
+        
+        sink(tc)
+        print(args[[i]])
+        sink(NULL)
+        lines <- textConnectionValue(tc)        
+        close(tc)
+        return(list(label=label, lines=lines))
+    })
+    max_length_out <- max(sapply(out, function(l) max(sapply(l$lines, nchar))))
+    lapply(out, function(l) {
+        cat(l$label)
+        cat(l$lines[1], '\n')
+        if (length(l$lines) > 1) {
+            sapply(l$lines[2:length(l$lines)], function(line) cat(value_pad, line, '\n'))
+        }
+        cat(value_pad, "\n")
+    })
+    invisible()
+}
 
 plot.log.x <- function(x, ...) {
     m <- floor(log10(min(x)))
@@ -86,4 +142,4 @@ scale_xy_log10 <- function() {
     )
 }
 
-cat(getwd(), '\n')
+
