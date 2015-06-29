@@ -1,7 +1,6 @@
 options(repos=c(CRAN="http://cran.revolutionanalytics.com"))
 library(tools, quietly=TRUE)
 library(stringr, quietly=TRUE)
-library(compiler, quietly=TRUE)
 library(magrittr, quietly=TRUE)
 library(foreach, quietly=TRUE)
 library(ggplot2, quietly=TRUE)
@@ -10,8 +9,6 @@ library(doParallel, quietly=TRUE)
 registerDoParallel()
 source("~/Projects/rutils/utils.r")
 
-invisible(setCompilerOptions(suppressAll=TRUE))
-invisible(enableJIT(2))
 options(max.print = 100)
 
 dots_names <- function(...) sapply( substitute(list(...)), deparse )[-1]
@@ -29,8 +26,8 @@ cache <- function(exp, fn, dependencies=NULL) {
                 return(readRDS(fn))
         }
     }
-    print(depsfn)
-    ret <- force(exp)
+
+  ret <- force(exp)
     saveRDS(ret, fn)
     if (!is.null(dependencies)) {
         sums <- md5sum(dependencies)

@@ -2,7 +2,6 @@
 ;;
 ;; Loads ESS; use M-x R to start R shell
 
-(require 'ess-smart-underscore)
 ;; Slightly modified from http://kieranhealy.org/blog/archives/2009/10/12/make-shift-enter-do-a-lot-in-ess/
 (setq ess-ask-for-ess-directory nil)
 (setq ess-local-process-name "R")
@@ -10,6 +9,7 @@
 (setq comint-scroll-to-bottom-on-input t)
 (setq comint-scroll-to-bottom-on-output t)
 (setq comint-move-point-for-output t)
+(setq ess-toggle-underscore nil)
 
 (defun start-R ()
   (interactive)

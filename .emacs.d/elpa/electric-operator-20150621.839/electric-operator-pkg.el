@@ -1,0 +1,1 @@
+(define-package "electric-operator" "20150621.839" "Automatically add spaces around operators" '((dash "2.10.0") (names "20150618.0")) :url "https://github.com/davidshepherd7/electric-operator" :keywords '("electric"))

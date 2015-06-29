@@ -90,6 +90,7 @@
 
 ;; Loads magit; use M-x magit-status
 (require 'magit)
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 ;; Smartscan, jump between instances of symbol at cursor
 ;; use M-n M-p to jump forward/backward
@@ -145,7 +146,6 @@
 ;; Global linum
 (require 'linum-off)
 (global-linum-mode)
-
 
 
 ;; Global paredit
