@@ -1,15 +1,23 @@
 options(repos=c(CRAN="http://cran.revolutionanalytics.com"))
+library(MASS, quietly=TRUE)
 library(tools, quietly=TRUE)
 library(stringr, quietly=TRUE)
 library(magrittr, quietly=TRUE)
 library(foreach, quietly=TRUE)
 library(ggplot2, quietly=TRUE)
-library(plyr, quietly=TRUE)
+#library(plyr, quietly=TRUE)
 library(doParallel, quietly=TRUE)
+#library(dplyr, quietly=TRUE)
+library(DT, quietly=TRUE)
+library(compiler)
 registerDoParallel()
 source("~/Projects/rutils/utils.r")
+enableJIT(3)
+setCompilerOptions(suppressAll=TRUE, suppressUndefined=TRUE)
 
 options(max.print = 100)
+theme_update(axis.title.x = element_text(vjust=0), axis.title.y = element_text(vjust=1, angle=90))
+
 
 dots_names <- function(...) sapply( substitute(list(...)), deparse )[-1]
 

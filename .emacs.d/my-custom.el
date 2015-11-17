@@ -109,7 +109,6 @@
  '(sml/inactive-foreground-color "#34495e")
  '(speedbar-use-images t)
  '(tool-bar-mode nil)
- '(transient-mark-mode (quote (only . t)))
  '(vc-annotate-background "#d4d4d4")
  '(vc-annotate-color-map
    (quote
