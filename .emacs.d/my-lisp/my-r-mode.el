@@ -11,6 +11,13 @@
 (setq comint-move-point-for-output t)
 (setq ess-toggle-underscore nil)
 
+(add-hook 'ess-mode-hook
+            (lambda ()
+              (push '("function" . ?λ) prettify-symbols-alist)
+              (push '("%>%" . ?⨠) prettify-symbols-alist)
+              ))
+
+
 (defun start-R ()
   (interactive)
   (if (not (member "*R*" (mapcar (function buffer-name) (buffer-list))))
@@ -37,18 +44,13 @@
 (add-hook 'inferior-ess-mode-hook
           '(lambda()
              (define-key inferior-ess-mode-map [up] (lambda() (interactive) (goto-char (point-max)) (comint-previous-input 1)))
-             (define-key inferior-ess-mode-map [down] (lambda() (interactive) (goto-char (point-max)) (comint-next-input 1)))))
-          
-
-
+             (define-key inferior-ess-mode-map [down] (lambda() (interactive) (goto-char (point-max)) (comint-next-input 1)))))          
 
 (setq ess-fancy-comments nil)
 (add-hook 'Rnw-mode-hook 
           '(lambda() 
              (local-set-key [(shift return)] 'my-ess-eval))) 
 (require 'ess-site)
-
-
 (provide 'my-r-mode)
 
 

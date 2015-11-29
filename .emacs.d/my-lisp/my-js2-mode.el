@@ -17,6 +17,6 @@
             (lambda ()
               (push '("function" . ?λ) prettify-symbols-alist)))
 
-(require 'ac-js2)
-(add-hook 'js2-mode-hook 'ac-js2-mode)
+;; (require 'ac-js2)
+;; (add-hook 'js2-mode-hook 'ac-js2-mode)
 (provide 'my-js2-mode)
