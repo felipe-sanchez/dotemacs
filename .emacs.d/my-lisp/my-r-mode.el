@@ -14,7 +14,7 @@
 (add-hook 'ess-mode-hook
             (lambda ()
               (push '("function" . ?λ) prettify-symbols-alist)
-              (push '("%>%" . ?⨠) prettify-symbols-alist)
+              (push '("%>%" . ?➨) prettify-symbols-alist)
               ))
 
 
