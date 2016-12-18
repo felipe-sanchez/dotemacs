@@ -11,7 +11,7 @@
 
 ;; Enable EIN; M-x notebook-list
 (require 'ein)
-(setq ein:use-auto-complete 't)
+
 
 (provide 'my-python-mode)
 
